@@ -1,0 +1,12 @@
+// файл з нульовими стилями
+@import "nulstyle.scss";
+
+
+// обгортка
+.wrapper {
+	overflow: hidden; //приховати вихід за рамки вікна
+	min-height: 100%; //мінімальна висота
+
+	display: flex; //flex
+	flex-direction: column; //орієнтація колонка
+}
