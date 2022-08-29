@@ -1,0 +1,3 @@
+06_html - теги: form-форма, input: text-текстове поле, password-паорль, radio-пермикачі,
+			checkbox-чекбокси, file-вибір файлу; textarea-багатострічне поле вводу, select-список: option-пункти;
+			button - кнопка: submit-пердати, reset-очистити

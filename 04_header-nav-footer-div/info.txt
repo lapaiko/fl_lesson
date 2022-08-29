@@ -1,1 +1,0 @@
-04_header-nav-footer-div - теги header-блок-голова, nav-блок-навігація, footer-блок-підвал, div-блок-контент.  

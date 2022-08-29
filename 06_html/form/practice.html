@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 4. Практика html теги: form-форма, input-поле,кнопка</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<form action="#" method="get" enctype="multipart/form-data">
+		<h1>Особисті дані</h1>
+		<div>
+			<p>Ім'я</p>
+			<input tabindex="1" placeholder="Ім'я" name="name" type="text">
+		</div>
+		<div>
+			<p>Пароль</p>
+			<input tabindex="2" placeholder="Пароль" name="pass" type="password">
+		</div>
+		<div>
+			<p>Телефон</p>
+			<input tabindex="3" placeholder="+(380)-000-00-00" name="tel" type="tel">
+		</div>
+		<div>
+			<p>Стать</p>
+			<div><input tabindex="4" checked type="radio" name="gender" value="male">Чоловічий</div>
+			<div><input tabindex="4" type="radio" name="gender" value="fimale">Жіночий</div>
+		</div>
+		<div>
+			<p>Власність</p>
+			<div><input tabindex="5" checked type="checkbox" name="bike" value="yes">Байк</div>
+			<div><input tabindex="6" type="checkbox" name="car" value="no">Машина</div>
+			<div><input tabindex="7" disabled type="checkbox" name="house" value="no">Квартира</div>
+		</div>
+		<p>Додаткова інформація</p>
+
+		<textarea tabindex="8" placeholder="Додаткова інформацфія" name="info" cols="30" rows="10"></textarea>
+		</div>
+		<div>
+			<p>Прікріпити фото</p>
+			<div><input tabindex="9" name="photo" type="file"></div>
+		</div>
+
+		<div>
+			<p>Улюблений колір</p>
+			<select name="color">
+				<option value="red">Червоний</option>
+				<option value="yellow">Жовтий</option>
+				<option selected value="green">Зелений</option>
+			</select>
+		</div>
+		<div>
+			<p>Дія</p>
+			<button tabindex="10" type="reset">Очитити форму</button>
+			<button tabindex="11" type="submit">Надіслати дані</button>
+		</div>
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 4. Теорія html теги: form-форма, input-поле,кнопка</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<h1>Форми</h1>
+	<form action="#" method="post" enctype="multipart/form-data">
+		<h2>Ввід даних - input типи:</h2>
+		<h3>- текст = text</h3>
+		<div><input tabindex="1" placeholder="Логін" disabled type="text" name="username" value=""></div>
+		<h3>- пароль = password</h3>
+		<div><input tabindex="2" placeholder="Пароль" type="password" name="userpass" value=""></div>
+		<h3>- радіо-кнопки - radio</h3>
+		<div>
+			<p><input tabindex="3" type="radio" name="beer" value="lager" checked>Сітле пиво</p>
+			<p><input tabindex="3" type="radio" name="beer" value="dark">Темне пиво</p>
+		</div>
+		<br>
+		<div>
+			<p><input tabindex="4" type="radio" name="beer2" value="lager">Сітле пиво</p>
+			<p><input tabindex="4" type="radio" name="beer2" value="dark" checked>Темне пиво</p>
+		</div>
+		<h3>- чек-бокси - radio</h3>
+		<div>
+			<p><input tabindex="5" type="checkbox" name="car1" value="yes">Наявність авто 1</p>
+			<p><input tabindex="6" type="checkbox" name="car2" value="yes" checked>Наявність авто 2</p>
+			<p><input tabindex="7" type="checkbox" name="car3" value="yes">Наявність авто 3</p>
+			<p><input tabindex="8" type="checkbox" name="car4" value="yes" checked>Наявність авто 4</p>
+		</div>
+		<h3>- файли - file</h3>
+		<div>
+			<input tabindex="9" type="file">
+		</div>
+		<br>
+		<h2>Багатострічне поле вводу тексту - textarea</h2>
+		<div>
+			<textarea tabindex="10" placeholder="Примітки" name="text" cols="30" rows="10"></textarea>
+		</div>
+		<br>
+		<h2>Cписок - select, option</h2>
+		<h3>Випадаючий</h3>
+		<div>
+			<select tabindex="11" name="color">
+				<option value="red">червоний</option>
+				<option selected value="yellow">жовтий</option>
+				<option value="blue">блакитний</option>
+			</select>
+		</div>
+		<h3>Листовий</h3>
+		<div>
+			<select tabindex="12" name="color2" multiple>
+				<option value="red">червоний</option>
+				<option value="yellow">жовтий</option>
+				<option selected value="blue">блакитний</option>
+			</select>
+		</div>
+		<br>
+		<h2>Кнопка - button</h2>
+		<h3>Очистити форму - reset</h3>
+		<div>
+			<button tabindex="13" type="reset">Очистити форму</button>
+		</div>
+		<h3>Відправити - submit</h3>
+		<div>
+			<button tabindex="14" type="submit">Відправити</button>
+		</div>
+	</form>
+</body>
+
+</html>
