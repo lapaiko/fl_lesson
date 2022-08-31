@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 5. Теорія css: синтаксис + обнулення</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<h1>CSS</h1>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 1 - стиль по назві тегу</h2>
+		</div>
+		<div class="css">css: <br>
+			span {font-size: 14px; color: green;}
+		</div>
+		<div class="code">
+			<p>p class="" <span>span class=""</span>p class="" <span>span class=""</span> p class=""</p>
+			<p>p class="" <span>span class=""</span>p class="" </p>
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 2 - стиль тегів по назві класу</h2>
+		</div>
+		<div class="css">css: <br>
+			span {font-size: 14px; color: green;} <br>
+			.bigred { font-size: 16px; color: red; }
+		</div>
+		<div class="code">
+			<p>p class="" <span class="bigred">span class="bigred"</span> p class="" <span>span class=""</span> p class=""
+			</p>
+			<p>p class="" <span class="bigred">span class="bigred"</span> p class="" </p>
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 3 - стиль тегів по назві класу</h2>
+		</div>
+		<div class="css">css: <br>
+			span {font-size: 14px; color: green;} <br>
+			.bigred { font-size: 16px; color: red; }
+		</div>
+		<div class="code">
+			<p class="bigred">p class="bigred" <span class="bigred">span class="bigred"</span> p class="bigred" <span>span
+					class=""</span> class="bigred"
+			</p>
+			<p>p class="" <span class="bigred">span class="bigred"</span> p class="" </p>
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 4 - порядок запису параметрів та селекторів</h2>
+		</div>
+		<div class="css">css: <br>
+			span {font-size: 14px; color: green;} <br>
+			.bigblue { font-size: 16px; color: red; } <br>
+			.bigblue { font-size: 20px; }
+		</div>
+		<div class="code">
+			<p class="bigblue">p class="bigblue" <span class="bigblue">span class="bigblue"</span> p class="bigblue"
+				<span>span
+					class=""</span> class="bigblue"
+			</p>
+			<p>p class="" <span class="bigblue">span class="bigblue"</span> p class="" </p>
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 5 - пріоритетність записів</h2>
+		</div>
+		<div class="css">css: <br>
+			span {font-size: 14px; color: green;} <br>
+			span.bigbrown { font-size: 18px; color: brown; } - для всіх тегів span з класом "bigbrown" - ПРІРИТЕТНИЙ ЗАПИС
+			в незалежності від порядку запису
+		</div>
+		<div class="code">
+			<p class="bigblue">p class="bigblue" <span class="bigbrown">span class="bigbrown"</span> p class="bigblue"
+				<span>span
+					class=""</span> p class="bigblue"
+			</p>
+			<p>p class="" <span class="bigblue">span class="bigblue"</span> p class="" </p>
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 6 - вкладеність</h2>
+		</div>
+		<div class="css">css: <br>
+			span {font-size: 14px; color: green;} <br>
+			.bigmagenta { color: magenta; } <br>
+			.bigmagenta span { font-size: 24px; color: darkmagenta; }
+		</div>
+		<div class="code">
+			<p class="bigmagenta">p class="bigmagenta" <span> span class=""</span> p class="bigmagenta"<span> span
+					class=""</span>
+				p class="bigmagenta"
+			</p>
+			<p>p class="" <span> span class=""</span> p class="" </p>
+		</div>
+	</div>
+
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 7 - багаторівнева вкладенність</h2>
+		</div>
+		<div class="css">css: <br>
+			span {font-size: 14px; color: green;} <br>
+			.bigorange>p { color: magenta; }
+		</div>
+		<div class="code bigorange">
+			<p>p1 class="" <span> span class=""</span> p1 class=""<span> span class=""</span> p1 class="" </p>
+			<p>p1 class="" <span> span class=""</span> p1 class="" </p>
+			<div>
+				<p>p2 class=""</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 8 - наслідування параметрів</h2>
+		</div>
+		<div class="css">css: <br>
+			.bigpurple span, .bigpurple { color: purple; } <br>
+			.bigpurple { border: 1px dashed purple; }
+		</div>
+		<div class="code bigpurple">
+			<p>p1 class="" <span> span class=""</span> p1 class=""<span> span class=""</span> p1 class="" </p>
+			<p>p1 class="" <span> span class=""</span> p1 class="" </p>
+			<div>
+				<p>p2 class=""</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+html,
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.example {
+	border: 1px solid #333;
+	margin: 0 0 10px 0;
+}
+
+.head,
+.css,
+.code {
+	padding: 0 10px;
+}
+
+.css {
+	padding: 10px;
+	background-color: #ddd;
+}
+
+/*Приклад 1*/
+span {
+	font-size: 14px;
+	color: green;
+}
+
+/*Приклад 2, 3*/
+.bigred {
+	font-size: 16px;
+	color: red
+}
+
+/*Приклад 4*/
+.bigblue {
+	font-size: 16px;
+	color: blue;
+}
+
+/*Приклад 5 - ПРІОРИТЕТНИЙ ЗАПИС*/
+span.bigbrown {
+	font-size: 18px;
+	color: brown;
+}
+
+/*Приклад 6 - вкладеність*/
+.bigmagenta {
+	color: magenta;
+}
+
+.bigmagenta span {
+	font-size: 24px;
+	color: darkmagenta;
+}
+
+/*Приклад 7 - багаторівнева вкладеність*/
+.bigorange>p {
+	color: orange;
+}
+
+/*Приклад 8 - наслідування пааметрів*/
+.bigpurple,
+.bigpurple span {
+	color: purple;
+	font-size: 26px;
+}
+
+.bigpurple {
+	border: 1px dashed purple;
+	margin: 5px;
+}
