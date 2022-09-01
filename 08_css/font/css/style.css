@@ -18,6 +18,10 @@ p {
 	padding: 0 10px;
 }
 
+.code p {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
 .theory {
 	padding: 10px;
 	background-color: gold;
@@ -44,4 +48,65 @@ p {
 .size30 {
 	font-size: 30px;
 
+}
+
+/*Приклад 4 - властивість шрифта font-style - встанолює начертання шрифта*/
+.style {
+	font-style: italic;
+}
+
+/*Приклад 5 - властивість шрифта font-weight - встанолює насиченість шрифта*/
+.weight {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+/*Приклад 6 - властивість шрифта color - встанолює колір шрифта*/
+.color {
+	color: red;
+}
+
+/*Приклад 7 - властивість тексту text-align - вирівнювання текcту*/
+.align_r {
+	text-align: right;
+}
+
+.align_j {
+	text-align: justify;
+}
+
+.align_c {
+	text-align: center;
+}
+
+/*Приклад 9 - властивість тексту text-decoration - додає оформлення тексту*/
+.decoration_u {
+	text-decoration: underline;
+}
+
+.decoration_o {
+	text-decoration: overline;
+}
+
+.decoration_l {
+	text-decoration: line-through;
+}
+
+/*Приклад 10 - властивість тексту text-shadow- додає текту тінь*/
+.shadow {
+	text-shadow: 1px 1px 10px green;
+	font-size: 20px;
+}
+
+/*Приклад 11 - властивість тексту text-transform - робить літери тексту прописними або заглавними*/
+.transform_u {
+	text-transform: uppercase;
+}
+
+.transform_l {
+	text-transform: lowercase;
+}
+
+.transform_c {
+	text-transform: capitalize;
 }
