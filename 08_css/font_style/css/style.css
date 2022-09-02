@@ -110,3 +110,29 @@ p {
 .transform_c {
 	text-transform: capitalize;
 }
+
+/*Приклад 12 - властивість тексту text-indent - починає текст з абзацу*/
+.indent {
+	text-indent: 50px;
+}
+
+/*Приклад 13 - властивість тексту letter-spacing - встаовлює інтервал між літерами*/
+.leter {
+	letter-spacing: 5px;
+}
+
+/*Приклад 14 - властивість тексту word-spacing - встаовлює інтервал між словами*/
+.word {
+	word-spacing: 15px;
+}
+
+/*Приклад 15 - властивість тексту white-space - керує властивостями пробілів між словами*/
+.white {
+	white-space: nowrap;
+	/*заборояє перос стрічки*/
+}
+
+/*Приклад 16 - властивість тексту line-height - встановлює міжстрочний інтервал*/
+.line {
+	line-height: 28px;
+}
