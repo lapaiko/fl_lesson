@@ -100,9 +100,19 @@ h4,
 h5,
 h6 {
 	font-size: inherit;
-	font-weight: 400;
+	font-weight: 700;
 }
 
+h1 {
+	font-size: 20px;
+	margin: 15px 10px;
+}
+
+html,
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	line-height: 16px;
+}
 
 .example {
 	border: 1px solid #333;
@@ -110,12 +120,253 @@ h6 {
 }
 
 .head,
-.css,
-.code {
-	padding: 0 10px;
+.css {
+	padding: 10px 10px;
 }
 
-/*Приклад 1 - блочний та строчний теги*/
-.example-block {}
+.theory {
+	padding: 10px;
+	background-color: gold;
+}
 
-.example-string {}
+.css {
+	padding: 10px;
+	background-color: #ddd;
+}
+
+/*Приклад 1 - padding внутрішній відступ блочних елементів*/
+.example-string-padding4 {
+	padding: 10px 20px 30px 5px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-padding3 {
+	padding: 10px 20px 15px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-padding2 {
+	padding: 10px 20px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-padding1 {
+	padding: 30px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-padding {
+	padding: 10%;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-paddingadding {
+	padding: 20px;
+	/*border: 1px solid yellowgreen;*/
+}
+
+/*Приклад 2 - margin зовнішній відступ блочних елементів*/
+.example-string-margin4 {
+	margin: 10px 30px 30px 15px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-margin3 {
+	margin: 10px 40px 15px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-margin2 {
+	margin: 10px -20px;
+	color: red;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-margin1 {
+	margin: 30px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-margin {
+	margin: 10%;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-margin {
+	margin: 20px;
+	/*border: 1px solid yellowgreen;*/
+}
+
+/*Приклад 3 - width встановлює ширину блочних елементів  та строкового IMG*/
+.example-block-width {
+	width: 500px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-width {
+	width: 500px;
+
+}
+
+.example-img-width {
+	width: 100px;
+}
+
+/*Приклад 4 - max-width обмежує максимальну ширину блочних елементів та строкового IMG*/
+.example-block-max-width {
+	max-width: 500px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-max-width {
+	max-width: 500px;
+}
+
+.example-img-max-width {
+	width: 100%;
+	max-width: 500px;
+}
+
+/*Приклад 5 - min-width встановлює мінімальну ширину блочних елементів та строкового IMG*/
+.example-block-min-width {
+	min-width: 500px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-min-width {
+	min-width: 500px;
+}
+
+.example-img-min-width {
+	width: 100%;
+	min-width: 500px;
+}
+
+/*Приклад 6 - height встановлює висоту блочних елементів та строкового IMG*/
+.example-block-height {
+	height: 200px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-height {
+	height: 200px;
+}
+
+.example-img-height {
+	height: 200px;
+}
+
+/*Приклад 7 - max-height обмежує максимальну висоту блочних елементів та строкового IMG*/
+.example-block-max-height {
+	max-height: 100px;
+	color: red;
+	border: 2px solid red;
+}
+
+.example-string-max-height {
+	max-height: 100px;
+}
+
+.example-img-max-height {
+	max-height: 100px;
+}
+
+/*Приклад 8 - min-height встановлює мінімальну висоту блочних елементів та строкового IMG*/
+
+.example-block-min-height {
+	min-height: 100px;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-min-height {
+	min-height: 200px;
+}
+
+.example-img-min-height {
+	min-height: 100px;
+}
+
+/*Приклад 9 - overflow курує відображенням вмісту блочних елементів*/
+.example-block-overflow-v {
+	overflow: visible;
+	height: 40px;
+	color: red;
+	border: 1px solid red;
+}
+
+.example-block-overflow-s {
+	overflow: scroll;
+	height: 40px;
+	color: red;
+	border: 1px solid red;
+}
+
+.example-block-overflow-a {
+	overflow: auto;
+	height: 40px;
+	color: red;
+	border: 1px solid red;
+}
+
+.example-block-overflow-h {
+	overflow: hidden;
+	height: 40px;
+	color: green;
+	border: 1px solid green;
+}
+
+.example-string-overflow {
+	overflow: hidden;
+	height: 100px;
+}
+
+.example-img-overflow {
+	overflow: hidden;
+	height: 300px;
+	width: 300px;
+}
+
+/*Приклад 9 - display багатоцільова властивість, що визначає як елемент повинен бути показан у документі*/
+.example-block-display-block {
+	display: block;
+	border: 1px solid yellowgreen;
+}
+
+.example-string-display-block {
+	display: block;
+	padding: 20px;
+	border: 1px solid yellowgreen;
+}
+
+.example-block-display-inline {
+	display: inline;
+	border: 1px solid red;
+}
+
+.example-string-display-inline {
+	display: inline;
+	padding: 20px;
+	border: 1px solid red;
+}
+
+.example-block-display-inline-block {
+	display: inline-block;
+	padding: 20px;
+	width: 400px;
+	border: 1px solid green;
+}
+
+.example-string-display-inline-block {
+	display: inline-block;
+	padding: 20px;
+	width: 400px;
+	border: 1px solid green;
+}
+
+.example-block-display-none {
+	display: none;
+}
+
+.example-string-display-none {
+	display: none;
+}

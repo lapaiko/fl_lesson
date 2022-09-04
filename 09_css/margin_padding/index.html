@@ -13,27 +13,65 @@
 	<h1>CSS margin, padding, display</h1>
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 1 - блочний та строчний теги</h2>
+			<h2>Приклад 1 - padding внутрішній відступ блочних тегів</h2>
 		</div>
 		<div class="theory">Теорія: <br>
-			div - блочний тег<br>
-			span - строчний тег<br>
+			Варіанти запису параметру та значень: <br>
+			padding: 15px 10px 5px 0px - верх, права, низ, зліва<br>
+			padding: 15px 5px 0px - верх, права/зліва, низ<br>
+			padding: 15px 10px - верх/низ і ліва/права <br>
+			padding: 15px - верх/низ/ліва/права <br>
+			padding-top: 10px - верху<br>
+			padding-left: 10px - зліва<br>
+			padding-botton: 10 px - знизу<br>
+			padding-right: 10 px - зправа <br> <br>
+			padding - НЕ МОЖЕ МАТИ ВІДЄМНІ ЗНАЧЕННЯ!!! <br>
+			padding: 10 % - % визначається від ширина батьківського тегу у даному випадку ширини браузера <br><br>
+			Гарачий набір: <br> p10 + Enter = padding: 10 px;
 		</div>
 		<div class="css">
 			css: <br>
-			.example-block { }
-			.example-string { }
+			.example-string-padding4 { padding: 10px 20px 30px 5px; } <br>
+			.example-string-padding3 { padding: 10px 20px 15px } <br>
+			.example-string-padding2 { padding: 10px 20px; } <br>
+			.example-string-padding1 { padding: 10px } <br>
+			.example-string-padding { padding: 10% } <br>
+			.example-string-p { padding: 20px; }
 		</div>
 		<div class="code">
-			<div class="example-block">
-				Блочний тег <br>
+			<div class="example-string-padding4">
+				Блочний тег - padding: 10px 20px 30px 5px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div> <br>
+			<div class="example-string-padding3">
+				Блочний тег - padding: 10px 20px 15px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div> <br>
+			<div class="example-string-padding2">
+				Блочний тег - padding: 10px 20px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div> <br>
+			<div class="example-string-padding1 ">
+				Блочний тег - padding: 30px<br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div> <br>
+			<div class="example-string-padding ">
+				Блочний тег - padding: 10%<br>
 				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
 				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
 				eligendi.
 			</div>
 			<br>
-			<span class="example-string">
-				Строчний тег <br>
+			<span class="example-string-p">
+				Строчний тег - padding: 20px; <br>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
 				debitis minus? Ab nam rem deserunt aut? Cupiditate, illo deserunt aliquid qui ratione voluptates
 				repudiandae!
@@ -41,7 +79,433 @@
 		</div>
 	</div>
 
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 2 - margin зовнішній відступ блочних елементів</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			Варіанти запису параметру та значень: <br>
+			margin: 15px 10px 5px 0px - верх, права, низ, зліва<br>
+			margin: 15px 5px 0px - верх, права/зліва, низ<br>
+			margin: 15px 10px - верх/низ і ліва/права <br>
+			margin: 15px - верх/низ/ліва/права <br>
+			margin-top: 10px - верху<br>
+			margin-left: 10px - зліва<br>
+			margin-botton: 10 px - знизу<br>
+			margin-right: 10 px - зправа <br> <br>
+			margin - МОЖЕ МАТИ ВІДЄМНІ ЗНАЧЕННЯ!!!<br>
+			margin: 10 % - % визначається від ширина батьківського тегу у даному випадку ширини браузера <br><br>
+			Гарачий набір: <br> m10 + Enter = marging: 10 px;
 
+		</div>
+		<div class="css">
+			css: <br>
+			.example-string-margin4 { margin: 10px 20px 30px 5px; } <br>
+			.example-string-margin3 { margin: 10px 20px 15px } <br>
+			.example-string-margin2 { margin: 10px -20px; } <br>
+			.example-string-margin1 { margin: 10px } <br>
+			.example-string-margin { margin: 10% } <br>
+			.example-string-m { margin: 20px; }
+		</div>
+		<div class="code">
+			<div class="example-string-margin4">
+				Блочний тег - margin: 10px 20px 30px 5px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div> <br>
+			<div class="example-string-margin3">
+				Блочний тег - margin: 10px 20px 15px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div> <br>
+			<div class="example-string-margin2">
+				Блочний тег - margin: 10px -20px; ВІДЄМНІ ВІДСТУПИ ЗЛІВА/ЗПРАВА<br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div> <br>
+			<div class="example-string-margin1 ">
+				Блочний тег - margin: 30px<br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div> <br>
+			<div class="example-string-margin ">
+				Блочний тег - margin: 10%<br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div>
+			<br>
+			<span class="example-string-m">
+				Строчний тег - margin: 20px; <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus? Ab nam rem deserunt aut? Cupiditate, illo deserunt aliquid qui ratione voluptates
+				repudiandae!
+			</span>
+		</div>
+	</div>
+
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 3 - width встановлює ширину блочних елементів та строкового IMG</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			width: 500px<br>
+			width - НЕ МОЖЕ БУТИ ВІДЄМНИМ!!!<br>
+			width: 90 % - % визначається від ширина батьківського тегу у даному випадку ширини браузера <br><br>
+			Гарачий набір: <br>
+			w500 + Enter = width: 500 px;
+
+		</div>
+		<div class="css">
+			css: <br>
+			.example-block-width { width: 500px; } <br>
+			.example-string-width { width: 500px; } <br>
+			.example-img-width { width: 100px; }
+		</div>
+		<div class="code">
+			<div class="example-block-width">
+				Блочний тег - width:500px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div>
+			<br>
+			<span class="example-string-width">
+				Строчний тег - width: 500px; <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span>
+
+			<img class="example-img-width" src="img/v2_600x600.jpg" alt="">
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 4 - max-width обмежує максимальну ширину блочних елементів та строкового IMG</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			max-width: 500px<br>
+			max-width - НЕ МОЖЕ БУТИ ВІДЄМНИМ!!!<br>
+			max-width: 90 % - % визначається від ширина батьківського тегу у даному випадку ширини браузера <br><br>
+			Гарачий набір: <br>
+			maw500 + Enter = max-width: 500px;
+
+		</div>
+		<div class="css">
+			css: <br>
+			.example-block-max-width { max-width: 500px; } <br>
+			.example-string-max-width { max-width: 500px; } <br>
+			.example-img-max-width { max-width: 100px; }<br>
+		</div>
+		<div class="code">
+			<div class="example-block-max-width">
+				Блочний тег - max-width:500px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div>
+			<br>
+			<span class="example-string-max-width">
+				Строчний тег - max-width: 500px; <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span>
+
+			<img class="example-img-max-width" src="img/v2_600x600.jpg" alt="">
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 5 - min-width встановлює мінімальну ширину блочних елементів та строкового IMG</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			min-width: 500px<br>
+			min-width - НЕ МОЖЕ БУТИ ВІДЄМНИМ!!!<br>
+			min-width: 90 % - % визначається від ширина батьківського тегу у даному випадку ширини браузера <br><br>
+			Гарачий набір: <br>
+			mw500 + Enter = min-width: 500px;
+
+		</div>
+		<div class="css">
+			css: <br>
+			.example-block-min-width: 500px;border: 1px solid yellowgreen; } <br>
+			.example-string-min-width { min-width: 500px; }<br>
+			.example-img-min-width { min-width: 100px; }<br>
+		</div>
+		<div class="code">
+			<div class="example-block-min-width">
+				Блочний тег - min-width:500px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div>
+			<br>
+			<span class="example-string-min-width">
+				Строчний тег - min-width: 500px; <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span>
+
+			<img class="example-img-min-width" src="img/v2_600x600.jpg" alt="">
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 6 - height встановлює висоту блочних елементів та строкового IMG</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			height: 200px<br>
+			height - НЕ МОЖЕ БУТИ ВІДЄМНИМ!!!<br>
+			height: 50 % - % визначається від висоти батьківського тегу у даному випадку ширини браузера <br><br>
+			Гарачий набір: <br>
+			h200 + Enter = height: 200 px;
+		</div>
+		<div class="css">
+			css: <br>
+			.example-block-height { height: 200px; } <br>
+			.example-string-height { height: 200px; } <br>
+			.example-img-height { height: 100px; }
+		</div>
+		<div class="code">
+			<div class="example-block-height">
+				Блочний тег - height:200px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div>
+			<br>
+			<span class="example-string-height">
+				Строчний тег - height: 200px; <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span>
+			<img class="example-img-height" src="img/v2_600x600.jpg" alt="">
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 7 - max-height обмежує максимальну висоту блочних елементів та строкового IMG</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			max-height: 200px<br>
+			max-height - НЕ МОЖЕ БУТИ ВІДЄМНИМ!!!<br>
+			max-height: 50 % - % визначається від висоти батьківського тегу у даному випадку ширини браузера <br><br>
+			Гарачий набір: <br>
+			mah200 + Enter = max-height: 200px;
+		</div>
+		<div class="css">
+			css: <br>
+			.example-block-max-height { max-height: 100px; } <br>
+			.example-string-max-height { max-height: 200px; } <br>
+			.example-img-max-height { max-height: 100px; }
+		</div>
+		<div class="code">
+			<div class="example-block-max-height">
+				Блочний тег - max-height:100px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempore, suscipit natus autem in
+				expedita aut libero ab nulla, temporibus molestias harum debitis corrupti qui eum fuga unde id nesciunt!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, a! Sapiente, deserunt provident quidem
+				nam aspernatur quam sit neque nulla? Sit deserunt porro dolor excepturi voluptates saepe autem fuga fugit?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate atque molestias quae asperiores dolor
+				maxime cupiditate ullam magni, praesentium vitae, molestiae veritatis quidem tenetur tempore modi, accusamus
+				blanditiis ducimus error.
+			</div>
+			<br>
+			<span class="example-string-max-height">
+				Строчний тег - max-height: 200px; <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span>
+			<img class="example-img-max-height" src="img/v2_600x600.jpg" alt="">
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 8 - min-height встановлює мінімальну висоту блочних елементів та строкового IMG</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			min-height: 100px<br>
+			min-height - НЕ МОЖЕ БУТИ ВІДЄМНИМ!!!<br>
+			min-height: 50 % - % визначається від висоти батьківського тегу у даному випадку ширини браузера <br><br>
+			Гарачий набір: <br>
+			mih200 + Enter = min-height: 200px;
+		</div>
+		<div class="css">
+			css: <br>
+			.example-block-min-height { min-height: 200px; } <br>
+			.example-string-min-height { min-height: 200px; } <br>
+			.example-img-min-height { min-height: 100px; }
+		</div>
+		<div class="code">
+			<div class="example-block-min-height">
+				Блочний тег - min-height:100px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempore, suscipit natus autem in
+				expedita aut libero ab nulla, temporibus molestias harum debitis corrupti qui eum fuga unde id nesciunt!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, a! Sapiente, deserunt provident quidem
+				nam aspernatur quam sit neque nulla? Sit deserunt porro dolor excepturi voluptates saepe autem fuga fugit?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate atque molestias quae asperiores dolor
+				maxime cupiditate ullam magni, praesentium vitae, molestiae veritatis quidem tenetur tempore modi, accusamus
+				blanditiis ducimus error.
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempore, suscipit natus autem in
+				expedita aut libero ab nulla, temporibus molestias harum debitis corrupti qui eum fuga unde id nesciunt!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, a! Sapiente, deserunt provident quidem
+				nam aspernatur quam sit neque nulla? Sit deserunt porro dolor excepturi voluptates saepe autem fuga fugit?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate atque molestias quae asperiores dolor
+				maxime cupiditate ullam magni, praesentium vitae, molestiae veritatis quidem tenetur tempore modi, accusamus
+				blanditiis ducimus error.
+			</div>
+			<br>
+			<span class="example-string-min-height">
+				Строчний тег - min-height: 200px; <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span>
+			<img class="example-img-min-height" src="img/v2_600x600.jpg" alt="">
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 9 - overflow курує відображенням вмісту блочних елементів</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			Гарачий набір: <br>
+			o + Enter = overflow: hidden;
+		</div>
+		<div class="css">
+			css: <br>
+			.example-block-overflow-h{ overflow: hidden; height: 40px; } <br>
+			.example-block-overflow-v{ overflow: visible; height: 40px; } <br>
+			.example-block-overflow-s{ overflow: scroll; height: 40px; } <br>
+			.example-block-overflow-a{ overflow: auto; height: 40px; } <br>
+			.example-string-overflow { overflow: hidden; height: 100px; width: 500px; } <br>
+			.example-img-overflow { overflow: hidden; height: 300px; width: 300px; } - img обгорнутий в div
+		</div>
+		<div class="code">
+			<div class="example-block-overflow-h">
+				Блочний тег - overflow: hidden; height: 40px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempore, suscipit natus autem in
+				expedita aut libero ab nulla, temporibus molestias harum debitis corrupti qui eum fuga unde id nesciunt!
+			</div>
+			<br>
+			<div class="example-block-overflow-s">
+				Блочний тег - overflow: scroll; height: 40px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempore, suscipit natus autem in
+				expedita aut libero ab nulla, temporibus molestias harum debitis corrupti qui eum fuga unde id nesciunt!
+			</div>
+			<br>
+			<div class="example-block-overflow-a">
+				Блочний тег - overflow: auto; height: 40px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempore, suscipit natus autem in
+				expedita aut libero ab nulla, temporibus molestias harum debitis corrupti qui eum fuga unde id nesciunt!
+			</div>
+			<br>
+			<div class="example-block-overflow-v">
+				Блочний тег - overflow: visible; height: 40px; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempore, suscipit natus autem in
+				expedita aut libero ab nulla, temporibus molestias harum debitis corrupti qui eum fuga unde id nesciunt!
+			</div>
+			<br>
+			<span class="example-string-overflow-v">
+				Строчний тег - min-height: 200px; <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span>
+			<div class="example-img-overflow"><img src="img/v2_600x600.jpg" alt=""></div>
+		</div>
+	</div>
+
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 9 - display багатоцільова властивість, що визначає як елемент повинен бути показан у документі</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			Гарачий набір: <br>
+			d + Enter = display: block; - робить елемент блочним
+			di + Enter = display: inline; - робить елемент строчним
+			dib + Enter = display: inline-block; - робить елемент строчним з блочними властивостями у якому працюють:
+			padding, margin, width, height
+			dn + Enter = display: none; - тимчасово прибирає елемент з документу і місце під нього не резервується
+		</div>
+		<div class="css">
+			css: <br>
+			.example-block-display-block { display: block; } <br>
+			.example-string-display-block { display: block; padding: 20px;} <br>
+			.example-img-display-block { display: block; } <br>
+			.example-block-display-inline { display: inline; } <br>
+			.example-string-display-inline { display: inline; padding: 20px; } <br>
+			.example-block-display-inline-block { display: inline-block; padding: 20px; width: 400px;} <br>
+			.example-string-display-inline-block { display: inline-block; padding: 20px; width: 400px;} <br>
+			.example-block-display-none { display: none; } <br>
+			.example-string-display-none { display: none; }
+
+		</div>
+		<div class="code">
+			<div class="example-block-display-block">
+				Блочний тег - display: block; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempore, suscipit natus autem in
+				expedita aut libero ab nulla, temporibus molestias harum debitis corrupti qui eum fuga unde id nesciunt!
+			</div>
+			<br>
+			<span class="example-string-display-block">
+				Строчний тег - display: block; padding: 20px; <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span> <br>
+			<div class="example-block-display-inline">
+				Блочний тег - display: inline; <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempore, suscipit natus autem in
+				expedita aut libero ab nulla, temporibus molestias harum debitis corrupti qui eum fuga unde id nesciunt!
+			</div>
+			<br> <br>
+			<span class="example-string-display-inline">
+				Строчний тег - display: inline; padding: 20px; <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span> <br> <br>
+
+			<div class="example-block-display-inline-block">
+				Блочний тег - display: inline-block; padding: 20px; width: 400px;<br>
+				Lorem ipsum, dolor sit
+			</div>
+			<br> <br>
+			<span class="example-string-display-inline-block">
+				Строчний тег - display: inline-block; padding: 20px; width: 400px;<br>
+				Lorem ipsum dolor sit
+			</span>
+			<div class="example-block-display-none">
+				Блочний тег - display: none;<br>
+				Lorem ipsum, dolor sit
+			</div>
+			<br> <br>
+			<span class="example-string-display-none">
+				Строчний тег - display: none;<br>
+				Lorem ipsum dolor sit
+			</span>
+
+		</div>
+	</div>
 </body>
 
 </html>
