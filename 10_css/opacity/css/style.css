@@ -147,7 +147,7 @@ body {
 	margin: 30px 0 0 0;
 }
 
-/*Приклад 1 - border границя авколо елемента*/
+/*Приклад 1 - border границя навколо елемента*/
 .example-block {
 	font-size: 14px;
 	margin: 0 0 30px 0;
@@ -186,7 +186,7 @@ body {
 
 /*Приклад 2 - border-radius встановлює радіус закруглення границі*/
 .example-block-border-radius {
-	border-radius: 5px;
+	border-radius: 10px;
 }
 
 .example-block-border-radius-lrbt {
@@ -220,13 +220,37 @@ body {
 
 /*Приклад 3 - outline-зовнішня границя блоку*/
 .example-block-outline {
-	outline: 3px solid yellowgreen;
+	outline: 10px solid yellowgreen;
+	margin: 20px;
 }
 
 .example-string-outline {
-	outline: 3px solid yellowgreen;
+	outline: 10px solid yellowgreen;
+	margin: 20px;
 }
 
 .example-img-outline {
-	outline: 3px solid yellowgreen;
+	outline: 10px solid yellowgreen;
+	margin: 20px;
+}
+
+/*Приклад 4 - box-shadow додає тінь елементу*/
+.example-block-box-shadow {
+	box-shadow: 5px 5px 10px 5px red;
+	padding: 10px;
+	margin: 30px;
+}
+
+.example-block-box-shadow-inset {
+	box-shadow: 5px 5px 10px 5px red, inset 5px 5px 10px 5px green;
+	padding: 10px;
+	margin: 30px;
+}
+
+.example-string-box-shadow {
+	box-shadow: 5px 5px 10px 5px red;
+}
+
+.example-img-box-shadow {
+	box-shadow: 5px 5px 10px 5px red;
 }

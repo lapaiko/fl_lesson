@@ -13,7 +13,7 @@
 	<h1>CSS border, border-radius, opacity</h1>
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 1 - border границя авколо елемента</h2>
+			<h2>Приклад 1 - border границя навколо елемента</h2>
 		</div>
 		<div class="theory">Теорія:
 			border: 1px solid #000; встановлює: товщину, стиль, колір границі елемента<br>
@@ -135,16 +135,18 @@
 		<div class="head">
 			<h2>Приклад 3 - outline-зовнішня границя блоку</h2>
 		</div>
-		<div class="theory">Теорія:
+		<div class="theory">Теорія: <br>
+			outline вказується відразу для всіх чотирьох сторін <br>
+			border-radius не діє на outline <br>
 			за замовчуваням outline: ; <br>
 			Гарачий набір: <br>
-			ol + Enter = outline: ; <br>
+			oul + Enter = outline: ; <br>
 		</div>
 		<div class="css">
 			css: <br>
-			.example-block-outline { outline: 20px; } <br>
-			.example-string-outline { outline: 20px; } <br>
-			.example-img-outline { outline: 20px; } <br>
+			.example-block-outline { outline: 10px solid yellowgreen; margin: 20px; } <br>
+			.example-string-outline { outline: 10px solid yellowgreen; margin: 20px; } <br>
+			.example-img-outline { outline: 10px solid yellowgreen; margin: 20px; } <br>
 		</div>
 		<div class="code">
 			<div class="example-block example-block-border-s example-block-outline">
@@ -153,13 +155,67 @@
 				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
 				eligendi.
 			</div>
-			<span class="example-string example-string-border example-block-border">
+			<span class="example-string example-string-border example-block-outline">
 				Строчний тег span - class = "example-string-border example-string-outline" <br>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
 				debitis minus?
 			</span>
 			<p class="p-img">Строчний тег img - class = "example-img-border example-img-outline" <br>
 				<img class="example-img-border example-img-outline" src="img/youtube.png" alt="">
+			</p>
+		</div>
+	</div>
+
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 4 - box-shadow додає тінь елементу</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			box-shadow: 5px 5px 10px 15px red - зсув по горизонталіб, зсув по вертикалі, радіус тіні, відстань тіні, колір
+			box-shadow: 5px 5px 10px 5px red, inset 5px 5px 10px 5px green; - inset dвстановлює внутрішню тінь блоку
+			<br>
+			box-shadow працює разом з border-radis <br>
+			<br>
+			Гарачий набір: <br>
+			bshw + Enter = box-shadow: ; <br>
+		</div>
+		<div class="css">
+			css: <br>
+			.example-block-box-shadow { box-shadow: 5px 5px 10px 5px red; padding: 10px; margin: 30px; } <br>
+			.example-block-box-shadow-inset { box-shadow: 5px 5px 10px 5px red, inset 5px 5px 10px 5px green; padding:
+			10px; margin: 30px; } <br>
+			.example-string-box-shadow { box-shadow: 5px 5px 10px 5px red; } <br>
+			.example-img-box-shadow { box-shadow: 5px 5px 10px 5px red; } <br>
+		</div>
+		<div class="code">
+			<div class="example-block example-block-border-s example-block-box-shadow">
+				Блочний тег div - class = "example-block example-block-border
+				example-box-shadow" <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div>
+			<div class="example-block example-block-border-s example-block-border-radius example-block-box-shadow">
+				Блочний тег div - class = "example-block example-block-border example-block-border-radius
+				example-box-shadow" <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div>
+			<div class="example-block example-block-border-s example-block-border-radius example-block-box-shadow-inset">
+				Блочний тег div - class = "example-block example-block-border example-block-border-radius
+				example-block-box-shadow-inset" <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div>
+			<span class="example-string example-string-border example-block-box-shadow">
+				Строчний тег span - class = "example-string-border example-string-box-shadow" <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span>
+			<p class="p-img">Строчний тег img - class = "example-img-border example-img-box-shadow" <br>
+				<img class="example-img-border example-img-box-shadow" src="img/youtube.png" alt="">
 			</p>
 		</div>
 	</div>
