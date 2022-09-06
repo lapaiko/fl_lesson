@@ -5,19 +5,21 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Урок 7 Теорія css - властивості і стилі оформлення блоків: opacity</title>
+	<title>Урок 8 Теорія css - властивості і стилі оформлення блоків: border, border-radius, outline, visibility, opacity
+	</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<h1>CSS border, border-radius, opacity</h1>
+	<h1>CSS border, border-radius, outline, visibility, opacity</h1>
 	<div class="example">
 		<div class="head">
 			<h2>Приклад 1 - border границя навколо елемента</h2>
 		</div>
 		<div class="theory">Теорія:
 			border: 1px solid #000; встановлює: товщину, стиль, колір границі елемента<br>
-			за замовчуваням border: none;
+			border: none; - за замовчуваням <br>
+			border - не працює з строчими елементами окрім IMG <br>
 			Гарачий набір: <br>
 			bd + Enter = border: 1px solid #000;
 		</div>
@@ -74,7 +76,8 @@
 		</div>
 		<div class="theory">Теорія:
 			border-radius: 5px; встановлює радіус закруглення границі<br>
-			за замовчуваням border-radius: 0px; <br>
+			border-radius: 0px; - за замовчуваням <br>
+			border-radius - не працює з строчими елементами окрім IMG <br>
 			border-radius: 10px 10px 10px 10px; - встановлення радіусів з верхнього лівого кута і далі радіуси кутів за
 			годинниковою стрілкою <br>
 			Гарачий набір: <br>
@@ -91,7 +94,7 @@
 			.example-block-border-radius-all { overflow: hidden; border-radius: 50px 40px 40px 0px; } <br>
 			.example-block-border-radius-circle { overflow: hidden; width: 100px; height: 100px; border-radius: 50%; } <br>
 			.example-string-border-radius { border-radius: 5px; } <br>
-			.example-img-border-radius { border-radius: 5px; } <br>
+			.example-img-border-radius { border-radius: 50%; overflow: hidden; } <br>
 		</div>
 		<div class="code">
 			<div class="example-block example-block-border-s example-block-border-radius">
@@ -137,8 +140,9 @@
 		</div>
 		<div class="theory">Теорія: <br>
 			outline вказується відразу для всіх чотирьох сторін <br>
-			border-radius не діє на outline <br>
-			за замовчуваням outline: ; <br>
+			outline: none; - за замовчуванням <br>
+			outline - не працює border-radius<br>
+			outline - огинає стрічкові елементи. У span має специфічний/сходинковий вигляд <br>
 			Гарачий набір: <br>
 			oul + Enter = outline: ; <br>
 		</div>
@@ -171,6 +175,7 @@
 			<h2>Приклад 4 - box-shadow додає тінь елементу</h2>
 		</div>
 		<div class="theory">Теорія: <br>
+			працює з блочними елементами і строчними IMG<br>
 			box-shadow: 5px 5px 10px 15px red - зсув по горизонталіб, зсув по вертикалі, радіус тіні, відстань тіні, колір
 			box-shadow: 5px 5px 10px 5px red, inset 5px 5px 10px 5px green; - inset dвстановлює внутрішню тінь блоку
 			<br>
@@ -219,7 +224,82 @@
 			</p>
 		</div>
 	</div>
-
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 5 - opacity визначає рівень прозорості елемента</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			працює як блочними так і строчними елементами <br>
+			opacity: 1; - за замовчуванням де 1 - не прозорий, 0 - прозорий<br>
+			opacity: 0; - (на відміну від display: none;) залишає місце під елемент роблячи його прозорим<br>
+			opacity: 0; - (на відміну від display: none;) можна взаємодіяти з елементами такими як: a, input <br>
+			opacity: 0; - (на відміну від display: none;) можна робити анімацію елементів<br>
+			Гарачий набір: <br>
+			op0.5 + Enter = opacity: 0.5 <br>
+		</div>
+		<div class="css">
+			css: <br>
+			.example-block-opacity { opacity: 0.3; } <br>
+			.example-string-opacity { opacity: 0.3; } <br>
+			.example-img-opacity { opacity: 0.3; } <br>
+			<br>
+		</div>
+		<div class="code">
+			<div class="example-block example-block-border-s example-block-opacity">
+				<a href="#">Unvisible</a><br>
+				Блочний тег div - class = "example-block example-block-border example-block-opacity" <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div>
+			<span class="example-string example-string-border example-block-opacity">
+				Строчний тег span - class = "example-string-border example-string-opacity" <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span>
+			<p class="p-img">Строчний тег img - class = "example-img-border example-img-opacity" <br>
+				<img class="example-img-border example-img-opacity" src="img/youtube.png" alt="">
+			</p>
+		</div>
+	</div>
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 6 - visibility призначена для відображення або скриття блоку</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			працює як блочними так і строчними елементами <br>
+			visibility: visible; - за замовчуванням<br>
+			visibility: hidden; - (на відміну від display: none;) як і opacity: 0; залишає місце під елемент роблячи його
+			прозорим<br>
+			visibility: hidden; - (на відміну від opacity: 0;) як і в display: none; не можна взаємодіяти з елементами<br>
+			Гарачий набір: <br>
+			v + Enter = visibility: hidden; <br>
+		</div>
+		<div class="css">
+			css: <br>
+			.example-block-visibility-h { visibility: hidden; } <br>
+			.example-string-visibility-h { visibility: hidden; } <br>
+			.example-img-visibility-h { visibility: hidden; } <br>
+			<br>
+		</div>
+		<div class="code">
+			<div class="example-block example-block-border-s example-block-visibility-h">
+				<a href="#">Unvisible</a><br>
+				Блочний тег div - class = "example-block example-block-border example-block-visibility-h" <br>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium distinctio minus odio non ea! Soluta
+				quam consequatur modi, animi dolorum enim possimus, dolore cumque, recusandae quasi assumenda amet facere
+				eligendi.
+			</div>
+			<span class="example-string example-string-border example-block-visibility-h">
+				Строчний тег span - class = "example-string-border example-string-visibility-h" <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis labore commodi officiis maiores quisquam esse
+				debitis minus?
+			</span>
+			<p class="p-img">Строчний тег img - class = "example-img-border example-img-visibility-h" <br>
+				<img class="example-img-border example-img-visibility-h" src="img/youtube.png" alt="">
+			</p>
+		</div>
+	</div>
 
 	<br>
 	<a href="https://meet.google.com/zvd-crbk-vgb">Англійський</a>

@@ -215,7 +215,8 @@ body {
 }
 
 .example-img-border-radius {
-	border-radius: 15px;
+	border-radius: 50%;
+	overflow: hidden;
 }
 
 /*Приклад 3 - outline-зовнішня границя блоку*/
@@ -253,4 +254,30 @@ body {
 
 .example-img-box-shadow {
 	box-shadow: 5px 5px 10px 5px red;
+}
+
+/*Приклад 5 - opacity визначає рівень прозорості елемента*/
+.example-block-opacity {
+	opacity: 0.3;
+}
+
+.example-string-opacity {
+	opacity: 0.3;
+}
+
+.example-img-opacity {
+	opacity: 0.3;
+}
+
+/*Приклад 6 - visibility призначена для відображення або скриття блоку*/
+.example-block-visibility-h {
+	visibility: hidden;
+}
+
+.example-string-visibility-h {
+	visibility: visible;
+}
+
+.example-img-visibility-h {
+	visibility: hidden;
 }
