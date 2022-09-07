@@ -142,3 +142,20 @@ body {
 .css {
 	background-color: #ddd;
 }
+
+a {
+	display: block;
+	border: 1px solid gold;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+}
+
+a:hover {
+	background-color: gold;
+}
+
+/*Приклад 1 - background-color*/
+.block-background-color {
+	background-color: yellowgreen;
+}
