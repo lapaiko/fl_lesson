@@ -1,1 +1,5 @@
 11_css - властивості і стилі оформлення блоків: background
+	- background або background-color - визначає колір фону елекмента
+	- background або background-image - встановлює фонове зображення елемента або задає градієнтн
+	- background або Background-repeat - визначає як буде повторюватись фонове зображення
+	- background або background-position - задає початкову положення фонового зображення

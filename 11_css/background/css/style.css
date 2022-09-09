@@ -108,24 +108,31 @@ h1 {
 	margin: 15px 10px;
 }
 
-html,
-body {
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	line-height: 16px;
-}
-
-h1 {
-	font-size: 20px;
+h2 {
+	font-size: 18px;
 }
 
 html,
 body {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	line-height: 16px;
+}
+
+
+
+html,
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	line-height: 16px;
+}
+
+body {
+	padding: 10px;
 }
 
 .example {
 	border: 1px solid #333;
+	margin: 0 0 20px 0;
 }
 
 .head,
@@ -155,7 +162,108 @@ a:hover {
 	background-color: gold;
 }
 
-/*Приклад 1 - background-color*/
+.code {
+	background: rgba(236, 232, 157, 1);
+	padding: 10px;
+}
+
+.block-decoration {
+	padding: 10px;
+	margin: 0 0 15px 0;
+	height: 220px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px#000;
+}
+
+/*Приклад 1 - background або background-color - визначає колір фону елекмента*/
+.block-background-color-transparent {
+	background: #18b5a4;
+	background: transparent;
+}
+
 .block-background-color {
-	background-color: yellowgreen;
+	background: #18b5a4;
+}
+
+.block-background-color-rgb {
+	background: rgb(24, 181, 164);
+}
+
+.block-background-color-rgba {
+	background: rgba(24, 181, 164, 0.5);
+}
+
+/*Приклад 2 - background або background-image - встановлює фонове зображення елемента або задає градієнтну заливку*/
+.block-background-image {
+	background: url('../img/bg_repeat.jpg');
+	opacity: 0.7;
+}
+
+.block-background-gradient-liner {
+	/* Old browsers */
+	background: rgb(236, 232, 157);
+	/* FF3.6-15 */
+	background: -moz-linear-gradient(top, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181, 164, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: -webkit-linear-gradient(top, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181, 164, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: linear-gradient(to bottom, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181, 164, 1) 100%);
+}
+
+.block-background-gradient-radial {
+
+	/* Old browsers */
+	background: rgb(236, 232, 157);
+	/* FF3.6-15 */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181, 164, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181, 164, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: radial-gradient(ellipse at center, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181, 164, 1) 100%);
+}
+
+/*Приклад 3 - background або Background-repeat - визначає як буде повторюватись фонове зображення*/
+.block-background-repeat-default {
+	background: url('../img/avatar.jpg') repeat;
+}
+
+.block-background-repeat-no {
+	background: url('../img/avatar.jpg') no-repeat;
+}
+
+.block-background-repeat-x {
+	background: url('../img/avatar.jpg') repeat-x;
+}
+
+.block-background-repeat-y {
+	background: url('../img/avatar.jpg') repeat-y;
+}
+
+.block-background-repeat-space {
+	background: url('../img/avatar.jpg') space;
+}
+
+.block-background-repeat-round {
+	background: url('../img/avatar.jpg') round;
+}
+
+/*Приклад 4 - background або background-position - задає початкову положення фонового зображення*/
+.block-background-position-default {
+	background: url('../img/avatar.jpg') 0 0 no-repeat;
+}
+
+.block-background-position-center {
+	background: url('../img/avatar.jpg') 50% no-repeat;
+}
+
+.block-background-position-left {
+	background: url('../img/avatar.jpg') 0 50% no-repeat;
+}
+
+.block-background-position-corner {
+	background: url('../img/avatar.jpg') 100% 100% no-repeat;
+}
+
+.block-background-position-place {
+	background: url('../img/avatar.jpg') 25px 30px no-repeat;
 }

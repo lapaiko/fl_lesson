@@ -15,7 +15,7 @@
 		жизни»</a>
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 1 - background-color</h2>
+			<h2>Приклад 1 - background або background-color - визначає колір фону елекмента</h2>
 		</div>
 		<div class="theory">Теорія: <br>
 			background керує фоном елемента, що встановлює: <br>
@@ -32,15 +32,175 @@
 		</div>
 		<div class="css">
 			css: <br>
-			.block-background-color { background-color: yellowgreen; } <br>
+			.block-background-color-transparent { background: #18b5a4; background: transparent; } <br>
+			.block-background-color { background: #18b5a4; } <br>
+			.block-background-color-rgb { background: rgb(24, 181, 164); } <br>
+			.block-background-color-rgba { background: rgba(24, 181, 164, 0.5); } де , 0.5 - прозорість <br>
+		</div>
+		<div class="link">
+			<a href="http://hex2rgba.devoth.com/">Коонвертація з HEX в RGBA</a>
 		</div>
 		<div class="code">
-			<div class="block-background-color">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, ullam ipsam officia maxime rerum ducimus
-				tempora qui illo ad expedita iste, esse molestias, modi porro! Aliquam dolor sapiente illo mollitia.
+			<div class="block-background-color-transparent block-decoration">
+				block-background-color-transparent
+			</div>
+			<div class="block-background-color block-decoration">
+				block-background-color
+			</div>
+			<div class="block-background-color-rgb block-decoration">
+				block-background-color-rgb
+			</div>
+			<div class="block-background-color-rgba block-decoration">
+				block-background-color-rgba
 			</div>
 		</div>
 	</div>
+
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 2 - background або background-image - встановлює фонове зображення елемента або задає градієнтну
+				заливку</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			Гарачий набір: <br>
+			bc + Tab = background-color: #fff;
+		</div>
+		<div class="css">
+			css: <br>
+			.block-background-image { background: url('img/avatar.jpg'); } <br> <br>
+			.block-background-gradient-liner {
+			/* Old browsers */ <br>
+			background: rgb(236, 232, 157); <br>
+			/* FF3.6-15 */ <br>
+			background: -moz-linear-gradient(top, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181, 164,
+			1) 100%); <br>
+			/* Chrome10-25,Safari5.1-6 */ <br>
+			background: -webkit-linear-gradient(top, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181,
+			164, 1) 100%); <br>
+			/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ <br>
+			background: linear-gradient(to bottom, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181, 164,
+			1) 100%); <br>
+			} <br> <br>
+
+			.block-background-gradient-radial {<br>
+			/* Old browsers */<br>
+			background: rgb(236, 232, 157);<br>
+			/* FF3.6-15 */<br>
+			background: -moz-radial-gradient(center, ellipse cover, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%,
+			rgba(24, 181, 164, 1) 100%);<br>
+			/* Chrome10-25,Safari5.1-6 */<br>
+			background: -webkit-radial-gradient(center, ellipse cover, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%,
+			rgba(24, 181, 164, 1) 100%);<br>
+			/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */<br>
+			background: radial-gradient(ellipse at center, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24,
+			181, 164, 1) 100%);<br>
+			}<br>
+		</div>
+		<div class="link">
+			<a href="https://www.colorzilla.com/gradient-editor/">Інструмент створення градієнту</a>
+		</div>
+		<div class="code">
+			<div class="block-background-image block-decoration">
+				block-background-image
+			</div>
+			<div class="block-background-gradient-liner block-decoration">
+				block-background-gradient-liner
+			</div>
+			<div class="block-background-gradient-radial block-decoration">
+				block-background-gradient-radial
+			</div>
+		</div>
+	</div>
+
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 3 - background або Background-repeat - визначає як буде повторюватись фонове зображення
+				заливку</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			- repeat - фонове зображення повторюється по горионталі та вертикалі
+			- no-repeat - фонове зображення не повторюється
+			- repeat-x - фонове зображення повторюється по осі Х
+			- repeat-y - фонове зображення повторюється по осі Y
+			- space - фонове зображення - повторються так, щоб заповнити весь простір, а решта місця між ними залишаться
+			порожнім
+			- round - фонове зображення - повторються так, щоб заповнити весь простір при цьому не рівномірно масштабуються
+			для заповненн порожнього простору
+			Гарачий набір: <br>
+			bc + Tab = background-color: #fff;
+		</div>
+		<div class="css">
+			css: <br>
+			.block-background-repeat-default{ background: url('../img/avatar.jpg') repeat; } <br>
+			.block-background-repeat-no{ background: url('../img/avatar.jpg') no-repeat; } <br>
+			.block-background-repeat-x{ background: url('../img/avatar.jpg') repeat-x; } <br>
+			.block-background-repeat-y{ background: url('../img/avatar.jpg') repeat-y; } <br>
+			.block-background-repeat-space{ background: url('../img/avatar.jpg') space; } <br>
+			.block-background-repeat-round{ background: url('../img/avatar.jpg') round; } <br>
+		</div>
+		<div class="code">
+			<div class="block-background-repeat-default block-decoration">
+				block-background-repeat-default
+			</div>
+			<div class="block-background-repeat-no block-decoration">
+				block-background-repeat-no
+			</div>
+			<div class="block-background-repeat-x block-decoration">
+				block-background-repeat-x
+			</div>
+			<div class="block-background-repeat-y block-decoration">
+				block-background-repeat-y
+			</div>
+			<div class="block-background-repeat-space block-decoration">
+				block-background-repeat-space
+			</div>
+			<div class="block-background-repeat-round block-decoration">
+				block-background-repeat-round
+			</div>
+		</div>
+	</div>
+
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 4 - background або background-position - задає початкову положення фонового зображення</h2>
+		</div>
+		<div class="theory">Теорія: <br>
+			- background-position: 0 0; - відступ по горизонталі = 0 і відступ по вертикалі =0 <br>
+			- background-position: 50%; - по центру <br>
+			- background-position: 0 50%; - зліва<br>
+			- background-position: 100% 100%; - в нижньому правому вуглі<br>
+			- background-position: 30px 20px; - відступ по горизонталі = 30px і відступ по вертикалі =20px <br>
+			Гарачий набір: <br>
+			bc + Tab = background-color: #fff;
+		</div>
+		<div class="css">
+			css: <br>
+			.block-background-position-default{ background: url('../img/avatar.jpg') 0 0 no-repeat; } <br>
+			.block-background-position-center{ background: url('../img/avatar.jpg') 50% no-repeat; } <br>
+			.block-background-position-left{ background: url('../img/avatar.jpg') 0 50% no-repeat; } <br>
+			.block-background-position-corner{ background: url('../img/avatar.jpg') 100% 100% no-repeat; } <br>
+			.block-background-position-place{ background: url('../img/avatar.jpg') 25px 30px no-repeat; } <br>
+		</div>
+		<div class="code">
+			<div class="block-background-position-default block-decoration">
+				block-background-position-default
+			</div>
+			<div class="block-background-position-center block-decoration">
+				block-background-position-center
+			</div>
+			<div class="block-background-position-left block-decoration">
+				block-background-position-left
+			</div>
+			<div class="block-background-position-corner block-decoration">
+				block-background-position-corner
+			</div>
+			<div class="block-background-position-place block-decoration">
+				block-background-position-place
+			</div>
+		</div>
+	</div>
+
+
 </body>
 
 </html>
