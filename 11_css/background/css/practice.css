@@ -1,0 +1,192 @@
+/*Обнулення рамок та відступів в усіх тегах*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*зміна принципу визначення ширини блоку - ширина блоку включає товщину рамок*/
+*,
+*::before,
+*::after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*Прибираємо лінії обводки тегів*/
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+/*Наступні теги визначаємо як блочні*/
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+/*Урівнювання поведінки шрифтів для всіз бразерів та платформ та забороняє самовільне збільшення шрифта*/
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/*Встановлюємо наслідування сімейства шрифта для тегів*/
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+/*Визначаємо параметри для тегів, що прибирають їх особливості у різних браузерах*/
+input::-ms-clear {
+	/*прибирає хрестик в input у ІЕ*/
+	display: none;
+}
+
+button {
+	/*при наведені курсору на кнопку він пертворюється на вказівник*/
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	/*Прибирають зайві відступи в FF*/
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	/*скидаємо оформлення посилання, що відвідувалось*/
+	text-decoration: none;
+}
+
+a:hover {
+	/*скидаємо оформлення посилання НА ЯКЕ НАВОДИТЬСЯ КУРСОР*/
+	text-decoration: none;
+}
+
+ul,
+li {
+	list-style: none;
+	/*чистка стилів маркованих стилів*/
+}
+
+img {
+	vertical-align: top;
+	/*Піднімаємо картинку в гору*/
+}
+
+/*Обнуляємо заголовків*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 700;
+}
+
+body {
+	background: url(../img/practica/line.png) 50% 0/auto auto no-repeat;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 840px;
+	margin: 100px auto;
+}
+
+
+.title {
+	margin: 0 0 20px 0;
+
+	text-align: center;
+	color: #999;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.head {
+	margin: 0 0 80px 0;
+	font-size: 40px;
+	line-height: 60px;
+	text-align: center;
+}
+
+.phohto {
+	margin: 0 0 90px 0;
+	padding: 10px;
+	background-color: #fff;
+}
+
+.text {
+	margin: 0 0 40px 0;
+	padding: 0 25px;
+	font-size: 26px;
+	line-height: 38px;
+}
+
+.list {
+	margin: 0 0 80px 0;
+	padding: 0 25px;
+	font-size: 24px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	line-height: 32px;
+}
+
+.list li {
+	padding: 0 0 0 30px;
+	background: url(../img/icons/li.svg)0 50% no-repeat;
+}
+
+li:nth-child(2) {
+	font-style: italic;
+	color: #18b5a4;
+}
+
+li:nth-child(3) {
+	font-weight: 700;
+}
+
+li:last-child {
+	text-decoration: line-through;
+	color: #999;
+}
+
+.buttom {
+
+	display: inline-block;
+	background: #18b5a4 url(../img/practica/pointer.png)90% 50% no-repeat;
+
+	padding: 10px 50px 10px 20px;
+
+	border-radius: 20px;
+	color: #ddd;
+
+	letter-spacing: 2px;
+	font-size: 14px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	text-transform: uppercase;
+}

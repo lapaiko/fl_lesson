@@ -135,11 +135,31 @@ body {
 	margin: 0 0 20px 0;
 }
 
-.head,
-.theory,
-.css {
+
+.descript,
+.code {
 	margin: 0 0 10px 0;
+}
+
+.head,
+.descript,
+.theory,
+.css,
+.code {
 	padding: 10px;
+}
+
+.descript {
+	background: #dfd;
+}
+
+.code {
+	background: #ffd;
+}
+
+.css span,
+.theory p {
+	font-weight: 700;
 }
 
 .theory {
@@ -162,10 +182,6 @@ a:hover {
 	background-color: gold;
 }
 
-.code {
-	background: rgba(236, 232, 157, 1);
-	padding: 10px;
-}
 
 .block-decoration {
 	padding: 10px;
@@ -173,6 +189,15 @@ a:hover {
 	height: 220px;
 	border-radius: 15px;
 	box-shadow: 0 0 10px#000;
+}
+
+.block-decoration p {
+	display: inline-block;
+	padding: 3px 5px;
+	font-weight: bold;
+	background-color: #ffa;
+	border-radius: 3px;
+	border: 1px solid #777;
 }
 
 /*Приклад 1 - background або background-color - визначає колір фону елекмента*/
@@ -195,7 +220,7 @@ a:hover {
 
 /*Приклад 2 - background або background-image - встановлює фонове зображення елемента або задає градієнтну заливку*/
 .block-background-image {
-	background: url('../img/bg_repeat.jpg');
+	background: url('../img/avatar.jpg');
 	opacity: 0.7;
 }
 
@@ -266,4 +291,76 @@ a:hover {
 
 .block-background-position-place {
 	background: url('../img/avatar.jpg') 25px 30px no-repeat;
+}
+
+/*Приклад 5 - background або background-attachment - визначає чи буде фонове зображення прокручуватись разом з змістом елемента*/
+.block-background-attachment-scroll {
+	background: url('../img/bg.jpg') 0 0 no-repeat scroll;
+}
+
+.block-background-attachment-fixed {
+	background: url('../img/bg.jpg') 0 0 no-repeat fixed;
+}
+
+.block-background-attachment-local {
+	background: url('../img/bg.jpg') 0 0 no-repeat local;
+	overflow-y: auto;
+}
+
+/*Приклад 6 - background або background-size - маштабує фонове зображення за вказаними розмірами.*/
+.block-background-size-default {
+	background: url('../img/bg.jpg')0 0/auto auto no-repeat;
+}
+
+.block-background-size-width {
+	background: url('../img/bg.jpg') 0 0/100% auto no-repeat;
+}
+
+.block-background-size-height {
+	background: url('../img/bg.jpg') 0 0/auto 100% no-repeat;
+}
+
+.block-background-size-strech {
+	background: url('../img/bg.jpg') 0 0/100% 100% no-repeat;
+}
+
+.block-background-size-contain {
+	background: url('../img/bg.jpg') 0 0/contain no-repeat;
+}
+
+.block-background-size-cover {
+	background: url('../img/bg.jpg') 50%/cover no-repeat;
+}
+
+.block-background-size-width-height {
+	background: url('../img/bg.jpg') 0 0/200px 150px no-repeat;
+}
+
+/*Приклад 7 - установка кількох фонових зображень*/
+.block-background-img-color {
+	background: #18b5a4 url('../img/avatar.jpg') no-repeat
+}
+
+.block-background-img-img {
+	background: url('../img/avatar_3.jpg') left no-repeat, url('../img/bg.jpg') 50%/cover no-repeat;
+}
+
+.block-background-img-img-img {
+	background: url('../img/avatar_2.jpg') right/50px no-repeat, url('../img/avatar_3.jpg') left no-repeat, url('../img/bg.jpg') 50%/cover no-repeat;
+}
+
+.block-background-img-img-img-img {
+	background: url('../img/avatar.jpg') 0 0/50px no-repeat, url('../img/avatar_2.jpg') 100% 100%/50px no-repeat, url('../img/avatar_3.jpg') 50% no-repeat, url('../img/bg.jpg') 50%/cover no-repeat;
+}
+
+/*Приклад 8 - вказівники списку фоновою картинкою*/
+.list {
+	margin: 0 0 50px 0;
+}
+
+.list li {
+	font-size: 24px;
+	margin: 0 0 15px 0;
+	background: url(../img/icons/li.svg) left 5px no-repeat;
+	padding: 0 0 0 30px;
 }

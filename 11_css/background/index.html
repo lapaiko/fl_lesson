@@ -13,194 +13,798 @@
 	<h1>CSS background</h1>
 	<a href="https://fls.guru/cssbackground.html">Шпаргалка (методичка) CSS властивості background. «Фрилансер по
 		жизни»</a>
+
+	<!--Приклад 1-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 1 - background або background-color - визначає колір фону елекмента</h2>
+			<h2>Приклад 1 - background або background-color</h2>
 		</div>
-		<div class="theory">Теорія: <br>
+		<div class="descript">Загальні відомості: <br>
 			background керує фоном елемента, що встановлює: <br>
 			- колір фону блочного елемента <br>
-			- градієнтне
-			- фонове зображення
-			- позицію фонового зображення
-			- задати метод прокрутки фонового зображення
-			- маштабувати фонове зображення згідно потрібних розмірів
-			background-color: #fff; - за замовчуванням
-			background-color: yellowgreen; та background: yellowgreen; - рівнозначні записи<br>
+			- градієнтне<br>
+			- фонове зображення<br>
+			- позицію фонового зображення<br>
+			- задати метод прокрутки фонового зображення<br>
+			- маштабувати фонове зображення згідно потрібних розмірів<br>
+			Примітка:<br>
+			- background-color: #fff; - за замовчуванням<br>
+			- background-color: yellowgreen; та background: yellowgreen; - рівнозначні записи<br>
 			Гарачий набір: <br>
-			bc + Tab = background-color: #fff;
-		</div>
-		<div class="css">
-			css: <br>
-			.block-background-color-transparent { background: #18b5a4; background: transparent; } <br>
-			.block-background-color { background: #18b5a4; } <br>
-			.block-background-color-rgb { background: rgb(24, 181, 164); } <br>
-			.block-background-color-rgba { background: rgba(24, 181, 164, 0.5); } де , 0.5 - прозорість <br>
+			- bc + Tab = background-color: #fff;
 		</div>
 		<div class="link">
 			<a href="http://hex2rgba.devoth.com/">Коонвертація з HEX в RGBA</a>
 		</div>
+
+		<div class="theory">
+			<p>transparent</p>
+			- фон прозорим, <br>
+			- місце під елемент залишається, <br>
+			- елемент активний
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-color-transparent { background: <span>transparent</span>; } </p>
+		</div>
 		<div class="code">
 			<div class="block-background-color-transparent block-decoration">
-				block-background-color-transparent
+				<p>block-background-color-transparent</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>#18b5a4; </p>
+			- встановлює 16-річний колір фону
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-color { background: <span>#18b5a4</span>; }</p>
+		</div>
+		<div class="code">
 			<div class="block-background-color block-decoration">
-				block-background-color
+				<p>block-background-color</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>rgb(24, 181, 164); </p>
+			- встановлює rgb - колір фону
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-color-rgb { background: <span>rgb(24, 181, 164);</span> } </p>
+		</div>
+		<div class="code">
 			<div class="block-background-color-rgb block-decoration">
-				block-background-color-rgb
+				<p>block-background-color-rgb</p>
 			</div>
-			<div class="block-background-color-rgba block-decoration">
-				block-background-color-rgba
+		</div>
+
+		<div class="theory">
+			<p>rgb(24, 181, 164); </p>
+			- встановлює rgb - колір фону з альфа-канлом (встановлює рівень прозорості від 0 до 1)
+		</div>
+		<div class="css">
+			<div class="css">
+				css:
+				<p>.block-background-color-rgba { background: <span>rgba(24, 181, 164, 0.5);</span>} де , 0.5 - прозорість
+					<br>
+				</p>
+			</div>
+			<div class="code">
+				<div class="block-background-color-rgba block-decoration">
+					<p>block-background-color-rgba</p>
+				</div>
 			</div>
 		</div>
 	</div>
 
+	<!--Приклад 2-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 2 - background або background-image - встановлює фонове зображення елемента або задає градієнтну
-				заливку</h2>
+			<h2>Приклад 2 - background або background-image</h2>
 		</div>
-		<div class="theory">Теорія: <br>
+		<div class="descript">Загальні відомості: <br>
+			- встановлює фонове зображення елемента або задає градієнтну заливку <br>
 			Гарачий набір: <br>
-			bc + Tab = background-color: #fff;
-		</div>
-		<div class="css">
-			css: <br>
-			.block-background-image { background: url('img/avatar.jpg'); } <br> <br>
-			.block-background-gradient-liner {
-			/* Old browsers */ <br>
-			background: rgb(236, 232, 157); <br>
-			/* FF3.6-15 */ <br>
-			background: -moz-linear-gradient(top, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181, 164,
-			1) 100%); <br>
-			/* Chrome10-25,Safari5.1-6 */ <br>
-			background: -webkit-linear-gradient(top, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181,
-			164, 1) 100%); <br>
-			/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ <br>
-			background: linear-gradient(to bottom, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24, 181, 164,
-			1) 100%); <br>
-			} <br> <br>
-
-			.block-background-gradient-radial {<br>
-			/* Old browsers */<br>
-			background: rgb(236, 232, 157);<br>
-			/* FF3.6-15 */<br>
-			background: -moz-radial-gradient(center, ellipse cover, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%,
-			rgba(24, 181, 164, 1) 100%);<br>
-			/* Chrome10-25,Safari5.1-6 */<br>
-			background: -webkit-radial-gradient(center, ellipse cover, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%,
-			rgba(24, 181, 164, 1) 100%);<br>
-			/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */<br>
-			background: radial-gradient(ellipse at center, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24,
-			181, 164, 1) 100%);<br>
-			}<br>
+			- bc + Tab = background-color: #fff;
 		</div>
 		<div class="link">
 			<a href="https://www.colorzilla.com/gradient-editor/">Інструмент створення градієнту</a>
 		</div>
+
+		<div class="theory">
+			<p>url('img/avatar.jpg');</p>
+			- встановлює зображення фону елемента
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-image { background: <span>url('img/avatar.jpg')</span>; }</p>
+		</div>
 		<div class="code">
 			<div class="block-background-image block-decoration">
-				block-background-image
+				<p>block-background-image</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>rgb(236, 232, 157);</p>
+			- градієнтна заливка для старих браузерів - не працює
+			<p>-moz-linear-gradient</p>
+			- градієнтна заливка фона для FF3.6-15
+			<p>-webkit-linear-gradient</p>
+			- градієнтна заливка фона для Chrome10-25,Safari5.1-6
+			<p>linear-gradient</p>
+			- градієнтна заливка фона для W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+		</div>
+		<div class="css">
+			css:
+			.block-background-gradient-liner {
+			/* Old browsers */ <br>
+			<p>background: <span>rgb(236, 232, 157);</span></p>
+			/* FF3.6-15 */ <br>
+			<p>background: <span>-moz-linear-gradient(top, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24,
+					181, 164, 1) 100%);</span></p>
+			/* Chrome10-25,Safari5.1-6 */ <br>
+			<p>background: <span>-webkit-linear-gradient(top, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24,
+					181, 164, 1) 100%);</span></p>
+			/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ <br>
+			<p>background: <span>linear-gradient(to bottom, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24,
+					181, 164, 1) 100%);</span>}</p>
+		</div>
+		<div class="code">
 			<div class="block-background-gradient-liner block-decoration">
-				block-background-gradient-liner
+				<p>block-background-gradient-liner</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>rgb(236, 232, 157);</p>
+			- градієнтна заливка для старих браузерів - не працює
+			<p>-moz-radial-gradient</p>
+			- градієнтна заливка фона для FF3.6-15
+			<p>-webkit-radial-gradient</p>
+			- градієнтна заливка фона для Chrome10-25,Safari5.1-6
+			<p>radial-gradient</p>
+			- градієнтна заливка фона для W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+		</div>
+		<div class="css">
+			css:
+			.block-background-gradient-radial {<br>
+			/* Old browsers */<br>
+			<p>background: <span>rgb(236, 232, 157);</span></p>
+			/* FF3.6-15 */
+			<p>
+				background: <span>
+					-moz-radial-gradient(center, ellipse cover, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%,
+					rgba(24, 181, 164, 1) 100%);
+				</span><br>
+			</p>
+			/* Chrome10-25,Safari5.1-6 */<br>
+			<p>
+				background: <span>
+					-webkit-radial-gradient(center, ellipse cover, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1)
+					50%,
+					rgba(24, 181, 164, 1) 100%)
+				</span>;<br>
+			</p>
+			/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */<br>
+			<p>
+				background: <span>
+					radial-gradient(ellipse at center, rgba(236, 232, 157, 1) 0%, rgba(94, 83, 115, 1) 50%, rgba(24,
+					181, 164, 1) 100%)
+				</span>;<br>
+			</p>
+			}<br>
+		</div>
+		<div class="code">
 			<div class="block-background-gradient-radial block-decoration">
-				block-background-gradient-radial
+				<p>block-background-gradient-radial</p>
 			</div>
 		</div>
 	</div>
 
+
+	<!--Приклад 3-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 3 - background або Background-repeat - визначає як буде повторюватись фонове зображення
-				заливку</h2>
+			<h2>Приклад 3 - background або background-repeat</h2>
 		</div>
-		<div class="theory">Теорія: <br>
-			- repeat - фонове зображення повторюється по горионталі та вертикалі
-			- no-repeat - фонове зображення не повторюється
-			- repeat-x - фонове зображення повторюється по осі Х
-			- repeat-y - фонове зображення повторюється по осі Y
-			- space - фонове зображення - повторються так, щоб заповнити весь простір, а решта місця між ними залишаться
-			порожнім
-			- round - фонове зображення - повторються так, щоб заповнити весь простір при цьому не рівномірно масштабуються
-			для заповненн порожнього простору
+		<div class="descript">Загальні відомості: <br>
+			- визначає як буде повторюватись фонове зображення <br>
 			Гарачий набір: <br>
-			bc + Tab = background-color: #fff;
+			- bc + Tab = background-color: #fff;
+		</div>
+
+		<div class="theory">
+			<p>repeat </p>
+			- фонове зображення повторюється по горионталі та вертикалі
 		</div>
 		<div class="css">
-			css: <br>
-			.block-background-repeat-default{ background: url('../img/avatar.jpg') repeat; } <br>
-			.block-background-repeat-no{ background: url('../img/avatar.jpg') no-repeat; } <br>
-			.block-background-repeat-x{ background: url('../img/avatar.jpg') repeat-x; } <br>
-			.block-background-repeat-y{ background: url('../img/avatar.jpg') repeat-y; } <br>
-			.block-background-repeat-space{ background: url('../img/avatar.jpg') space; } <br>
-			.block-background-repeat-round{ background: url('../img/avatar.jpg') round; } <br>
+			css:
+			<p>.block-background-repeat-default{ background: url('../img/avatar.jpg') <span>repeat</span>; } </p>
 		</div>
 		<div class="code">
 			<div class="block-background-repeat-default block-decoration">
-				block-background-repeat-default
+				<p>block-background-repeat-default</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>no-repeat </p>
+			- фонове зображення не повторюється
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-repeat-no{ background: url('../img/avatar.jpg') <span>no-repeat</span>; } </p>
+		</div>
+		<div class="code">
 			<div class="block-background-repeat-no block-decoration">
-				block-background-repeat-no
+				<p>block-background-repeat-no</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>repeat-x </p>
+			- фонове зображення повторюється по осі Х
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-repeat-x{ background: url('../img/avatar.jpg') <span>repeat-x</span>; } </p>
+		</div>
+		<div class="code">
 			<div class="block-background-repeat-x block-decoration">
-				block-background-repeat-x
+				<p>block-background-repeat-x</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>repeat-y </p>
+			- фонове зображення повторюється по осі Y
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-repeat-y{ background: url('../img/avatar.jpg') <span>repeat-y</span>; } </p>
+		</div>
+		<div class="code">
 			<div class="block-background-repeat-y block-decoration">
-				block-background-repeat-y
+				<p>block-background-repeat-y</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>space </p>
+			- фонове зображення - повторються так, щоб заповнити весь простір, а решта місця між ними залишаться
+			порожнім
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-repeat-space{ background: url('../img/avatar.jpg') <span>space</span>; } </p>
+		</div>
+		<div class="code">
 			<div class="block-background-repeat-space block-decoration">
-				block-background-repeat-space
+				<p>block-background-repeat-space</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>round </p>
+			- фонове зображення - повторються так, щоб заповнити весь простір при цьому не рівномірно
+			масштабуються для заповненн порожнього простору
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-repeat-round{ background: url('../img/avatar.jpg') <span>round</span>; } </p>
+		</div>
+		<div class="code">
 			<div class="block-background-repeat-round block-decoration">
-				block-background-repeat-round
+				<p>block-background-repeat-round</p>
 			</div>
 		</div>
 	</div>
 
+
+	<!--Приклад 4-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 4 - background або background-position - задає початкову положення фонового зображення</h2>
+			<h2>Приклад 4 - background або background-position</h2>
 		</div>
-		<div class="theory">Теорія: <br>
-			- background-position: 0 0; - відступ по горизонталі = 0 і відступ по вертикалі =0 <br>
-			- background-position: 50%; - по центру <br>
-			- background-position: 0 50%; - зліва<br>
-			- background-position: 100% 100%; - в нижньому правому вуглі<br>
-			- background-position: 30px 20px; - відступ по горизонталі = 30px і відступ по вертикалі =20px <br>
+		<div class="descript">Загальні відомості: <br>
+			- задає початкову положення фонового зображення <br>
 			Гарачий набір: <br>
-			bc + Tab = background-color: #fff;
+			- bc + Tab = background-color: #fff;
+		</div>
+
+		<div class="theory">
+			<p>background-position: 0 0; </p>
+			- відступ по горизонталі = 0 і відступ по вертикалі =0 <br>
 		</div>
 		<div class="css">
-			css: <br>
-			.block-background-position-default{ background: url('../img/avatar.jpg') 0 0 no-repeat; } <br>
-			.block-background-position-center{ background: url('../img/avatar.jpg') 50% no-repeat; } <br>
-			.block-background-position-left{ background: url('../img/avatar.jpg') 0 50% no-repeat; } <br>
-			.block-background-position-corner{ background: url('../img/avatar.jpg') 100% 100% no-repeat; } <br>
-			.block-background-position-place{ background: url('../img/avatar.jpg') 25px 30px no-repeat; } <br>
+			css:
+			<p>.block-background-position-default{ background: url('../img/avatar.jpg') <span>0 0</span> no-repeat; } <br>
+			</p>
 		</div>
 		<div class="code">
 			<div class="block-background-position-default block-decoration">
-				block-background-position-default
+				<p>block-background-position-default</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>background-position: 50%; </p>
+			- по центру <br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-position-center{ background: url('../img/avatar.jpg') <span>50%</span> no-repeat; } <br>
+			</p>
+		</div>
+		<div class="code">
 			<div class="block-background-position-center block-decoration">
-				block-background-position-center
+				<p>block-background-position-center</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>background-position: 0 50%; </p>
+			- зліва
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-position-left{ background: url('../img/avatar.jpg') <span>0 50%</span> no-repeat; }</p>
+		</div>
+		<div class="code">
 			<div class="block-background-position-left block-decoration">
-				block-background-position-left
+				<p>block-background-position-left</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>background-position: 100% 100%; </p>
+			- в нижньому правому вуглі<br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-position-corner{ background: url('../img/avatar.jpg') <span>100% 100%</span> no-repeat; }
+			</p>
+		</div>
+		<div class="code">
 			<div class="block-background-position-corner block-decoration">
-				block-background-position-corner
+				<p>block-background-position-corner</p>
 			</div>
+		</div>
+
+		<div class="theory">
+			<p>background-position: 25px 30px;</p>
+			- відступ по горизонталі = 30px і відступ по вертикалі =20px <br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-position-place{ background: url('../img/avatar.jpg') <span>25px 30px</span> no-repeat; }
+			</p>
+		</div>
+		<div class="code">
 			<div class="block-background-position-place block-decoration">
-				block-background-position-place
+				<p>block-background-position-place</p>
+			</div>
+		</div>
+	</div>
+
+	<!--Приклад 5-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 5 - background або background-attachment</h2>
+		</div>
+		<div class="descript"> Загальні відомості:<br>
+			- визначає чи буде фонове зображення прокручуватись разом з змістом елемента
+		</div>
+		<div class="theory">
+			<p>scroll</p>
+			- дозволяє перміщатись фону разом з вікном браузера
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-attachment-scroll {background: url('../img/bg.jpg') 0 0 no-repeat <span>scroll</span>; }
+			</p>
+		</div>
+		<div class="code">
+			<div class="block-background-attachment-scroll block-decoration">
+				<p>block-background-attachment-scroll</p>
+			</div>
+		</div>
+
+		<div class="theory">
+			<p>fixed </p>
+			- фонове зображення стає нерухомим та встанлює його положення відносно вікна браузера<br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-attachment-fixed {background: url('../img/bg.jpg') 0 0 no-repeat <span>fixed</span>; }</p>
+		</div>
+		<div class="code">
+			<div class="block-background-attachment-fixed block-decoration">
+				<p>block-background-attachment-fixed</p>
+			</div>
+		</div>
+
+		<div class="theory">
+			<p>local</p>
+			- фон фіксується з врахуванням поведінки елементу. Якщо елемент має прокрутку, то фон буде
+			прокручуватись разом із змістом, але фон, що виходить за рамки елементу залишається на місці і не покриває
+			зміст
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-attachment-local {background: url('../img/bg.jpg') 0 0 no-repeat <span>local</span>; }</p>
+		</div>
+		<div class="code">
+			<div class="block-background-attachment-local block-decoration">
+				<p>block-background-attachment-local</p> <br>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore ducimus reprehenderit cum
+				molestias vero et libero ipsam suscipit veniam aliquid, assumenda, sint incidunt atque molestiae, commodi
+				quidem dolor odio!
+				Eius facilis ut quas explicabo, molestiae veniam tempore ad maxime exercitationem aliquid quidem odio
+				reiciendis, soluta nulla error dolor natus. Id blanditiis rem repudiandae nihil odit aliquid voluptatem
+				quia
+				cum.
+				Magni impedit similique voluptate blanditiis perspiciatis rerum tenetur maiores consequatur. In sint sit,
+				laboriosam veniam, at ab, dolor molestias quas dolorum nihil fugiat dolorem necessitatibus optio? Sit
+				optio
+				dolores quidem?
+				Unde repellat eaque autem architecto culpa cum ducimus porro numquam nam, quaerat necessitatibus eum
+				voluptatibus exercitationem minima animi totam? Pariatur aperiam facere placeat, ex autem officiis enim
+				accusantium ea veritatis!
+				Incidunt enim accusantium hic modi facilis corporis laborum aperiam sint est! Esse doloremque id ducimus,
+				reiciendis sapiente voluptate repudiandae deserunt consectetur corrupti obcaecati, quod quibusdam natus
+				distinctio officiis. Voluptate, commodi!
+				Ipsa, maiores. Ex repellat sapiente accusamus sunt itaque, reprehenderit aspernatur dicta veritatis
+				voluptatum laboriosam in, consequatur similique aliquid unde autem, alias dolorum laudantium. Placeat
+				sequi
+				alias quos. Earum, quod exercitationem!
+				At eveniet dolorem sint voluptate culpa debitis reiciendis commodi, nemo est amet. Commodi veniam dolores
+				facilis, reiciendis nesciunt doloribus laboriosam alias cupiditate eaque, voluptatibus deserunt nobis.
+				Exercitationem quibusdam magnam necessitatibus!
+				Explicabo maiores ab ad reprehenderit temporibus expedita tenetur rerum soluta nostrum error atque
+				perspiciatis fugit illum nesciunt quia, eius id non fuga maxime quod corporis accusamus animi.
+				Aspernatur,
+				ducimus accusamus.
+				Nesciunt aliquid rerum veritatis exercitationem cum corporis similique nobis placeat tenetur earum quia
+				porro aperiam repellat architecto, autem ut illum voluptatem accusamus quas dolores. Ipsum ex provident
+				libero velit quidem!
+				Hic tenetur, soluta similique impedit quas eligendi amet magni voluptatem sed, beatae autem ullam
+				veritatis
+				ex voluptatibus veniam repellendus tempore, incidunt officia. Iste nemo veniam magni sint molestiae
+				pariatur
+				atque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore ducimus reprehenderit
+				cum
+				molestias vero et libero ipsam suscipit veniam aliquid, assumenda, sint incidunt atque molestiae, commodi
+				quidem dolor odio!
+				Eius facilis ut quas explicabo, molestiae veniam tempore ad maxime exercitationem aliquid quidem odio
+				reiciendis, soluta nulla error dolor natus. Id blanditiis rem repudiandae nihil odit aliquid voluptatem
+				quia
+				cum.
+				Magni impedit similique voluptate blanditiis perspiciatis rerum tenetur maiores consequatur. In sint sit,
+				laboriosam veniam, at ab, dolor molestias quas dolorum nihil fugiat dolorem necessitatibus optio? Sit
+				optio
+				dolores quidem?
+				Unde repellat eaque autem architecto culpa cum ducimus porro numquam nam, quaerat necessitatibus eum
+				voluptatibus exercitationem minima animi totam? Pariatur aperiam facere placeat, ex autem officiis enim
+				accusantium ea veritatis!
+				Incidunt enim accusantium hic modi facilis corporis laborum aperiam sint est! Esse doloremque id ducimus,
+				reiciendis sapiente voluptate repudiandae deserunt consectetur corrupti obcaecati, quod quibusdam natus
+				distinctio officiis. Voluptate, commodi!
+				Ipsa, maiores. Ex repellat sapiente accusamus sunt itaque, reprehenderit aspernatur dicta veritatis
+				voluptatum laboriosam in, consequatur similique aliquid unde autem, alias dolorum laudantium. Placeat
+				sequi
+				alias quos. Earum, quod exercitationem!
+				At eveniet dolorem sint voluptate culpa debitis reiciendis commodi, nemo est amet. Commodi veniam dolores
+				facilis, reiciendis nesciunt doloribus laboriosam alias cupiditate eaque, voluptatibus deserunt nobis.
+				Exercitationem quibusdam magnam necessitatibus!
+				Explicabo maiores ab ad reprehenderit temporibus expedita tenetur rerum soluta nostrum error atque
+				perspiciatis fugit illum nesciunt quia, eius id non fuga maxime quod corporis accusamus animi.
+				Aspernatur,
+				ducimus accusamus.
+				Nesciunt aliquid rerum veritatis exercitationem cum corporis similique nobis placeat tenetur earum quia
+				porro aperiam repellat architecto, autem ut illum voluptatem accusamus quas dolores. Ipsum ex provident
+				libero velit quidem!
+				Hic tenetur, soluta similique impedit quas eligendi amet magni voluptatem sed, beatae autem ullam
+				veritatis
+				ex voluptatibus veniam repellendus tempore, incidunt officia. Iste nemo veniam magni sint molestiae
+				pariatur
+				atque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore ducimus reprehenderit
+				cum
+				molestias vero et libero ipsam suscipit veniam aliquid, assumenda, sint incidunt atque molestiae, commodi
+				quidem dolor odio!
+				Eius facilis ut quas explicabo, molestiae veniam tempore ad maxime exercitationem aliquid quidem odio
+				reiciendis, soluta nulla error dolor natus. Id blanditiis rem repudiandae nihil odit aliquid voluptatem
+				quia
+				cum.
+				Magni impedit similique voluptate blanditiis perspiciatis rerum tenetur maiores consequatur. In sint sit,
+				laboriosam veniam, at ab, dolor molestias quas dolorum nihil fugiat dolorem necessitatibus optio? Sit
+				optio
+				dolores quidem?
+				Unde repellat eaque autem architecto culpa cum ducimus porro numquam nam, quaerat necessitatibus eum
+				voluptatibus exercitationem minima animi totam? Pariatur aperiam facere placeat, ex autem officiis enim
+				accusantium ea veritatis!
+				Incidunt enim accusantium hic modi facilis corporis laborum aperiam sint est! Esse doloremque id ducimus,
+				reiciendis sapiente voluptate repudiandae deserunt consectetur corrupti obcaecati, quod quibusdam natus
+				distinctio officiis. Voluptate, commodi!
+				Ipsa, maiores. Ex repellat sapiente accusamus sunt itaque, reprehenderit aspernatur dicta veritatis
+				voluptatum laboriosam in, consequatur similique aliquid unde autem, alias dolorum laudantium. Placeat
+				sequi
+				alias quos. Earum, quod exercitationem!
+				At eveniet dolorem sint voluptate culpa debitis reiciendis commodi, nemo est amet. Commodi veniam dolores
+				facilis, reiciendis nesciunt doloribus laboriosam alias cupiditate eaque, voluptatibus deserunt nobis.
+				Exercitationem quibusdam magnam necessitatibus!
+				Explicabo maiores ab ad reprehenderit temporibus expedita tenetur rerum soluta nostrum error atque
+				perspiciatis fugit illum nesciunt quia, eius id non fuga maxime quod corporis accusamus animi.
+				Aspernatur,
+				ducimus accusamus.
+				Nesciunt aliquid rerum veritatis exercitationem cum corporis similique nobis placeat tenetur earum quia
+				porro aperiam repellat architecto, autem ut illum voluptatem accusamus quas dolores. Ipsum ex provident
+				libero velit quidem!
+				Hic tenetur, soluta similique impedit quas eligendi amet magni voluptatem sed, beatae autem ullam
+				veritatis
+				ex voluptatibus veniam repellendus tempore, incidunt officia. Iste nemo veniam magni sint molestiae
+				pariatur
+				atque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore ducimus reprehenderit
+				cum
+				molestias vero et libero ipsam suscipit veniam aliquid, assumenda, sint incidunt atque molestiae, commodi
+				quidem dolor odio!
+				Eius facilis ut quas explicabo, molestiae veniam tempore ad maxime exercitationem aliquid quidem odio
+				reiciendis, soluta nulla error dolor natus. Id blanditiis rem repudiandae nihil odit aliquid voluptatem
+				quia
+				cum.
+				Magni impedit similique voluptate blanditiis perspiciatis rerum tenetur maiores consequatur. In sint sit,
+				laboriosam veniam, at ab, dolor molestias quas dolorum nihil fugiat dolorem necessitatibus optio? Sit
+				optio
+				dolores quidem?
+				Unde repellat eaque autem architecto culpa cum ducimus porro numquam nam, quaerat necessitatibus eum
+				voluptatibus exercitationem minima animi totam? Pariatur aperiam facere placeat, ex autem officiis enim
+				accusantium ea veritatis!
+				Incidunt enim accusantium hic modi facilis corporis laborum aperiam sint est! Esse doloremque id ducimus,
+				reiciendis sapiente voluptate repudiandae deserunt consectetur corrupti obcaecati, quod quibusdam natus
+				distinctio officiis. Voluptate, commodi!
+				Ipsa, maiores. Ex repellat sapiente accusamus sunt itaque, reprehenderit aspernatur dicta veritatis
+				voluptatum laboriosam in, consequatur similique aliquid unde autem, alias dolorum laudantium. Placeat
+				sequi
+				alias quos. Earum, quod exercitationem!
+				At eveniet dolorem sint voluptate culpa debitis reiciendis commodi, nemo est amet. Commodi veniam dolores
+				facilis, reiciendis nesciunt doloribus laboriosam alias cupiditate eaque, voluptatibus deserunt nobis.
+				Exercitationem quibusdam magnam necessitatibus!
+				Explicabo maiores ab ad reprehenderit temporibus expedita tenetur rerum soluta nostrum error atque
+				perspiciatis fugit illum nesciunt quia, eius id non fuga maxime quod corporis accusamus animi.
+				Aspernatur,
+				ducimus accusamus.
+				Nesciunt aliquid rerum veritatis exercitationem cum corporis similique nobis placeat tenetur earum quia
+				porro aperiam repellat architecto, autem ut illum voluptatem accusamus quas dolores. Ipsum ex provident
+				libero velit quidem!
+				Hic tenetur, soluta similique impedit quas eligendi amet magni voluptatem sed, beatae autem ullam
+				veritatis
+				ex voluptatibus veniam repellendus tempore, incidunt officia. Iste nemo veniam magni sint molestiae
+				pariatur
+				atque!
 			</div>
 		</div>
 	</div>
 
 
+
+	<!--Приклад 6-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 6 - background або background-size</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- маштабує фонове зображення за вказаними розмірами <br>
+			- 0 0/100% 100% no-repeat - перше 100% - встановлю ширину в %/px, а другі 100% - встановлють висоту в %/px;
+		</div>
+
+		<div class="theory">
+			<p>/ auto auto</p>
+			- за замовчуванням <br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-size-default {background: url('../img/bg.jpg')0 0/<span>auto auto</span> no-repeat; }</p>
+		</div>
+		<div class="code">
+			<div class="block-background-size-default block-decoration">
+				<p>block-background-attachment-size-default</p>
+			</div>
+		</div>
+
+		<div class="theory">
+			<p>/ 100% auto</p>
+			- встановлює ширину картинки <br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-size-width {background: url('../img/bg.jpg') 0 0/<span>100% auto</span> no-repeat; }</p>
+		</div>
+		<div class="code">
+			<div class="block-background-size-width block-decoration">
+				<p>block-background-attachment-size-width</p>
+			</div>
+		</div>
+
+		<div class="theory">
+			<p>/ auto 100% </p>
+			- встановлює висоту картинки <br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-size-height {background: url('../img/bg.jpg') 0 0/auto 100% no-repeat; }</p>
+		</div>
+		<div class="code">
+			<div class="block-background-size-height block-decoration">
+				<p>block-background-attachment-size-height</p>
+			</div>
+		</div>
+
+		<div class="theory">
+			<p>/ 100% 100%</p>
+			- розтягує картинку фону на всю ширину та довжину блоку<br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-size-strech {background: url('../img/bg.jpg') 0 0/<span>100% 100%</span> no-repeat; }</p>
+		</div>
+		<div class="code">
+			<div class="block-background-size-strech block-decoration">
+				<p>block-background-attachment-size-strech</p>
+			</div>
+		</div>
+
+		<div class="theory">
+			<p>/ contain</p>
+			- маштабує зображення з ЗБЕРЕЖЕННЯМ ПРОПОРЦІЙ по МЕНШІЙ стороні КАРТИНКИ - ширина
+			або
+			висота КАРТИНИ рівна ширині або висоті БЛОКУ<br>
+		</div>
+		<div class="css">
+			css:
+			.block-background-size-contain {background: url('../img/bg.jpg') 0 0/<span>contain</span> no-repeat; } <br>
+		</div>
+		<div class="code">
+			<div class="block-background-size-contain block-decoration">
+				<p>block-background-attachment-size-contain</p>
+			</div>
+		</div>
+
+		<div class="theory">
+			<p>/ cover</p>
+			- маштабує картинку з ЗБЕРЕЖЕННЯМ ПРОПОРЦІЙ по БІЛЬШІЙ стороні КАРТИНКИ - ширина або
+			висота КАРТИНИ рівна ширині або висоті БЛОКУ<br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-size-cover {background: url('../img/bg.jpg') 50%/<span>cover</span> no-repeat; }</p>
+		</div>
+		<div class="code">
+			<div class="block-background-size-cover block-decoration">
+				<p>block-background-size-cover</p>
+			</div>
+		</div>
+
+		<div class="theory">
+			<p>/ 200px 150px</p>
+			- встановлює ширину і висоту фонової картинки. ОДНЕ значення встановлює ширину
+			картинки а висота приймає значення auto прицьому зберігаються ПРОПОРЦІЇ КАРТИНКИ.
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-size-width-height {background: url('../img/bg.jpg') 0 0/<span>200px 150px</span>
+				no-repeat; }</p>
+		</div>
+		<div class="code">
+			<div class="block-background-size-width-height block-decoration">
+				<p>block-background-size-width-height</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!--Приклад 7-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 7 - установка кількох фонових зображень</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- властивості background дозволяють задати кілька фонових зображень одному блоку <br>
+			- кожне зображення матиме свої налаштування позиціонування, маштабуваня та прокрутки <br>
+			- фонові зображення вказуються через кому
+		</div>
+
+		<div class="theory">
+			<p>#18b5a4 url('../img/avatar.jpg') no-repeat</p>
+			- колір фону + одна картинка без повтору <br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-img-color {background: <span>#18b5a4 url('../img/avatar.jpg') no-repeat</span> }</p>
+		</div>
+		<div class="code">
+			<div class="block-background-img-color block-decoration">
+				<p>block-background-img-color</p>
+			</div>
+		</div>
+
+		<div class="theory">
+			<p>url('../img/avatar_3.jpg') left no-repeat, url('../img/bg.jpg') 50%/cover no-repeat; </p>
+			- дві картинки фону
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-img-img { background: <span>url('../img/avatar_3.jpg') left no-repeat,
+					url('../img/bg.jpg')
+					50%/cover no-repeat; </span>}</p>
+		</div>
+		<div class="code">
+			<div class="block-background-img-img block-decoration">
+				<p>block-background-img-img</p>
+			</div>
+		</div>
+
+		<div class="theory">
+			<p>/ contain</p>
+			- три картинки фону<br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-img-img-img { background: <span>url('../img/avatar_2.jpg') right/50px no-repeat,
+					url('../img/avatar_3.jpg') left no-repeat, url('../img/bg.jpg') 50%/cover no-repeat; </span>}</p>
+		</div>
+		<div class="code">
+			<div class="block-background-img-img-img block-decoration">
+				<p>block-background-img-img-img</p>
+			</div>
+		</div>
+
+		<div class="theory">
+			<p>/ cover</p>
+			- чотири картинки фону<br>
+		</div>
+		<div class="css">
+			css:
+			<p>.block-background-img-img-img-img { background: <span>url('../img/avatar.jpg') 0 0/50px no-repeat,
+					url('../img/avatar_2.jpg') 100% 100%/50px no-repeat, url('../img/avatar_3.jpg') 50% no-repeat,
+					url('../img/bg.jpg') 50%/cover no-repeat;</span> }</p>
+		</div>
+		<div class="code">
+			<div class="block-background-img-img-img-img block-decoration">
+				<p>block-background-img-img-img-img</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!--Приклад 8-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 8 - вказівники списку фоновою картинкою</h2>
+		</div>
+		<div class="theory">
+			<p>#18b5a4 url('../img/avatar.jpg') no-repeat</p>
+			- колір фону + одна картинка без повтору <br>
+		</div>
+		<div class="css">
+			css:
+		</div>
+		<div class="code">
+			<div class="block-decoration">
+				<ul class="list">
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nihil! Repellat modi obcaecati
+						commodi nulla totam dicta illo voluptatem recusandae repudiandae, esse repellendus. Ipsum nobis alias
+						voluptates dolorum iusto facilis.</li>
+					<li>Lorem</li>
+					<li>Lorem</li>
+					<li>Lorem</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
