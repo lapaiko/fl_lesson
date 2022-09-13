@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 10 Теорія css - псевдокласи</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<h1>Урок 10 Теорія css - псевдокласи</h1>
+	<div class="css">Стенд<br>
+		css:
+		.block { margin: 0 0 30px 0; } <br>
+		.block p { font-size: 18px; line-height: 24px; margin: 0 0 20px 0; } <br>
+		.link { color: red; } <br>
+		.textinput { border: 1px solid #666; height: 50px; padding: 0 15px; font-size: 18px; width: 300px; margin: 0 0
+		10px 0; } <br>
+		.textbutton { display: block; width: 300px; height: 50px; background: #666; font-size: 18px; color: #fff;
+		text-transform: uppercase; margin: 0 0 30px 0; } <br>
+		.list {} <br>
+		.list li font-size: 18px; margin: 0 0 15px 0;
+	</div> <br>
+	<!--Приклад 1-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 1 - hover</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- спрацьовує при наведені на елемент
+			- використовується всіх елементів
+		</div>
+		<div class="theory">
+			<p>:hover</p>
+			- наведення на ссилку<br>
+			<p>div::hover</p>
+			- наведення на блок<br>
+		</div>
+		<div class="css">
+			css:
+			<p>.link:<span>hover</span> {text-decoration: underline; color: blue; }</p>
+			<p>.block:<span>hover</span> { background: blue; }</p>
+			<p>.textbutton:<span>hover</span> { background: #333; color: yellow; }</p>
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<p><a class="link" href="#">Lorem</a> ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+					rerum sequi
+					officiis explicabo, voluptatum provident recusandae ipsa illo necessitatibus dolore iste consectetur
+					expedita incidunt vitae similique autem dignissimos repellendus totam?</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus eligendi quis veniam dignissimos a dolore
+					beatae eveniet amet illo omnis. Veniam fuga non vero. Nam vero magni dignissimos deleniti tempore?</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda alias nihil sapiente sed,
+					commodi voluptas iste odio a saepe quisquam tenetur repellat magni accusantium quibusdam deleniti facere
+					velit expedita.</p>
+			</div>
+			<form action="#">
+				<input class="textinput" type="text">
+				<button class="textbutton" type="submit">Відправити</button>
+			</form>
+			<ul class="list">
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--Приклад 2-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 2 - visited</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- спрацьовує для відвіданих посилань
+		</div>
+		<div class="theory">
+			<p>:visited</p>
+			- відвідане посилання<br>
+		</div>
+		<div class="css">
+			css:
+			<p>.link:<span>visited</span> { color: green; }</p>
+		</div>
+		<div class="code code__border">
+			<div class="block-none">
+				<p><a class=" link" href="http://google.com.ua">Lorem</a> ipsum dolor sit, amet
+					consectetur
+					adipisicing elit.
+					Nulla rerum sequi officiis explicabo, voluptatum provident recusandae ipsa illo necessitatibus dolore
+					iste consectetur
+					expedita incidunt vitae similique autem dignissimos repellendus totam?</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus eligendi quis veniam dignissimos a dolore
+					beatae eveniet amet illo omnis. Veniam fuga non vero. Nam vero magni dignissimos deleniti tempore?</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda alias nihil sapiente sed,
+					commodi voluptas iste odio a saepe quisquam tenetur repellat magni accusantium quibusdam deleniti facere
+					velit expedita.</p>
+			</div>
+			<form action="#">
+				<input class="textinput" type="text">
+				<button class="textbutton" type="submit">Відправити</button>
+			</form>
+			<ul class="list">
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--Приклад 3-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 3 - active</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- спрацьовує при натисканні на елемент
+		</div>
+		<div class="theory">
+			<p>:active</p>
+			- натиснуто на елемент<br>
+		</div>
+		<div class="css">
+			css:
+			<p>.link:<span>active</span> { color: yellow; }</p>
+			<p>.textbutton:<span>active</span> { background: #eee; }</p>
+		</div>
+		<div class="code code__border">
+			<div class="block-none">
+				<p><a class="link" href="http://google.com.ua">Lorem</a> ipsum dolor sit, amet
+					consectetur
+					adipisicing elit.
+					Nulla rerum sequi officiis explicabo, voluptatum provident recusandae ipsa illo necessitatibus dolore
+					iste consectetur
+					expedita incidunt vitae similique autem dignissimos repellendus totam?</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus eligendi quis veniam dignissimos a dolore
+					beatae eveniet amet illo omnis. Veniam fuga non vero. Nam vero magni dignissimos deleniti tempore?</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda alias nihil sapiente sed,
+					commodi voluptas iste odio a saepe quisquam tenetur repellat magni accusantium quibusdam deleniti facere
+					velit expedita.</p>
+			</div>
+			<form action="#">
+				<input class="textinput" type="text">
+				<button class="textbutton" type="submit">Відправити</button>
+			</form>
+			<ul class="list">
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--Приклад 4-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 4 - focus</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- спрацьовує при отриманні елементом фокусу
+			- працює на елементах form: input, buttom
+			- спрацювує при перході між елементами при натисканні Тab
+		</div>
+		<div class="theory">
+			<p>:focus</p>
+			- отрмано фокус<br>
+		</div>
+		<div class="css">
+			css:
+			<p>.textinput:<span>focus</span> { box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); }</p>
+			<p>.textbutton:<span>focus</span> { box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); }</p>
+		</div>
+		<div class="code code__border">
+			<div class="block-none">
+				<p><a class="link" href="http://google.com.ua">Lorem</a> ipsum dolor sit, amet
+					consectetur
+					adipisicing elit.
+					Nulla rerum sequi officiis explicabo, voluptatum provident recusandae ipsa illo necessitatibus dolore
+					iste consectetur
+					expedita incidunt vitae similique autem dignissimos repellendus totam?</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus eligendi quis veniam dignissimos a dolore
+					beatae eveniet amet illo omnis. Veniam fuga non vero. Nam vero magni dignissimos deleniti tempore?</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda alias nihil sapiente sed,
+					commodi voluptas iste odio a saepe quisquam tenetur repellat magni accusantium quibusdam deleniti facere
+					velit expedita.</p>
+			</div>
+			<form action="#">
+				<input class="textinput" type="text">
+				<button class="textbutton" type="submit">Відправити</button>
+			</form>
+			<ul class="list">
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--Приклад 5-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 5 - first-child, last-child</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- дозволяє звернутись до першрго або останнього елементу у блоці
+		</div>
+		<div class="theory">
+			<p>:first-child</p>
+			- звертається до першого елементу у блоці<br>
+			<p>last-child</p>
+			- звертається до останнього елементу у блоці
+		</div>
+		<div class="css">
+			css:
+			<p>.list li:<span>first-child</span> { color: green; }</p>
+			<p>.list li:<span>last-child </span>{ color: greenyellow; }</p>
+			<p>.block-first-last p:<span>first-child</span> { text-transform: uppercase; }</p>
+			<p>.block-first-last p:<span>last-child</span> { text-transform: uppercase; }</p>
+		</div>
+		<div class="code code__border">
+			<div class="block-none block-first-last">
+				<div class="block-child">first-child - не працює томущо тег < р> не є першим</div>
+				<p><a class="link" href="http://google.com.ua">Lorem</a> ipsum dolor sit, amet
+					consectetur
+					adipisicing elit.
+					Nulla rerum sequi officiis explicabo, voluptatum provident recusandae ipsa illo necessitatibus dolore
+					iste consectetur
+					expedita incidunt vitae similique autem dignissimos repellendus totam?</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus eligendi quis veniam dignissimos a dolore
+					beatae eveniet amet illo omnis. Veniam fuga non vero. Nam vero magni dignissimos deleniti tempore?</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda alias nihil sapiente sed,
+					commodi voluptas iste odio a saepe quisquam tenetur repellat magni accusantium quibusdam deleniti facere
+					velit expedita.</p>
+			</div>
+			<form action="#">
+				<input class="textinput" type="text">
+				<button class="textbutton" type="submit">Відправити</button>
+			</form>
+			<ul class="list">
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--Приклад 6-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 6 - nth-child</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- звернення до елементу за його номером у блоці
+		</div>
+		<div class="theory">
+			<p>:nth-child(3)</p>
+			- звертається до третього елементу у блоці<br>
+			<p>nth-child(odd)</p>
+			- звертається до всіх елементів з непарним номером
+			<p>nth-child(even)</p>
+			- звертається до всіх елементів з непарним номером
+		</div>
+		<div class="css">
+			css:
+			<p>.block-nth p:<span>nth-child(4)</span> { text-transform: uppercase; }</p>
+			<p>.block-nth p:<span>nth-child(1)</span> { text-transform: uppercase; }</p>
+			<p>.block-nth p:<span>nth-child(odd)</span> { background: yellow; }</p>
+			<p>.block-nth p:<span>nth-child(even)</span> { background: #eee; }</p>
+			<p>.list-ntt li:<span>nth-child(4)</span> { text-decoration: underline; }</p>
+			<p>.list-ntt li:<span>nth-child(odd)</span> { text-transform: uppercase; }</p>
+			<p>.list-ntt li:<span>nth-child(even)</span> { color: green; }</p>
+		</div>
+		<div class="code code__border">
+			<div class="block-none block-nth">
+
+				<p><a class="link" href="http://google.com.ua">Lorem</a> ipsum dolor sit, amet
+					consectetur
+					adipisicing elit.
+					Nulla rerum sequi officiis explicabo, voluptatum provident recusandae ipsa illo necessitatibus dolore
+					iste consectetur
+					expedita incidunt vitae similique autem dignissimos repellendus totam?</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus eligendi quis veniam dignissimos a dolore
+					beatae eveniet amet illo omnis. Veniam fuga non vero. Nam vero magni dignissimos deleniti tempore?</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda alias nihil sapiente sed,
+					commodi voluptas iste odio a saepe quisquam tenetur repellat magni accusantium quibusdam deleniti facere
+					velit expedita.</p>
+				<div class="block-child">nth-child(4) - не працює томущо тег < р> не є першим</div>
+			</div>
+			<form action="#">
+				<input class="textinput" type="text">
+				<button class="textbutton" type="submit">Відправити</button>
+			</form>
+			<ul class="list-ntt">
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!--Приклад 6-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 7 - nth-child, hover</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- поєднання псевдокласів
+		</div>
+		<div class="theory">
+			<p>:nth-child(3):hover</p>
+			- поєднання псевдокласів звернення до елементу за номером та наведенням
+		</div>
+		<div class="css">
+			css:
+			<p>.юblock-nth-hover p:nth-child(odd) { background: green; }</p>
+			<p>.юblock-nth-hover p:<span>nth-child(3):hover</span> { background: yellow; }</p>
+		</div>
+		<div class="code code__border">
+			<div class="block-none block-nth-hover">
+				<p><a class="link" href="http://google.com.ua">Lorem</a> ipsum dolor sit, amet
+					consectetur
+					adipisicing elit.
+					Nulla rerum sequi officiis explicabo, voluptatum provident recusandae ipsa illo necessitatibus dolore
+					iste consectetur
+					expedita incidunt vitae similique autem dignissimos repellendus totam?</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus eligendi quis veniam dignissimos a dolore
+					beatae eveniet amet illo omnis. Veniam fuga non vero. Nam vero magni dignissimos deleniti tempore?</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda alias nihil sapiente sed,
+					commodi voluptas iste odio a saepe quisquam tenetur repellat magni accusantium quibusdam deleniti facere
+					velit expedita.</p>
+			</div>
+			<form action="#">
+				<input class="textinput" type="text">
+				<button class="textbutton" type="submit">Відправити</button>
+			</form>
+			<ul class="list-ntt">
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+				<li>text</li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+
+</html>
