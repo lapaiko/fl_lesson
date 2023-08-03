@@ -1,0 +1,358 @@
+/*Обнулення рамок та відступів в усіх тегах*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*зміна принципу визначення ширини блоку - ширина блоку включає товщину рамок*/
+*,
+*::before,
+*::after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*Прибираємо лінії обводки тегів*/
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+/*Наступні теги визначаємо як блочні*/
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+/*Урівнювання поведінки шрифтів для всіз бразерів та платформ та забороняє самовільне збільшення шрифта*/
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/*Встановлюємо наслідування сімейства шрифта для тегів*/
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+/*Визначаємо параметри для тегів, що прибирають їх особливості у різних браузерах*/
+input::-ms-clear {
+	/*прибирає хрестик в input у ІЕ*/
+	display: none;
+}
+
+button {
+	/*при наведені курсору на кнопку він пертворюється на вказівник*/
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	/*Прибирають зайві відступи в FF*/
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	/*скидаємо оформлення посилання, що відвідувалось*/
+	text-decoration: none;
+}
+
+a:hover {
+	/*скидаємо оформлення посилання НА ЯКЕ НАВОДИТЬСЯ КУРСОР*/
+	text-decoration: none;
+}
+
+ul,
+li {
+	list-style: none;
+	/*чистка стилів маркованих стилів*/
+}
+
+img {
+	vertical-align: top;
+	/*Піднімаємо картинку в гору*/
+}
+
+/*Обнуляємо заголовків*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 20px;
+	margin: 0px 0 20px 0px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+
+html,
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	line-height: 16px;
+}
+
+body {
+	padding: 10px;
+}
+
+.example {
+	border: 1px solid #333;
+	margin: 0 0 20px 0;
+}
+
+.descript,
+.code {
+	margin: 0 0 10px 0;
+}
+
+.head,
+.descript,
+.theory,
+.css,
+.code {
+	padding: 10px;
+}
+
+.descript {
+	background: #dfd;
+}
+
+.code {
+	background: #ffd;
+}
+
+.code__border {
+	padding: 10px;
+	margin: 10px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px#000;
+}
+
+.css span,
+.theory p {
+	font-weight: 700;
+}
+
+.theory {
+	background-color: gold;
+}
+
+.css {
+	background-color: #ddd;
+}
+
+.href {
+	display: block;
+	border: 1px solid gold;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.href :hover {
+	background-color: gold;
+}
+
+.block-decoration {
+	padding: 10px;
+	margin: 0 0 15px 0;
+	/*height: 220px;*/
+	border-radius: 15px;
+	box-shadow: 0 0 10px#000;
+}
+
+.block-decoration p {
+	display: inline-block;
+	padding: 3px 5px;
+	font-weight: bold;
+	background-color: #ffa;
+	border-radius: 3px;
+	border: 1px solid #777;
+}
+
+/* Стенд */
+.block,
+.block-none,
+.block-child {
+	margin: 0 0 30px 0;
+}
+
+.block-child {
+	color: red;
+}
+
+.block p,
+.block-none p,
+.block-child {
+	font-size: 18px;
+	line-height: 24px;
+	margin: 0 0 20px 0;
+}
+
+.link {
+	color: red;
+}
+
+.textinput {
+	border: 1px solid #666;
+	height: 50px;
+	padding: 0 15px;
+	font-size: 18px;
+	width: 300px;
+	margin: 0 0 10px 0;
+}
+
+.textbutton {
+	display: block;
+	width: 300px;
+	height: 50px;
+	background: #666;
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0 0 30px 0;
+}
+
+
+
+.list li,
+.list-ntt li {
+	font-size: 18px;
+	margin: 0 0 15px 0;
+}
+
+
+/*Приклад 1 - */
+
+.text_fln {
+	line-height: 32px;
+	font-size: 32px;
+	margin: 0 0 30px 0;
+}
+
+.text_fln::first-line {
+	color: green;
+}
+
+.list_fln li {
+	font-size: 24px;
+	margin: 0px 0px 20px 0px;
+}
+
+/*Приклад 2 - first-letter*/
+.text_flt {
+	line-height: 32px;
+	font-size: 32px;
+	margin: 0 0 30px 0;
+}
+
+.text_flt::first-letter {
+	font-weight: 700;
+	font-size: 50px;
+	color: red;
+}
+
+.list_flt li {
+	font-size: 24px;
+	margin: 0px 0px 20px 0px;
+}
+
+
+/*Приклад 3 - before. after */
+.text_ba {
+	line-height: 32px;
+	font-size: 32px;
+	margin: 0 0 30px 0;
+}
+
+.list_ba li,
+.list_b li {
+	font-size: 24px;
+	margin: 0px 0px 20px 0px;
+}
+
+.list_ba li::before {
+	content: "`";
+}
+
+.list_ba li::after {
+	content: "'";
+}
+
+.list_b li::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: red;
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+/*Приклад 4 - input */
+
+input {
+	width: 200px;
+	height: 20px;
+	border: solid 1px #000;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+/*Приклад 5 -  */
+.text_bh {
+	line-height: 32px;
+	font-size: 32px;
+	margin: 0 0 30px 0;
+}
+
+
+.list_bh li {
+	font-size: 24px;
+	margin: 0px 0px 20px 0px;
+}
+
+.list_bh li::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: red;
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+.list_bh li:hover::before {
+	background-color: yellow;
+	cursor: pointer;
+}
