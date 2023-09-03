@@ -103,113 +103,152 @@ h6 {
 	font-weight: 700;
 }
 
+h1 {
+	font-size: 20px;
+	margin: 0px 0 20px 0px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+
+html,
 body {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 14px;
+	line-height: 16px;
 }
 
-.wrapper {
-	min-height: 100%;
-	overflow: hidden;
+body {
+	padding: 10px;
 }
 
-.container {
-	max-width: 840px;
-	margin: 100px auto;
-}
-
-.title {
-	text-transform: uppercase;
+.example {
+	border: 1px solid #333;
 	margin: 0 0 20px 0;
 }
 
-.list__1 li,
-.list__2 li {
-	margin: 0 0 20px 0;
+.descript,
+.code {
+	margin: 0 0 10px 0;
 }
 
-.list__1 li::before,
-.list__2 li::before {
-	content: "";
-	padding: 0 0 0 20px;
-	background: url(/13_css/before/img/icons/li.svg)0 50% no-repeat;
+.head,
+.descript,
+.theory,
+.css,
+.code {
+	padding: 10px;
 }
 
-.list__1 li:first-child {
-	text-decoration: line-through;
+.descript {
+	background: #dfd;
 }
 
-.list__1 li:nth-child(2) {
+.code {
+	background: #ffd;
+}
+
+.code__border {
+	padding: 10px;
+	margin: 10px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px#000;
+}
+
+.css span,
+.theory p {
 	font-weight: 700;
 }
 
-.list__1 li:nth-child(3) {
-	font-style: italic;
+.theory {
+	background-color: gold;
 }
 
-.list__1 li:last-child {
-	text-transform: uppercase;
-	margin: 0 0 40px 0;
+.css {
+	background-color: #ddd;
 }
 
-.list__2 li:hover {
-	color: red;
-	cursor: pointer;
-}
-
-
-.buttom {
-	display: inline-block;
-	padding: 10px 20px 10px 20px;
-	background-color: #18b5a4;
-	border-radius: 20px;
-	margin: 0 0 30px 0;
-	text-transform: uppercase;
-	color: #fff;
-	box-shadow: 0 0 10px #333;
-}
-
-.buttom:hover {
-	background-color: #096d63;
-	cursor: pointer;
-}
-
-.buttom:active {
-	background-color: #777;
-	box-shadow: none;
-}
-
-.buttom::after {
-	content: "";
-	padding: 0 0px 0 40px;
-	background: url(/13_css/before/img/pointer.png) center right no-repeat;
-}
-
-.parag_1::first-line {
-	color: green;
-	margin: 0 0 30px 0;
-}
-
-.parag_2::first-letter {
-	color: red;
-	font-weight: 700;
-	font-size: 40px;
-}
-
-/* NOT WORKING!!!!
-
-.paragraph:first-child::first-line {
-	color: green;
-	margin: 0 0 30px 0;
-}
-
-.paragraph:last-child::first-letter {
-	color: red;
-	font-weight: 700;
-	font-size: 40px;
-}
-
-/*.parag {
+.href {
 	display: block;
-}*/
-/*
+	border: 1px solid gold;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.href :hover {
+	background-color: gold;
+}
+
+.block-decoration {
+	padding: 10px;
+	margin: 0 0 15px 0;
+	/*height: 220px;*/
+	border-radius: 15px;
+	box-shadow: 0 0 10px#000;
+}
+
+.block-decoration p {
+	display: inline-block;
+	padding: 3px 5px;
+	font-weight: bold;
+	background-color: #ffa;
+	border-radius: 3px;
+	border: 1px solid #777;
+}
+
+/* Стенд */
+.block,
+.block-none,
+.block-child {
+	margin: 0 0 30px 0;
+}
+
+.block-child {
+	color: red;
+}
+
+.block p,
+.block-none p,
+.block-child {
+	font-size: 18px;
+	line-height: 24px;
+	margin: 0 0 20px 0;
+}
+
+.link {
+	color: red;
+}
+
+.textinput {
+	border: 1px solid #666;
+	height: 50px;
+	padding: 0 15px;
+	font-size: 18px;
+	width: 300px;
+	margin: 0 0 10px 0;
+}
+
+.textbutton {
+	display: block;
+	width: 300px;
+	height: 50px;
+	background: #666;
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0 0 30px 0;
+}
+
+.list {}
+
+.list li,
+.list-ntt li {
+	font-size: 18px;
+	margin: 0 0 15px 0;
+}
+
+
+
+/*Приклад 1 - */
