@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 15 Теорія sass/scss - препроцесор</title>
+	<link rel="stylesheet" href="/css/stylesass_15.css">
+</head>
+
+<body>
+
+	<h1>Урок 15 Теорія sass/scss - препроцесор</h1>
+	<div class="css">Стенд<br>
+		css:
+		.block { margin: 0 0 30px 0; } <br>
+		.block p { font-size: 18px; line-height: 24px; margin: 0 0 20px 0; } <br>
+		.link { color: red; } <br>
+		.textinput { border: 1px solid #666; height: 50px; padding: 0 15px; font-size: 18px; width: 300px; margin: 0 0
+		10px 0; } <br>
+		.textbutton { display: block; width: 300px; height: 50px; background: #666; font-size: 18px; color: #fff;
+		text-transform: uppercase; margin: 0 0 30px 0; } <br>
+		.list {} <br>
+		.list li font-size: 18px; margin: 0 0 15px 0;
+	</div> <br>
+
+
+	<!--Приклад 1-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 1 - Вкладеність тега</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			sass - має жорсткий синтакси де властивості класу: без дужок, починаються з нової стрічки, відступом у один Тав
+			і без ";"
+			scss - синтаксис схожий з scc
+		</div>
+		<div class="theory">
+			- вкладеність тега
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			.block__teg {<br>
+			padding: 30px; font-size: 50px; line-height: 60px;<br>
+			span { color: green;}<br>
+			}<br>
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+				<div class="block__teg">
+					Привіт я <span>фрілансер</span>!
+				</div>
+				<!-- Exemple - HTML -->
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 2 - Вкладеність класу -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 2 - Вкладеність класу</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			збережена властивість вкладення класу
+		</div>
+		<div class="theory">
+			- вкладеність класу
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			css:<br>
+			.block__class {<br>
+			padding: 30px; font-size: 50px; line-height: 60px;<br>
+			span { color: green;}<br>
+			.block__class_text { font-size: 80px;}<br>
+			}<br>
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+				<div class="block__class">
+					<div class="block__class_text">
+						Привіт я <span>фрілансер</span>!
+					</div>
+				</div>
+				<!-- Exemple - HTML -->
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 3 - Багаторівнева вкладеність - ">" -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 3 - Багаторівнева вкладеність</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			">" - звертається до наступного рівня вкладення
+			"<" - звертається до попереднього рівня вкладення </div>
+				<div class="theory">
+					- звертається лиши до наступного/попереднього рівня вкладення<br>
+				</div>
+				<div class="css">
+					<!-- Exemple - CSS -->
+					css:<br>
+					.block__up { padding: 30px; font-size: 50px; line-height: 60px;<br>
+					>p { color: red; }<br>
+					.block__up_text {font-size: 80px; <br>
+					span { color: green;}<br>
+					}<br>
+					}<br>
+				</div>
+
+				<div class="code code__border">
+					<div class="block">
+
+						<!-- Exemple - HTML -->
+						<div class="block__up">
+							<p>Параграф №1</p>
+							<div class="block__up_text">
+								<p>Параграф №2</p>
+								Привіт я <span>фрілансер</span>!
+							</div>
+						</div>
+						<!-- Exemple - HTML -->
+
+					</div>
+				</div>
+
+		</div>
+
+		<!--Приклад 4 - Багаторівнева вкладеність - "&" -->
+		<div class="example">
+			<div class="head">
+				<h2>Приклад 4 - Багаторівнева вкладеність - "&" </h2>
+			</div>
+			<div class="descript">Загальні відомості: <br>
+				"&" - префікс зєднання назви батьківського класу з назвою дочірнього/псевдокласом/псевдоелементом
+			</div>
+			<div class="theory">
+				- зєднання батьківського і дочірнього класів<br>
+				- зєднання назви батьківського класу як префіксу назви дочірнього класів<br>
+				- зєднання назви батьківського класу з псевдокласом/псевдоелементом<br>
+			</div>
+			<div class="css">
+				<!-- Exemple - CSS -->
+				css:<br>
+				.block__link { padding: 30px; font-size: 50px; line-height: 60px;<br>
+				&_text {font-size: 80px; <br>
+				span { color: green;}<br>
+				}<br>
+				}<br>
+				.link {color: blue;text-decoration: underline; <br>
+				&:hover { color: green;}<br>
+				&:active { color: blueviolet;}<br>
+				&::before { content: "!";}<br>
+				&::after { content: "?";}<br>
+				}<br>
+			</div>
+
+			<div class="code code__border">
+				<div class="block">
+
+					<!-- Exemple - HTML -->
+					<div class="block__link block--big">
+						<a href="" class="link">Google</a>
+						<div class="block__link_text">
+							Привіт я <span>фрілансер</span>!
+						</div>
+					</div>
+					<a href="" class="link">Google</a>
+					<!-- Exemple - HTML -->
+
+				</div>
+			</div>
+
+		</div>
+
+		<!--Приклад 5 - Змінні та імпорт-->
+		<div class="example">
+			<div class="head">
+				<h2>Приклад 5 - Змінні та імпорт</h2>
+			</div>
+			<div class="descript">Загальні відомості: <br>
+				"$" - префікс змінних <br>
+				@import - ключове слово за яким у лапках вказується назва scss файлу для імпорту (наприклад
+				"nullstylesass_15.scss");
+			</div>
+			<div class="theory">
+				- приклад взастосування змінних <br>
+				$fz: 100px;<br>
+				block__val_text { font-size: $fz;}<br>
+				- приклад імпорту scss нульового стилю<br>
+				@import "nullstylesass_15.scss";<br>
+				- при редагуванні імпортованого scss файлу зміни відбуваються у основному файлі
+			</div>
+			<div class="css">
+				<!-- Exemple - CSS -->
+				css:<br>
+				$fz: 100px;<br>
+				$color_1: #000;<br>
+				$color_2: #fff;<br>
+
+				.block__val {<br>
+				padding: 30px;line-height: 60px;<br>
+
+				.block__val_text { font-size: $fz;<br>
+				span { color: green;}<br>
+				}<br>
+				}<br>
+
+				.link__val {color: $color_1;text-decoration: underline;font-size: $fz;}<br>
+
+				.block__val & { font-size: $fz;}<br>
+				&:hover { color: $color_2;}<br>
+				}<br>
+			</div>
+
+			<div class="code code__border">
+				<div class="block">
+
+					<!-- Exemple - HTML -->
+					<div class="block__val">
+						<a href="" class="link__val">Google</a>
+						<div class="block__val_text">
+							Привіт я <span>фрілансер</span>!
+						</div>
+					</div>
+					<a href="" class="link__val">Google</a>
+					<!-- Exemple - HTML -->
+
+				</div>
+			</div>
+
+		</div>
+
+		<!--Приклад 6 - шаблони -->
+		<div class="example">
+			<div class="head">
+				<h2>Приклад 6 - шаблони</h2>
+			</div>
+			<div class="descript">Загальні відомості: <br>
+				"%" - префікс шаблону
+				"." - префікс стилю, що млже бути використаний як шаблон
+				"@extend" - виклик шаблону
+			</div>
+			<div class="theory">
+				- порядок розташування шаблону має значення!!!<br>
+				- шаблон, з що ніде не використовується в основному css:<br>
+				-- з префіксом "%" виводитись не буде<br>
+				-- з префіксом "." виводитись буде<br>
+			</div>
+			<div class="css">
+				<!-- Exemple - CSS -->
+				css:<br>
+				$fz: 100px;<br>
+				$color_1: #000;<br>
+				$color_2: #fff;<br>
+
+				.tplbordergreen { font-size: 100px; border-bottom: 5px dashed green;}<br>
+
+				.block__shab {<br>
+				padding: 30px;line-height: 60px;<br>
+
+				.block__shab_text { font-size: $fz;<br>
+				span { color: green;}<br>
+				}<br>
+				}<br>
+
+				.link__shab {color: $color_1;text-decoration: underline;font-size: $fz;<br>
+
+				.block__shab & { font-size: $fz;}<br>
+				&:hover { color: $color_2;}<br>
+				@extend .tplborder;<br>
+
+				}<br>
+				.link__shab-2 {<br>
+				@extend .tplborder; font-size: 80px;<br>
+				}<br>
+
+				%tplborder { font-size: 100px; border-bottom: 5px dashed red;}<br>
+
+			</div>
+
+			<div class="code code__border">
+				<div class="block">
+
+					<!-- Exemple - HTML -->
+					<div class="block__shab">
+						<a href="" class="link__shab">Google</a>
+						<div class="block__shab_text">
+							Привіт я <span>фрілансер</span>!
+						</div>
+					</div>
+					<a href="" class="link__shab-2">Google</a>
+					<!-- Exemple - HTML -->
+
+				</div>
+			</div>
+
+		</div>
+
+		<!--Приклад 7 - Міксіни -->
+		<div class="example">
+			<div class="head">
+				<h2>Приклад 7 - Міксіни</h2>
+			</div>
+			<div class="descript">Загальні відомості: <br>
+				@mixin назва(змінні) { параметри }- аналог процедури у якій перлічені властивості з значеннями у вигляді
+				змінних<br>
+				@include - виклик міксіна<br>
+			</div>
+			<div class="theory">
+				- кількість змінних не обмежена<br>
+				- можливо застосовувати математичні операції внутрі міксіна<br>
+			</div>
+			<div class="css">
+				<!-- Exemple - CSS -->
+				css:<br>
+				$fz: 100px;<br>
+				$color_1: #000;<br>
+				$color_2: #fff;<br>
+				@mixin fontz($f, $c) { <br>
+				font-size: $f;<br>
+				color: $c;<br>
+				}<br>
+				.block__mix {padding: 30px;line-height: 60px; <br>
+				.block__mix_text {font-size: $fz;<br>
+				span { color: green; }<br>
+				} }<br>
+
+				.link__mix { color: $color_1; text-decoration: underline; font-size: $fz; <br>
+				.block__mix & { font-size: $fz;}<br>
+				&:hover { color: $color_2;}<br>
+				}<br>
+
+				.link__mix-2 {<br>
+				@include fontz(50px, green);<br>
+				border-bottom: 5px dashed #000;<br>
+				}<br>
+			</div>
+
+			<div class="code code__border">
+				<div class="block">
+
+					<!-- Exemple - HTML -->
+					<div class="block__mix">
+						<a href="" class="link__mix">Google</a>
+						<div class="block__mix_text">
+							Привіт я <span>фрілансер</span>!
+						</div>
+					</div>
+					<a href="" class="link__mix-2">Google</a>
+
+					<!-- Exemple - HTML -->
+
+				</div>
+			</div>
+
+			<!--Приклад 8 - Математичні операції та коментування -->
+			<div class="example">
+				<div class="head">
+					<h2>Приклад 8 - Математичні операції </h2>
+				</div>
+				<div class="descript">Загальні відомості: <br>
+					"+","-","*","/" - математичні операції
+					/**/ - коментар що перходить у результуючий CSS
+					// - коментар, що не перходить у результуючий CSS
+				</div>
+				<div class="theory">
+					- при проведені розрахунку важливо вказувати одиниці вимірювання
+				</div>
+				<div class="css">
+					<!-- Exemple - CSS -->
+					css:<br>
+					css:<br>
+					$fz: 100px;<br>
+					$color_1: #000;<br>
+					$color_2: #fff;<br>
+					@mixin fontz($f, $c) { <br>
+					font-size: $f;<br>
+					color: $c;<br>
+					}<br>
+					.block__mat {<br>
+					width: 300px/960px*100%;<br>
+					padding: 30px;line-height: 60px; <br>
+					.block__mat_text {font-size: $fz;<br>
+					span { color: green; }<br>
+					} }<br>
+
+					.link__mat { color: $color_1; text-decoration: underline; font-size: $fz; <br>
+					.block__mat & { font-size: $fz;}<br>
+					&:hover { color: $color_2;}<br>
+					}<br>
+
+					.link__mat-2 {<br>
+					@include fontz(50px, green);<br>
+					border-bottom: 5px dashed #000;<br>
+					}<br>
+				</div>
+
+				<div class="code code__border">
+					<div class="block">
+
+						<!-- Exemple - HTML -->
+						<div class="block__mat">
+							<a href="" class="link__mat">Google</a>
+							<div class="block__mat_text">
+								Привіт я <span>фрілансер</span>!
+							</div>
+						</div>
+						<a href="" class="link__mat-2">Google</a>
+
+						<!-- Exemple - HTML -->
+
+					</div>
+				</div>
+				<!--Приклад  -->
+				<div class="example">
+					<div class="head">
+						<h2>Приклад </h2>
+					</div>
+					<div class="descript">Загальні відомості: <br>
+
+					</div>
+					<div class="theory">
+
+					</div>
+					<div class="css">
+						<!-- Exemple - CSS -->
+						css:<br>
+
+					</div>
+
+					<div class="code code__border">
+						<div class="block">
+
+							<!-- Exemple - HTML -->
+
+
+							<!-- Exemple - HTML -->
+
+						</div>
+					</div>
+
+				</div>
+
+
+
+</body>
+
+</html>

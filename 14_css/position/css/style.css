@@ -251,4 +251,233 @@ body {
 
 
 
-/*Приклад 1 - */
+/*Приклад 1 - позиціонування position:static;*/
+.block__static {
+	border: 5px solid red;
+	max-width: 800px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.block__static div {
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.block__static_1 {
+	position: static;
+	background-color: #ece89d;
+}
+
+.block__static_2 {
+	position: static;
+	background-color: #5e5373;
+	color: #fff;
+}
+
+.block__static_3 {
+	position: static;
+	background-color: #18b5a4;
+}
+
+/*Приклад 2 - позиціонування position:relative*/
+.block__relative {
+	border: 5px solid red;
+	max-width: 800px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.block__relative div {
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.block__relative_1 {
+	position: relative;
+	background-color: #ece89d;
+}
+
+.block__relative_2 {
+	position: relative;
+	background-color: #5e5373;
+	color: #fff;
+	top: 60px;
+	left: 60px;
+	height: 100px;
+	z-index: 1;
+}
+
+.block__relative_3 {
+	position: relative;
+	background-color: #18b5a4;
+}
+
+/*Приклад 3 - позиціонування position:absolute*/
+.block__absolute {
+	border: 5px solid red;
+	max-width: 800px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.block__absolute div {
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.block__absolute_1 {
+	background-color: #ece89d;
+	z-index: 3;
+}
+
+.block__absolute_2 {
+	position: absolute;
+	background-color: #5e5373;
+	color: #fff;
+	top: 10px;
+	left: 0;
+	z-index: 1;
+}
+
+.block__absolute_22 {
+	position: absolute;
+	background-color: #dda133;
+	color: #fff;
+	top: 90px;
+	left: 40px;
+	width: 100%;
+}
+
+
+.block__absolute_3 {
+	background-color: #18b5a4;
+	position: relative;
+	z-index: 2;
+}
+
+/*Приклад 4 - позиціонування position:fixed*/
+.block__fixed {
+	border: 5px solid red;
+	max-width: 800px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.block__fixed div {
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.block__fixed_1 {
+	background-color: #ece89d;
+	z-index: 1;
+}
+
+.block__fixed_2 {
+	position: fixed;
+	background-color: #5e5373;
+	color: #fff;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.block__fixed_3 {
+	position: relative;
+	background-color: #18b5a4;
+	z-index: 2;
+}
+
+/*Приклад 5 - позиціонування position:sticky*/
+.block__sticky {
+	border: 5px solid red;
+	max-width: 800px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.block__sticky div {
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.block__sticky_1 {
+	background-color: #ece89d;
+}
+
+.block__sticky_2 {
+	position: sticky;
+	background-color: #dda133;
+	color: #fff;
+	top: 0;
+}
+
+.block__sticky_3 {
+	background-color: #18b5a4;
+}
+
+.block__sticky_4 {
+	position: sticky;
+	background-color: #8a5b03;
+	color: #fff;
+	top: 0;
+}
+
+.block__sticky_5 {
+	background-color: #0a7369;
+}
+
+
+
+/*Приклад 6 - Складності позиціонування absolute*/
+.block__complexities {
+	border: 5px solid red;
+	max-width: 800px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.block__complexities div {
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.block__complexities_1 {
+	background-color: #ece89d;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+}
+
+.block__complexities_2 {
+	background-color: #5e5373;
+	;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+
+}
+
+.block__complexities_3 {
+	background-color: #18b5a4;
+	position: relative;
+	z-index: 1;
+}

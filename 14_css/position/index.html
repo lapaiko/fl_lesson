@@ -26,139 +26,262 @@
 	</div> <br>
 
 
-	<!--Приклад 1-->
+	<!--Приклад 1 - позиціонування position:static-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 1 - </h2>
+			<h2>Приклад 1 - позиціонування position:static</h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			position - позіціонування елементів відносно інших елементів/вікна<br>
+			static - позиціонування за властивостями типу елемента (стрічковий/блочний)
+			static - значення за замовчуванням у всіх елементів
 		</div>
 		<div class="theory">
+			(стрічковий/блочний) <br>
+			- вказувати не обовязково<br>
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
-			css:
+			css: <br>
+			.block__static { border: 5px solid red; max-width: 800px; height: 500px; margin: 0 auto;}<br>
+			.block__static div { line-height: 50px; font-size: 18px; text-align: center; font-weight: 700;}<br>
+			.block__static_1 { position:static; background-color: #ece89d;}<br>
+			.block__static_2 { position:static; background-color: #5e5373; color: #fff;}<br>
+			.block__static_3 { position:static; background-color: #18b5a4;}<br>
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
-				<!-- Exemple - HTML -->
+
+				<!-- Exemple - HTML BEGIN-->
+				<div class="block__static">
+					<div class="block__static_1">block__static_1</div>
+					<div class="block__static_2">block__static_2</div>
+					<div class="block__static_3">block__static_3</div>
+				</div>
+				<!-- Exemple - HTML END-->
+
 			</div>
 		</div>
 
 	</div>
 
-	<!--Приклад * -->
+	<!--Приклад 2 - позиціонування position:relative -->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад * - </h2>
+			<h2>Приклад 2 - позиціонування position:relative</h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			relative - позиціонується за початковими координатами батьківського блоку <br>
+			relative - використовується разом з властивостями: left, right, top, bottom, height, width,
+			z-index<br>
+			z-index - вказую номер слою, де чим більше значення тим вище слой (контроль елементів позиціонування за віссю
+			z)<br>
+			z-index - за замовчуванням = 0
 		</div>
 		<div class="theory">
+			- при встановлені значень для left, right елемент перноситься але місце під нього залишається і займає місце
+			згідно значень height, width
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
-			css:
+			css:<br>
+			.block__relative { border: 5px solid red; max-width: 800px; height: 500px; margin: 0 auto;}<br>
+			.block__relative div { line-height: 50px; font-size: 18px; text-align: center; font-weight: 700;}<br>
+			.block__relative_1 { position:relative; background-color: #ece89d;}<br>
+			.block__relative_2 { position:relative; background-color: #5e5373; color: #fff; height: 100px; top: 60px; left:
+			60px; z-index:
+			1;}<br>
+			.block__relative_3 { position:relative; background-color: #18b5a4;}<br>
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
-				<!-- Exemple - HTML -->
+				<!-- Exemple - HTML BEGIN-->
+				<div class="block__relative">
+					<div class="block__relative_1">block__relative_1 z-index: 0</div>
+					<div class="block__relative_2">block__relative_2 z-index: 1</div>
+					<div class="block__relative_3">block__relative_3 z-index: 0</div>
+				</div>
+				<!-- Exemple - HTML END-->
 			</div>
 		</div>
 
 	</div>
 
-	<!--Приклад * -->
+	<!--Приклад 3 - позиціонування position:absolute -->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад * - </h2>
+			<h2>Приклад 3 - позиціонування position:absolute </h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			absolute - позиціонується за початковими координати вікна браузера або батьківського блоку з позиціонуванням
+			relative;<br>
+			absolute - використовується разом з властивостями: left, right, top, bottom, height, width,
+			z-index<br>
+			z-index - за замовчуванням = 0
 		</div>
 		<div class="theory">
+			- місце під блок не залишається (блок виривається)!!!<br>
+			- розмір блоку за замовченням приймає розмір вмісту (контенту)<br>
+			- z-index - вказую номер слою, для елементів з position:absolute<br>
+			- z-index - в межах батьківського елементи з position:absolute перекривають елементи з position: static не
+			залежно від їх значення<br>
+			- width, height = 100% - приймає розміри батьківського блоку/вікна браузера
+			}
+
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
-			css:
+			css:<br>
+			.block__absolute { border: 5px solid red; max-width: 800px; height: 500px; margin: 0 auto;}<br>
+			.block__absolute div { line-height: 50px; font-size: 18px; text-align: center; font-weight: 700;}<br>
+			.block__absolute_1 { background-color: #ece89d; z-index: 3}<br>
+			.block__absolute_2 { position:absolute; background-color: #5e5373; color: #fff; top: 60px; left: 60px;z-index:
+			1;}<br>
+			.block__absolute_22 { position: absolute; background-color: #dda133; color: #fff; top: 25px; left: 40px; width:
+			100%;}<br>
+			.block__absolute_3 { background-color: #18b5a4; position: relative; z-index: 2}<br>
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
-				<!-- Exemple - HTML -->
+				<!-- Exemple - HTML BEGIN-->
+				<div class="block__absolute">
+					<div class="block__absolute_1">block__absolute_1 static z-index: 3</div>
+					<div class="block__absolute_2">block__absolute_2 absolute z-index: 1</div>
+					<div class="block__absolute_22">block__absolute_22 absolute z-index: 0</div>
+					<div class="block__absolute_3">block__absolute_3 relativ z-index: 2</div>
+				</div>
+				<!-- Exemple - HTML END-->
 			</div>
 		</div>
 
 	</div>
 
-	<!--Приклад * -->
+	<!--Приклад 4 - позиціонування position:fixed -->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад * - </h2>
+			<h2>Приклад 4 - позиціонування position:fixed</h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			fixed - позиціонуєтьсяя за координатами вікна браузера <br>
+			fixed - використовується разом з властивостями: left, right, top, bottom, height, width, z-index<br>
+			z-index - за замовчуванням = 0
 		</div>
 		<div class="theory">
+			- розмір блоку за замовченням приймає розмір вмісту (контенту)<br>
+			- width, height = 100% - приймає розміри вікна браузера<br>
+			- місце під блок не залишається (блок виривається)!!!<br>
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
-			css:
+			css:<br>
+			.block__fixed { border: 5px solid red; max-width: 800px; height: 500px; margin: 0 auto;}<br>
+			.block__fixed div { line-height: 50px; font-size: 18px; text-align: center; font-weight: 700;}<br>
+			.block__fixed_1 { background-color: #ece89d; z-index: 1}<br>
+			.block__fixed_2 { position:fixed; background-color: #5e5373; color: #fff; top: 0px; left: 0px;}<br>
+			.block__fixed_3 { background-color: #18b5a4;position: relative; z-index: 2}<br>
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
-				<!-- Exemple - HTML -->
+
+				<!-- Exemple - HTML BEGIN-->
+				<div class="block__fixed">
+					<div class="block__fixed_1">block__fixed_1 static z-index: 1</div>
+					<div class="block__fixed_2">block__fixed_2 fixed z-index: 0</div>
+					<div class="block__fixed_3">block__fixed_3 relative z-index: 2</div>
+				</div>
+				<!-- Exemple - HTML END-->
 			</div>
 		</div>
 
 	</div>
 
-	<!--Приклад * -->
+	<!--Приклад 5 - позиціонування position:sticky -->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад * - </h2>
+			<h2>Приклад 5 - позиціонування position: sticky </h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			sticky - позиціонується по вікну браузера при досягненні значень top, bottom елементу під час скролу
+			контенту<br>
+			sticky - використовується разом з властивостями: left, right, top, bottom, height, width, z-index<br>
+			z-index - за замовчуванням = 0
 		</div>
 		<div class="theory">
+			- підтримується не всіма браузерами
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
-			css:
+			css:<br>
+			.block__stick { border: 5px solid red; max-width: 800px; height: 500px; margin: 0 auto;}<br>
+			.block__stick div { line-height: 50px; font-size: 18px; text-align: center; font-weight: 700;}<br>
+			.block__stick_1 { background-color: #ece89d;}<br>
+			.block__stick_2 { position:stick; background-color: #5e5373; color: #fff;}<br>
+			.block__stick_3 { background-color: #18b5a4;}<br>
+			.block__stick_4 { position:stick; background-color: #8a5b03;; color: #fff;}<br>
+			.block__stick_5 { background-color: #0a7369;}<br>
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
-				<!-- Exemple - HTML -->
+				<!-- Exemple - HTML BEGIN-->
+				<div class="block__sticky">
+					<div class="block__sticky_1">block__sticky_1</div>
+					<div class="block__sticky_2">block__sticky_2</div>
+					<div class="block__sticky_3">block__sticky_3</div>
+					<div class="block__sticky_4">block__sticky_4</div>
+					<div class="block__sticky_5">block__sticky_5</div>
+				</div>
+				<!-- Exemple - HTML END-->
 			</div>
 		</div>
 
 	</div>
 
-	<!--Приклад * -->
+	<!--Приклад 6 - Складності позиціонування absolute-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад * - </h2>
+			<h2>Приклад 6 - Складності позиціонування absolute</h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			- виривається з контейнера<br>
+			- перкриває собою решту блоків<br>
 		</div>
 		<div class="theory">
+			- постійний контроль за z-index<br>
+			- складно робити верстку з динамічним контентом<br>
 		</div>
 		<div class="css">
-			<!-- Exemple - CSS -->
-			css:
+			css:<br>
+			.block__complexities { border: 5px solid red; max-width: 800px; height: 500px; margin: 0 auto; position:
+			relative}<br>
+			.block__complexities div { line-height: 50px; font-size: 18px; text-align: center; font-weight: 700;}<br>
+			.block__complexities_1 { background-color: #ece89d; position: absolute; top: 0; left: 0; width: 50%;}<br>
+			.block__complexities_2 { background-color: #5e5373; ; color: #fff; position: absolute; top: 0; right: 0; width:
+			50%;}<br>
+			.block__complexities_3 { background-color: #18b5a4; position: relative; z-index: 1;}<br>
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
-				<!-- Exemple - HTML -->
+				<!-- Exemple - HTML BEGIN-->
+				<div class="block__complexities">
+					<div class="block__complexities_1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex neque
+						ullam hic magni tempore dicta odio, cum veritatis, eius qui aspernatur placeat. Aspernatur autem
+						explicabo omnis, laborum animi tempore hic?</div>
+					<div class="block__complexities_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+						autem tempora nobis cum quisquam laboriosam saepe deleniti ipsam excepturi! Consequuntur, commodi? Eos
+						non voluptas laborum mollitia modi, ipsam perferendis placeat?</div>
+					<div class="block__complexities_3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit
+						consequatur aperiam deleniti! Ipsa facere aut laudantium! Officia ipsa accusamus, eaque molestias
+						deleniti perferendis et nobis voluptates maxime quia illum.</div>
+				</div>
+				<!-- Exemple - HTML END-->
 			</div>
 		</div>
-
-	</div>
-
-
 
 </body>
 

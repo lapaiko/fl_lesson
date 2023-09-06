@@ -1,0 +1,260 @@
+/* Приклад 5 - Змінні та імпорт*/
+// Файл обнуляющих стилей
+@import "nullstylesass_15.scss";
+
+/* Приклад 1 - Вкладеність тегу*/
+.block__teg {
+	padding: 30px;
+	font-size: 50px;
+	line-height: 60px;
+
+	span {
+		color: green;
+	}
+
+	.block__teg_text {
+		font-size: 80px;
+	}
+}
+
+/* Приклад 2 - Вкладеність класу*/
+.block__class {
+	padding: 30px;
+	font-size: 50px;
+	line-height: 60px;
+
+	span {
+		color: green;
+	}
+
+	.block__class_text {
+		font-size: 80px;
+	}
+}
+
+
+/* Приклад 3 - Багаторівнева вкладеність -">" */
+.block__up {
+	padding: 30px;
+	font-size: 50px;
+	line-height: 60px;
+
+	>p {
+		color: red;
+	}
+
+	.block__up_text {
+		font-size: 80px;
+
+		span {
+			color: green;
+		}
+	}
+}
+
+
+/*Приклад 4 - Багаторівнева вкладеність - "&"*/
+.block__link {
+	padding: 30px;
+	font-size: 50px;
+	line-height: 60px;
+
+	.block__link_text {
+		font-size: 80px;
+
+		span {
+			color: green;
+		}
+	}
+
+	&.block--big {
+		font-size: 100px;
+	}
+}
+
+.link {
+	color: blue;
+	text-decoration: underline;
+	font-size: 20px;
+
+	.block__link & {
+		font-size: 100px;
+	}
+
+	&:hover {
+		color: green;
+	}
+
+	&:active {
+		color: blueviolet;
+	}
+
+	&::before {
+		content: "!";
+	}
+
+	&::after {
+		content: "?";
+	}
+}
+
+
+
+/*Приклад 5 - Змінні та імпорт*/
+$fz: 100px;
+$color_1: #000;
+$color_2: #fff;
+
+.block__val {
+	padding: 30px;
+	line-height: 60px;
+
+	.block__val_text {
+		font-size: $fz;
+
+		span {
+			color: green;
+		}
+	}
+}
+
+.link__val {
+	color: $color_1;
+	text-decoration: underline;
+	font-size: $fz;
+
+	.block__val & {
+		font-size: $fz;
+	}
+
+	&:hover {
+		color: $color_2;
+	}
+}
+
+
+/*Приклад 6 - шаблони*/
+
+/*стиль шаблону*/
+.tplbordergreen {
+	font-size: 100px;
+	border-bottom: 5px dashed green;
+}
+
+.block__shab {
+	padding: 30px;
+	line-height: 60px;
+
+	.block__shab_text {
+		font-size: $fz;
+
+		span {
+			color: green;
+		}
+	}
+}
+
+.link__shab {
+	color: $color_1;
+	text-decoration: underline;
+	font-size: $fz;
+
+	.block__shab & {
+		font-size: $fz;
+	}
+
+	&:hover {
+		color: $color_2;
+	}
+
+	@extend .tplbordergreen;
+}
+
+.link__shab-2 {
+	font-size: 80px;
+	@extend %tplborder;
+	border-bottom: 5px dashed #000;
+}
+
+/*стиль шаблону*/
+%tplborder {
+	font-size: 100px;
+	border-bottom: 5px dashed red;
+}
+
+
+
+/*Приклад 7 - Міксіни*/
+@mixin fontz($f, $c) {
+	font-size: $f;
+	color: $c;
+}
+
+.block__mix {
+	padding: 30px;
+	line-height: 60px;
+
+	.block__mix_text {
+		font-size: $fz;
+
+		span {
+			color: green;
+		}
+	}
+}
+
+.link__mix {
+	color: $color_1;
+	text-decoration: underline;
+	font-size: $fz;
+
+	.block__mix & {
+		font-size: $fz;
+	}
+
+	&:hover {
+		color: $color_2;
+	}
+}
+
+.link__mix-2 {
+	@include fontz(50px, green);
+	border-bottom: 5px dashed #000;
+}
+
+/*Приклад 8 - Математичні операціїи*/
+.block__mat {
+	width: 300px/960px*100%;
+	background-color: #777;
+	padding: 30px;
+	line-height: 60px;
+
+	.block__mat_text {
+		font-size: $fz;
+
+		span {
+			color: green;
+		}
+	}
+}
+
+.link__mat {
+	color: $color_1;
+	text-decoration: underline;
+	font-size: $fz;
+
+	.block__mat & {
+		font-size: $fz;
+	}
+
+	&:hover {
+		color: $color_2;
+	}
+}
+
+.link__mat-2 {
+	@include fontz(50px, green);
+	border-bottom: 5px dashed #000;
+}
+
+// Переменные для блока

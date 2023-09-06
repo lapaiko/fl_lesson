@@ -116,23 +116,3 @@ body {
 	max-width: 840px;
 	margin: 100px auto;
 }
-
-.list {
-	font-size: 18px;
-}
-
-.list li {
-	margin: 0 0 10px 0;
-	position: relative;
-	padding: 0 0 0 30px;
-}
-
-.list li::before {
-	content: "";
-	background: url(/14_css/position/img/li.svg) 0 0 no-repeat;
-	position: absolute;
-	top: 4px;
-	left: 0;
-	width: 20px;
-	height: 20px;
-}
