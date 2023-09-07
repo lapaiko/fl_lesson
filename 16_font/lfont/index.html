@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 16 Теорія Fonfs - Підключення шрифтів</title>
+
+	<!--Приклад 1 - Підключення шрифтів -->
+	<!--link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+		rel="stylesheet"-->
+
+	<link rel="stylesheet" href="/css/stylefont_16.css">
+</head>
+
+<body>
+
+	<h1>Урок 16 Теорія Fonfs - Підключення шрифтів</h1>
+	<div class="css">Стенд<br>
+		css:
+		.block { margin: 0 0 30px 0; } <br>
+		.block p { font-size: 18px; line-height: 24px; margin: 0 0 20px 0; } <br>
+		.link { color: red; } <br>
+		.textinput { border: 1px solid #666; height: 50px; padding: 0 15px; font-size: 18px; width: 300px; margin: 0 0
+		10px 0; } <br>
+		.textbutton { display: block; width: 300px; height: 50px; background: #666; font-size: 18px; color: #fff;
+		text-transform: uppercase; margin: 0 0 30px 0; } <br>
+		.list {} <br>
+		.list li font-size: 18px; margin: 0 0 15px 0;
+	</div> <br>
+
+
+	<!--Приклад 1 - Підключення шрифтів -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 1 - Підключення шрифтів</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			head - підключення через link
+			scss - підключення через @import url
+
+		</div>
+		<div class="theory">
+			- зайти за посиланням https://fonts.google.com<br>
+			- натиснути кнопку "Фільтр" і вибрати потрібну розкладку (кирилиця/латиниця)<br>
+			- ввести у пошуку назву потрібного шрифту<br>
+			- з знайдених вибрати потрібний шрифт<br>
+			- вибрати потрібні стилі шрифту<br>
+			- з поля "link" скопіювати посилання і вставити у html перд тегом link<br>
+			- з поля "import" скопіювати стрічку імпорту і вставити у початок файлу scss<br>
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			html head:<br><br>
+			link rel="preconnect" href="https://fonts.googleapis.com"<br>
+			link rel="preconnect" href="https://fonts.gstatic.com" crossorigin<br>
+			link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+			rel="stylesheet"<br><br><br>
+
+
+			scss:<br><br>
+			@import
+			url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');<br><br>
+
+			.textoriginal { font-size: 30px;line-height: 35px;<br>
+			p { margin: 0 0 30px 0;}<br>
+			}<br>
+
+			.text {font-size: 30px;line-height: 35px;<br>
+			font-family: "PT Sans";<br>
+			font-style: italic;<br>
+			font-weight: 700;<br>
+			p { margin: 0 0 30px 0;}<br>
+			}<br>
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+				<div class="textoriginal">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quibusdam eum repellendus ex
+						dignissimos! Vel voluptates veritatis voluptatem reiciendis provident possimus. Fugiat distinctio
+						similique, voluptatibus voluptates a facere pariatur atque.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis inventore culpa non. Optio provident
+						recusandae natus est nostrum, voluptas at eveniet repellendus? Esse voluptatem quisquam quia beatae
+						maxime veritatis sequi?</p>
+				</div>
+
+				<div class="text">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quibusdam eum repellendus ex
+						dignissimos! Vel voluptates veritatis voluptatem reiciendis provident possimus. Fugiat distinctio
+						similique, voluptatibus voluptates a facere pariatur atque.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis inventore culpa non. Optio provident
+						recusandae natus est nostrum, voluptas at eveniet repellendus? Esse voluptatem quisquam quia beatae
+						maxime veritatis sequi?</p>
+				</div>
+				<!-- Exemple - HTML -->
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 2 - Конвертація шрифтів -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 2 - Конвертація шрифтів </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			конвертація шрифта з nomail.com.ua на www.font2web.comшриф беремо з ресурсу nomail.com.ua і конвертуємо на
+			ресурсі www.font2web.com <br>
+		</div>
+		<div class="theory">
+			- зайти за посиланням https://nomail.com.ua/<br>
+			- змінити посилання на https://nomail.com.ua/font/Назва шрифта<br>
+			- вибрати з списку знайденого потрібний шрифт<br>
+			- натиснути кнопку "Завантажити"<br>
+			- скопіювати файл шрифта у теку "font" свого проекту<br>
+			- перейти за посиланням http://www.font2web.com/<br>
+			- натиснути кнопку "Вибрати файл" і вибрати .ttf файл шрифта<br>
+			- наснути кнопку "Конвертувати та завантажити" <br>
+			- отриманий архів розпакувати у теку "font" свого проекту<br>
+			- у теці архіву шрифта відкрити файл "font.scc" скопіювати і вставити на початок scss файлу свого проекту<br>
+			- поле font-family відкоригувати назву шрифта<br>
+			- поле font-weight відкоригувати значення відповідно назви шрифта<br>
+			- поле font-style відкоригувати стиль відповідно назви шрифта<br>
+			- поле src відкорегувати шляхи до файлів шрифтів
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="text-PFDin">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quibusdam eum repellendus ex
+						dignissimos! Vel voluptates veritatis voluptatem reiciendis provident possimus. Fugiat distinctio
+						similique, voluptatibus voluptates a facere pariatur atque.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis inventore culpa non. Optio provident
+						recusandae natus est nostrum, voluptas at eveniet repellendus? Esse voluptatem quisquam quia beatae
+						maxime veritatis sequi?</p>
+				</div>
+
+				<div class="text-PFDinmid">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quibusdam eum repellendus ex
+						dignissimos! Vel voluptates veritatis voluptatem reiciendis provident possimus. Fugiat distinctio
+						similique, voluptatibus voluptates a facere pariatur atque.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis inventore culpa non. Optio provident
+						recusandae natus est nostrum, voluptas at eveniet repellendus? Esse voluptatem quisquam quia beatae
+						maxime veritatis sequi?</p>
+				</div>
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад * -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад * - </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад * -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад * - </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад * -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад * - </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад * -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад * - </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+
+
+</body>
+
+</html>

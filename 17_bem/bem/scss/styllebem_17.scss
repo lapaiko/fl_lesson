@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+// Файл обнуляющих стилей
+@import "nullstylebem_17.scss";
+
+/*-Приклад 1 БЕМ - блок*/
+.title {
+	text-transform: uppercase;
+	font-size: 34px;
+	letter-spacing: 8.95px;
+
+	//не задавати властивості позиціонування
+	//margin: 0 0 20px 0;
+	//padding: 0 0 20px 0;
+}
+
+/*Приклад 3 БЕМ - модифікатор*/
+.menu__item {
+	color: #777;
+}
+
+.menu__item_acive {
+	color: red;
+}

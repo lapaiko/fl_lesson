@@ -1,0 +1,4 @@
+16 Теорія Fonfs - Підключення шрифтів: 
+	- head - підключення через link
+	- scss - підключення через @import url
+	- конвертація шрифта з nomail.com.ua на www.font2web.com  

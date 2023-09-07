@@ -1,0 +1,350 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/*Обнуляємо заголовків*/
+h1 {
+  font-size: 20px;
+  margin: 0px 0 20px 0px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+html,
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 16px;
+}
+
+body {
+  padding: 10px;
+}
+
+.example {
+  border: 1px solid #333;
+  margin: 0 0 20px 0;
+}
+
+.descript,
+.code {
+  margin: 0 0 10px 0;
+}
+
+.head,
+.descript,
+.theory,
+.css,
+.code {
+  padding: 10px;
+}
+
+.descript {
+  background: #dfd;
+}
+
+.code {
+  background: #ffd;
+}
+
+.code__border {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
+}
+
+.css span,
+.theory p {
+  font-weight: 700;
+}
+
+.theory {
+  background-color: gold;
+}
+
+.css {
+  background-color: #ddd;
+}
+
+.href {
+  display: block;
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.href :hover {
+  background-color: gold;
+}
+
+.block-decoration {
+  padding: 10px;
+  margin: 0 0 15px 0;
+  /*height: 220px;*/
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
+}
+
+.block-decoration p {
+  display: inline-block;
+  padding: 3px 5px;
+  font-weight: bold;
+  background-color: #ffa;
+  border-radius: 3px;
+  border: 1px solid #777;
+}
+
+/* Стенд */
+.block,
+.block-none,
+.block-child {
+  margin: 0 0 30px 0;
+}
+
+.block-child {
+  color: red;
+}
+
+.block p,
+.block-none p,
+.block-child {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 20px 0;
+}
+
+.link {
+  color: red;
+}
+
+.textinput {
+  border: 1px solid #666;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 18px;
+  width: 300px;
+  margin: 0 0 10px 0;
+}
+
+.textbutton {
+  display: block;
+  width: 300px;
+  height: 50px;
+  background: #666;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+}
+
+.list li,
+.list-ntt li {
+  font-size: 18px;
+  margin: 0 0 15px 0;
+}
+
+body {
+  font-family: Lato;
+}
+
+/* about - основний блок  */
+.about {
+  /* body - елемент, що обмежує розмір для блоку about та робить відступи*/
+  /* header - елемент що включає title і text - тому ним робимо відступ знизу*/
+  /* title - елемент з позицонуванням та відступами*/
+  /* text - елемент блоку about*/
+  /* row - нижню частину блоку about - ділимо на три колонки*/
+  /* row - контейнер flex - margin: 0 -15px;*/
+  /* column - колонка flex - padding: 0 15px;*/
+}
+
+.about__body {
+  max-width: 823px;
+  /* центрування блоку */
+  margin: 0 auto;
+}
+
+.about__header {
+  margin: 0 0 65px 0;
+}
+
+.about__title {
+  margin: 0 0 30px 0;
+}
+
+.about__text {
+  min-width: 688px;
+  color: #868585;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 25.89px;
+  /* центрування елементу */
+  margin: 0 auto;
+}
+
+.about__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+}
+
+.about__column {
+  padding: 0 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
+}
+
+/* title - клас властивостей обєкту*/
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 8.95px;
+  position: relative;
+  text-align: center;
+  padding: 0 0 30px 0;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  bottom: 0;
+  height: 1px;
+  left: 50%;
+  background-color: #000;
+  margin: 0 0 0 -25px;
+}
+
+/*Стилізація блоку внутрі колонки*/
+.item-about__icon {
+  margin: 0 auto 40px auto;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  border: 2px solid #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.item-about__title {
+  text-align: center;
+  color: #000;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 3.52px;
+  margin: 0 0 35px 0;
+}
+
+.item-about__text {
+  text-align: center;
+  color: #868585;
+  line-height: 26px;
+  font-weight: 300;
+  font-size: 14px;
+}

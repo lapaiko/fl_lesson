@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+// Файл обнуляющих стилей
+@import "nullstylebem_17.scss";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+body {
+	font-family: Lato;
+}
+
+/* about - основний блок  */
+.about {
+
+	/* body - елемент, що обмежує розмір для блоку about та робить відступи*/
+	&__body {
+		max-width: 823px;
+		/* центрування блоку */
+		margin: 0 auto;
+	}
+
+	/* header - елемент що включає title і text - тому ним робимо відступ знизу*/
+	&__header {
+		margin: 0 0 65px 0;
+	}
+
+	/* title - елемент з позицонуванням та відступами*/
+	&__title {
+		margin: 0 0 30px 0;
+	}
+
+	/* text - елемент блоку about*/
+	&__text {
+		min-width: 688px;
+		color: #868585;
+		font-size: 14px;
+		font-weight: 300;
+		text-align: center;
+		line-height: 25.89px;
+		/* центрування елементу */
+		margin: 0 auto;
+	}
+
+	/* row - нижню частину блоку about - ділимо на три колонки*/
+	/* row - контейнер flex - margin: 0 -15px;*/
+	&__row {
+		display: flex;
+		margin: 0 -15px;
+	}
+
+	/* column - колонка flex - padding: 0 15px;*/
+	&__column {
+		padding: 0 15px;
+		flex: 0 0 33.333%;
+	}
+}
+
+/* title - клас властивостей обєкту*/
+.title {
+	font-size: 34px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 8.95px;
+	position: relative;
+	text-align: center;
+	padding: 0 0 30px 0;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 50px;
+		bottom: 0;
+		height: 1px;
+		left: 50%;
+		background-color: #000;
+		margin: 0 0 0 -25px;
+
+	}
+}
+
+/*Стилізація блоку внутрі колонки*/
+.item-about {
+	&__icon {
+		margin: 0 auto 40px auto;
+		width: 92px;
+		height: 92px;
+		border-radius: 50%;
+		border: 2px solid #f1f1f1;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__title {
+		text-align: center;
+		color: #000;
+		font-size: 22px;
+		text-transform: uppercase;
+		letter-spacing: 3.52px;
+		margin: 0 0 35px 0;
+	}
+
+	&__text {
+		text-align: center;
+		color: #868585;
+		line-height: 26px;
+		font-weight: 300;
+		font-size: 14px;
+	}
+}

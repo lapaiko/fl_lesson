@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 17 Теорія БЕМ - блок елемент модифікатор</title>
+	<link rel="stylesheet" href="/css/styllebem_17.css">
+</head>
+
+<body>
+
+	<h1>Урок 17 Теорія БЕМ - методологія</h1>
+	<div class="css">Стенд<br>
+		css:
+		.block { margin: 0 0 30px 0; } <br>
+		.block p { font-size: 18px; line-height: 24px; margin: 0 0 20px 0; } <br>
+		.link { color: red; } <br>
+		.textinput { border: 1px solid #666; height: 50px; padding: 0 15px; font-size: 18px; width: 300px; margin: 0 0
+		10px 0; } <br>
+		.textbutton { display: block; width: 300px; height: 50px; background: #666; font-size: 18px; color: #fff;
+		text-transform: uppercase; margin: 0 0 30px 0; } <br>
+		.list {} <br>
+		.list li font-size: 18px; margin: 0 0 15px 0;
+	</div> <br>
+
+
+	<!--Приклад 1 БЕМ - блок-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 1 БЕМ - блок</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			блок - незалежний компонент сторінки, що може бути використаний багато раз
+		</div>
+		<div class="theory">
+			- відповідає на питання "ЩО ЦЕ?"<br>
+			- створювати блок коли він буде відображатися кілька разів у різних частинах сайту<br>
+			- необхідно максимально відобразити їх вміст (логоти, меню, тайтл )<br>
+			- блок має бути незалежним<br>
+			- не задавати зовнішню геометрію відступи/позиціонування (margin, padding)<br>
+			- блоки можна вкладати один в один<br>
+			- допускається будь яка вкладеність блоків<br>
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			.title { text-transform: uppercase; font-size: 34px; letter-spacing: 8.95}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+				<div class="title">Title</div>
+				<form action="#" class="search-form"></form>
+				<div class="portfolio">portfolio</div>
+
+				<div class="about">
+					<div class="title">Title</div>
+					<div class="subtitle">subtitle</div>
+				</div>
+				<!-- Exemple - HTML -->
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 2 БЕМ - елемент -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 2 БЕМ - елемен</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			елемент - складова блоку, що не може використовуватись у відриві від нього
+		</div>
+		<div class="theory">
+			- відповідає на питання "ЩО ЦЕ?"<br>
+			- елемент створюється коли він не може бути самостійним без батьківського блоку<br>
+			- елемент - завжди частина блоку а не іншого елементу<br>
+			- в елементах не можна прописувати ієрархію<br>
+			- синтаксис - імякласублоку__імяелементу<br>
+			- блоці меню пункти будуть елементами<br>
+			- елементи можна вкладти один в один<br>
+			- допускається будь яка вкладеність елементів<br>
+			- елемент не обовязковий компонент блоку
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+				<nav class="menu">
+					<a href="" class="menu__link">menu__link 1</a>
+					<a href="" class="menu__link">menu__link 2</a>
+					<a href="" class="menu__link">menu__link 3</a>
+					<a href="" class="menu__link">menu__link 4</a>
+				</nav>
+				<br>
+
+				<!-- Блок - row -->
+				<div class="row"> Блок - row
+					<!-- Елемент - column -->
+					<div class="row__column">Елемент - column
+						<!-- Елемент - item -->
+						<div class="row__item">Елемент - item</div>
+					</div>
+				</div><br>
+
+				<!-- Блок - about -->
+				<div class="about"> Блок - about
+					<!-- Елемент - title -->
+					<div class="about__title">Елемент - title </div>
+					<!-- Елемент - subtitle -->
+					<div class="about__subtitle">Елемент - subtitle</div>
+				</div><br>
+
+				<!-- Exemple - HTML -->
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 3 БЕМ - модифікатор -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 3 БЕМ - модифікатор</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			модифікатор - доповнює / уточнює стиль блоку / елементу
+		</div>
+		<div class="theory">
+			- відповідає на питання "ЯКИЙ?", "ЯК ВИГЛЯДАЄ?", "СТАН"<br>
+			- синтаксис: імяблоку_модифікатор, імяблоку__імяелементу_модифікатор <br>
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			.menu__item { color: #777;}<br>
+			.menu__item_acive { color: red;}<br>
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+				<nav class="menu">
+					<a href="" class="menu__item menu__item_acive">HOME</a>
+					<a href="" class="menu__item ">ABOUT US</a>
+					<a href="" class="menu__item ">PORTFOLIO</a>
+					<a href="" class="menu__item ">CONTACT</a>
+				</nav>
+				<!-- Exemple - HTML -->
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 4 БЕМ - Мікс -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 4 БЕМ - Мікс</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			мікс - використання і блоків і елементів в одному обєкті
+		</div>
+		<div class="theory">
+			- суміщають поведінку та стилі кількох обєктів без дублювання коду
+			- створювати симантично вові компоненти інтерфейсу на основі існуючих
+			- дозволяє в одному класі задати позиціонування, а в іншому його стандартний вигляд
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+				<!-- Блок - about -->
+				<div class="about"> Блок - about
+					<!-- Елемент - title -->
+					<div class="about__titlemix titlemix">Елемент - titlemix </div>
+					<!-- Елемент - subtitle -->
+					<div class="about__subtitlemix subtitlemix">Елемент - subtitlemix</div>
+				</div><br>
+				<!-- Exemple - HTML -->
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+</body>
+
+</html>
