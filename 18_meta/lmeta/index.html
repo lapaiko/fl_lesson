@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!--1 Тегі для відображення контенту-->
+	<!--Кодування сторінки-->
+	<meta charset="UTF-8">
+	<!--Налаштування адаптивності сторінки-->
+	<!--Фіксована ширина-->
+	<meta name="viewport" content="width=1170">
+	<!--Адаптивність-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Відключає формування посилання у номера мобільного на iOS-->
+	<meta name="format-detection" content="telephone=no">
+
+	<!--2 Тегі для SEO-->
+	<!--Короткий опис сторінки-->
+	<meta name="description" content="Що таке мета тегі і для чого вони потрібні">
+	<!--Ключові слова, що характеризують наш контент-->
+	<meta name="keywords" content="мета тегі, meta, мета теги для seo">
+	<!--Ключові слова, що характеризують наш контент-->
+	<meta name="keywords" content="мета тегі, meta, мета теги для seo">
+	<!-- Керування доступом пошукових роботів до сторінки -->
+	<!--Заборона індексації сторінки повністю-->
+	<meta name="robots" content="none">
+	<!--або-->
+	<meta name="robots" content="noindex, nofollow">
+	<!--Заборона індексації посилань та зображень на сторінці, а текст на сторінц буде доступний до інгдексації-->
+	<meta name="robots" content="noimageindex, nofollow">
+
+	<!--3 Технічні теги-->
+	<!--Автор сторінки-->
+	<meta name="Author" content="Дарт Вейдер">
+	<!--Авторські права-->
+	<meta name="Copyright" content="Люк Скайуокер">
+	<!--Адрес автора-->
+	<meta name="Address" content="Татуін, кратер №94">
+
+	<!--Редірект (перзавантаження) сторінки-->
+	<!--Затримка у секундвх; url=Адреса сайту/сторінки-->
+	<!--meta http-equiv="refresh" content="0; url=practice.html" -->
+
+	<!--4 Теги соціальних мереж-->
+	<!--Для Facebook-->
+	<!-- локалізація сайту, для російськомовного сайту ru_RU -->
+	<meta property="og:locale" content="ru_UA">
+	<!-- тип контенту, за умовчанням використовується article -->
+	<meta property="og:type" content="article">
+	<!-- заголовок сторінки, який буде виводитись у записі соціальної мережі -->
+	<meta property="og:title" content="META теги">
+	<!-- опис сторінки -->
+	<meta property="og:description" content="Опис сторінки про теги META">
+	<!-- посилання на зображення, яке публікуватиметься у записі -->
+	<meta property="og:image" content="http://fls.guru/meta/img/bg.jpg">
+	<!-- посилання на поточну сторінку -->
+	<meta property="og:url" content="http://fls.guru/meta/ ">
+	<!-- назва сайту -->
+	<meta property="og:site_name" content="Фрілансер з життя">
+
+	<!--Для Twitter-->
+	<!-- Тип картки, за умовчанням використовується summary -->
+	<meta name="twitter:card" content="summary">
+	<!-- Ім'я/логін автора -->
+	<meta name="twitter:site" content="Жека">
+	<!-- Назва сторінки -->
+	<meta name="twitter:title" content="META теги">
+	<!-- Опис сторінки -->
+	<meta name="twitter:description" content="про META теги">
+	<!-- Посилання на зображення -->
+	<meta name="twitter:image" content="http://fls.guru/meta/img/bg.jpg">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Урок 18 Теорія META - мета теги для SEO</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<h1>Урок 18 Теорія META - мета теги для SEO</h1>
+	<div class="css">Стенд<br>
+		css:
+		.block { margin: 0 0 30px 0; } <br>
+		.block p { font-size: 18px; line-height: 24px; margin: 0 0 20px 0; } <br>
+		.link { color: red; } <br>
+		.textinput { border: 1px solid #666; height: 50px; padding: 0 15px; font-size: 18px; width: 300px; margin: 0 0
+		10px 0; } <br>
+		.textbutton { display: block; width: 300px; height: 50px; background: #666; font-size: 18px; color: #fff;
+		text-transform: uppercase; margin: 0 0 30px 0; } <br>
+		.list {} <br>
+		.list li font-size: 18px; margin: 0 0 15px 0;
+	</div> <br>
+	<div class="descript">Загальні відомості: <br>
+		категорія 1 - тегі, що впливають відображення контенту<br>
+		категорія 2 - тегі для SEO<br>
+		категорія 3 - технічні теги<br>
+		категорія 4 - тегі для соціальних мереж<br>
+		name, http-equiv, property - атрибут що вказує назву властивості<br>
+		content - атрибут значення властивості<br>
+
+	</div>
+
+
+	<!--Приклад 1 - charset - кодування сторінки (тег відображення контенту)-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 1 - charset - кодування сторінки (тег відображення контенту)</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			meta charset="UTF-8" - задає кодування сторінки<br>
+			meta http-equiv="Content-type" content="text/html;charset=UTF-8" - задає кодування сторінки (застарівший<br>
+			варіант)
+		</div>
+		<div class="theory">
+			- частина html кода, що запусується у змісті тегу head<br>
+			- не є обовязковими<br>
+			- їх не бачить користувач<br>
+
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			head:<br>
+			< meta charset="UTF-8">
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<h1>Привіт! Це Фрілансер по життю!</h1>
+				<h2>Давай знайомитись</h2>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 2 - viewport - маштабування сторінки (тег відображення контенту)-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 2 - viewport - маштабування сторінки (тег відображення контенту)</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			meta name="viewport" content="width=1170" - фіксована верстка тобто маштабування (зменшення/збільшення шрифтів)
+			відбувається завжди<br>
+			meta name="viewport" content="width=device-width" - адаптивна верстка тобто маштабування (зменшення/збільшення
+			шрифтів)
+			не відбувається, а верстка "ламається"<br>
+			meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scale=0" де: <br>
+
+		</div>
+		<div class="theory">
+			- width=device-width - viewport контентної частини буде підлаштовуватись під ширину екрана<br>
+			- initial-scale=1.0 - встановлює початковий маштаб сторінки<br>
+			- maximum-scale=1.0 - встановлює максимальний маштаб сторінки<br>
+			- user-scale=0 - забороняємо маштабування контенту (на мобільних телефонах не можливо збільшити сторінку
+			пальцями)<br>
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			head:<br>
+			< meta name="viewport" content="width=device-width, initial-scale=1.0">
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<h1>Привіт! Це Фрілансер по життю!</h1>
+				<h2>Давай знайомитись</h2>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 3 - format-detection - відображення посилань за номером мобільного (тег відображення контенту)-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 3 - format-detection - відображення посилань за номером мобільного (тег відображення контенту)</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			meta name="format-detection" content="telephone=no" - відключення формування посилання у номера мобільного на
+			iOS<br>
+		</div>
+		<div class="theory">
+			на мобільних телефонах з iOS зявиться посилання шо не є бажаним<br>
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			head:<br>
+			< meta name="format-detection" content="telephone=no">
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<h1>Привіт! Це Фрілансер по життю!</h1>
+				<h2>Давай знайомитись</h2>
+				<p class="phone">+0981342367</p>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!--Приклад 4 - Тегі для SEO -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 4 - Тегі для SEO</h2>
+		</div>к
+		<div class="descript">Загальні відомості: <br>
+			meta name="description" content="Що таке мета тегі і для чого вони потрібні" - короткий опис сторінки до 140
+			символів<br>
+			meta name="keywords" content="мета тегі, meta, мета теги для seo" - ключові слова, що характеризують наш
+			контент не більше 20<br>
+			meta name="robots" content="" - керування доступом пошукових роботів до сторінки
+			- none – заборонити індексацію сторінки повністю.
+			- noindex – заборонити індексацію вмісту сторінки.
+			- nofollow – ігнорувати посилання у межах веб-сторінки.
+			- noimageindex – заборонити індексацію присутніх на сторінці зображень
+			- noarchive - заборонити висновок у результатах пошуку посилання «Збережена копія»
+			- nosnippet - заборонити виведення у пошуковій видачі під назвою сторінки фрагмента тексту, що описує її зміст.
+		</div>
+		<div class="theory">
+			- комплекс дій, що допомогають потенційним клієнтам швидко знайти ваш сайт у пошуковій системі<br>
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			head:<br>
+			< meta name="description" content="Що таке мета тегі і для чого вони потрібні"><br>
+				< meta name="keywords" content="мета тегі, meta, мета теги для seo"><br>
+					< meta name="robots" content=""><br>
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<h1>Привіт! Це Фрілансер по життю!</h1>
+				<h2>Давай знайомитись</h2>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 5 - Технічні мета теги-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 5 - Технічні мета теги</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+		</div>
+		<div class="theory">
+			meta name="Author" content="Дарт Вейдер" - автор сторінки <br>
+			meta name="Copyright" content="Люк Скайуокер" - Авторські права<br>
+			meta name="Address" content="Татуін, кратер №94" - Адрес автора<br>
+			meta http-equiv="refresh" content="0; url=" - результатах (перзавантаження) сторінки
+
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			meta:<br>
+			< meta name="Author" content="Дарт Вейдер"><br>
+				< meta name="Copyright" content="Люк Скайуокер"><br>
+					< meta name="Address" content="Татуін, кратер №94"><br>
+						< meta http-equiv="refresh" content="0; url=">
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<h1>Привіт! Це Фрілансер по життю!</h1>
+				<h2>Давай знайомитись</h2>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 4 - Тегі для соціальних мереж -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 4 - Тегі для соціальних мереж</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			facebook<br>
+			meta property="og:locale" content="ua_UA" - локалізація сайту, для україномовного сайту ua_UA<br>
+			meta property="og:type" content="article" - тип контенту, за умовчанням використовується article<br>
+			meta property="og:title" content="META теги" - заголовок сторінки, який буде виводитись у записі соціальної
+			мережі<br>
+			meta property="og:description" content="Опис сторінки про теги META" - опис сторінки<br>
+			meta property="og:image" content="http://fls.guru/meta/img/bg.jpg"- посилання на зображення, яке
+			публікуватиметься у записі<br>
+			meta property="og:url" content="http://fls.guru/meta/" - посилання на поточну сторінку<br>
+			meta property="og:site_name" content="Фрілансер з життя" - назва сайту<br><br>
+
+			twitter<br>
+			meta name="twitter:card" content="summary" - тип картки, за умовчанням використовується summary<br>
+			meta name="twitter:site" content="Жека" - ім'я/логін автора<br>
+			meta name="twitter:title" content="META теги" - назва сторінки<br>
+			meta name="twitter:description" content="про META теги" - опис сторінки<br>
+			meta name="twitter:image" content="http://fls.guru/meta/img/bg.jpg" - посилання на зображення<br>
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			meta:<br><br>
+			facebook<br>
+			< meta property="og:locale" content="ru_UA"><br>
+				< meta property="og:type" content="article"><br>
+					< meta property="og:title" content="META теги"><br>
+						< meta property="og:description" content="Опис сторінки про теги META"><br>
+							< meta property="og:image" content="http://fls.guru/meta/img/bg.jpg"><br>
+								< meta property="og:url" content="http://fls.guru/meta/ "><br>
+									< meta property="og:site_name" content="Фрілансер з життя"><br><br>
+
+										twitter<br>
+										< meta name="twitter:card" content="summary"><br>
+											< meta name="twitter:site" content="Жека"><br>
+												< meta name="twitter:title" content="META теги"><br>
+													< meta name="twitter:description" content="про META теги"><br>
+														< meta name="twitter:image" content="http://fls.guru/meta/img/bg.jpg"><br>
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<h1>Привіт! Це Фрілансер по життю!</h1>
+				<h2>Давай знайомитись</h2>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+</body>
+
+</html>

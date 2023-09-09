@@ -121,3 +121,48 @@
 	- елемент - складова блоку, що не може використовуватись у відриві від нього
 	- модифікатор - доповнює / уточнює стиль блоку / елементу
 	- мікс - використання і блоків і елементів в одному обєкті 
+16. 18 Теорія META - мета теги для SEO: 
+	- теги відображення
+		- meta charset="UTF-8" - задає кодування сторінки<br>
+		- meta http-equiv="Content-type" content="text/html;charset=UTF-8" - задає кодування сторінки (застарівший варіант)
+		- meta name="viewport" content="width=1170" - фіксована верстка тобто маштабування (зменшення/збільшення шрифтів) відбувається завжди
+		- meta name="viewport" content="width=device-width" - адаптивна верстка тобто маштабування (зменшення/збільшення шрифтів)	не відбувається, а верстка "ламається"
+		- meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scale=0" де:
+			- width=device-width - viewport контентної частини буде підлаштовуватись під ширину екрана
+			- initial-scale=1.0 - встановлює початковий маштаб сторінки
+			- maximum-scale=1.0 - встановлює максимальний маштаб сторінки
+			- user-scale=0 - забороняємо маштабування контенту
+		- meta name="format-detection" content="telephone=no" - відключення формування посилання у номера мобільного на iOS
+
+	- тегі SEO
+		- meta name="description" content="Що таке мета тегі і для чого вони потрібні" - короткий опис сторінки до 140 символів
+		- meta name="keywords" content="мета тегі, meta, мета теги для seo" - ключові слова, що характеризують наш контент не більше 20
+		- meta name="robots" content="" - керування доступом пошукових роботів до сторінки
+			- none – заборонити індексацію сторінки повністю.
+			- noindex – заборонити індексацію вмісту сторінки.
+			- nofollow – ігнорувати посилання у межах веб-сторінки.
+			- noimageindex – заборонити індексацію присутніх на сторінці зображень
+			- noarchive - заборонити висновок у результатах пошуку посилання «Збережена копія»
+			- nosnippet - заборонити виведення у пошуковій видачі під назвою сторінки фрагмента тексту, що описує її зміст.
+
+	- технічні теги
+		- meta name="Author" content="Дарт Вейдер" - автор сторінки 
+		- meta name="Copyright" content="Люк Скайуокер" - Авторські права
+		- meta name="Address" content="Татуін, кратер №94" - Адрес автора
+		- meta http-equiv="refresh" content="0; url=" - результатах (перзавантаження) сторінки
+	
+	- теги соціальних мереж
+		- facebook
+			- meta property="og:locale" content="ua_UA" - локалізація сайту, для російськомовного сайту ua_UA
+			- meta property="og:type" content="article" - тип контенту, за умовчанням використовується article
+			- meta property="og:title" content="META теги" - заголовок сторінки, який буде виводитись у записі соціальної мережі
+			- meta property="og:description" content="Опис сторінки про теги META" - опис сторінки
+			- meta property="og:image" content="http://fls.guru/meta/img/bg.jpg"- посилання на зображення, яке публікуватиметься у записі
+			- meta property="og:url" content="http://fls.guru/meta/" - посилання на поточну сторінку
+			- meta property="og:site_name" content="Фрілансер з життя" - назва сайту
+		- twitter
+			- meta name="twitter:card" content="summary" - тип картки, за умовчанням використовується summary
+			- meta name="twitter:site" content="Жека" - ім'я/логін автора
+			- meta name="twitter:title" content="META теги" - назва сторінки
+			- meta name="twitter:description" content="про META теги" - опис сторінки
+			- meta name="twitter:image" content="http://fls.guru/meta/img/bg.jpg" - посилання на зображення
