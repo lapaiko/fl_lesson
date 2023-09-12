@@ -1,0 +1,65 @@
+/* Приклад 5 - Змінні та імпорт*/
+// Файл обнуляющих стилей
+@import "nullstyleflex_20.scss";
+
+// Блок опису flex-box
+.blok {
+
+	&__list {
+		display: flex;
+		align-items: center;
+
+		li {
+			margin: 0 15px 0 0;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+
+	&__info {
+		position: relative;
+		padding: 0 0 0 25px;
+
+		&_c::before {
+			content: "";
+			position: absolute;
+			top: 3px;
+			left: 5%;
+			width: 10px;
+			height: 10px;
+			background-color: #ece89d;
+		}
+
+		&_e::before {
+			content: "";
+			position: absolute;
+			top: 3px;
+			left: 5%;
+			width: 10px;
+			height: 10px;
+			background-color: #5e5373;
+		}
+
+		&_v::before {
+			content: "";
+			position: absolute;
+			top: 3px;
+			left: 5%;
+			width: 10px;
+			height: 10px;
+			background-color: #18b5a4;
+		}
+	}
+}
+
+//обгортка
+.wrapper {
+	height: 100%;
+	overflow: hidden;
+	min-height: 100%;
+	padding: 50px;
+}
+
+/* Приклад 1 - display:flex*/
