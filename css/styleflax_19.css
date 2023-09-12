@@ -1,0 +1,487 @@
+@charset "UTF-8";
+/* Приклад 5 - Змінні та імпорт*/
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/*Обнуляємо заголовків*/
+h1 {
+  font-size: 20px;
+  margin: 0px 0 20px 0px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+html,
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 16px;
+}
+
+body {
+  padding: 10px;
+}
+
+.example {
+  border: 1px solid #333;
+  margin: 0 0 20px 0;
+}
+
+.descript,
+.code {
+  margin: 0 0 10px 0;
+}
+
+.head,
+.descript,
+.theory,
+.css,
+.code {
+  padding: 10px;
+}
+
+.descript {
+  background: #dfd;
+}
+
+.code {
+  background: #ffd;
+}
+
+.code__border {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
+}
+
+.css span,
+.theory p {
+  font-weight: 700;
+}
+
+.theory {
+  background-color: gold;
+}
+
+.css {
+  background-color: #ddd;
+}
+
+.href {
+  display: block;
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.href :hover {
+  background-color: gold;
+}
+
+.block-decoration {
+  padding: 10px;
+  margin: 0 0 15px 0;
+  /*height: 220px;*/
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
+}
+
+.block-decoration p {
+  display: inline-block;
+  padding: 3px 5px;
+  font-weight: bold;
+  background-color: #ffa;
+  border-radius: 3px;
+  border: 1px solid #777;
+}
+
+/* Стенд */
+.block,
+.block-none,
+.block-child {
+  margin: 0 0 30px 0;
+}
+
+.block-child {
+  color: red;
+}
+
+.block p,
+.block-none p,
+.block-child {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 20px 0;
+}
+
+.link {
+  color: red;
+}
+
+.textinput {
+  border: 1px solid #666;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 18px;
+  width: 300px;
+  margin: 0 0 10px 0;
+}
+
+.textbutton {
+  display: block;
+  width: 300px;
+  height: 50px;
+  background: #666;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+}
+
+.list li,
+.list-ntt li {
+  font-size: 18px;
+  margin: 0 0 15px 0;
+}
+
+.blok__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blok__list li {
+  margin: 0 15px 0 0;
+}
+
+.blok__list li:last-child {
+  margin: 0;
+}
+
+.blok__info {
+  position: relative;
+  padding: 0 0 0 25px;
+}
+
+.blok__info_c::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5%;
+  width: 10px;
+  height: 10px;
+  background-color: #ece89d;
+}
+
+.blok__info_e::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5%;
+  width: 10px;
+  height: 10px;
+  background-color: #5e5373;
+}
+
+.blok__info_v::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5%;
+  width: 10px;
+  height: 10px;
+  background-color: #18b5a4;
+}
+
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+  min-height: 100%;
+  padding: 50px;
+}
+
+/* Приклад 1 - display:flex*/
+.blokflex__row {
+  border: 20px solid #ece89d;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blokflex__column {
+  border: 20px solid #5e5373;
+}
+
+.blokflex__item {
+  background-color: #18b5a4;
+  padding: 50px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* риклад 2 - display:inline-flex*/
+.blokinline-flex {
+  text-align: center;
+}
+
+.blokinline-flex__row {
+  border: 20px solid #ece89d;
+  margin: 0 0 10px 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.blokinline-flex__column {
+  border: 20px solid #5e5373;
+}
+
+.blokinline-flex__item {
+  background-color: #18b5a4;
+  padding: 50px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Приклад 3 - justify-content - вирівнювання за основною віссю*/
+.blokjustify-content__row {
+  border: 20px solid #ece89d;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blokjustify-content__row_left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.blokjustify-content__row_center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blokjustify-content__row_right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.blokjustify-content__row_between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blokjustify-content__row_around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.blokjustify-content__column {
+  border: 20px solid #5e5373;
+}
+
+.blokjustify-content__item {
+  background-color: #18b5a4;
+  padding: 50px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Приклад 4 - align-items - вирівнювання за не основною віссю*/
+.blokalign-items__row {
+  border: 20px solid #ece89d;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blokalign-items__row_stretch {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.blokalign-items__row_start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.blokalign-items__row_end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.blokalign-items__row_center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blokalign-items__row_baseline {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.blokalign-items__column {
+  border: 20px solid #5e5373;
+}
+
+.blokalign-items__item {
+  background-color: #18b5a4;
+  padding: 50px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  line-height: 50px;
+}
+
+.blokalign-items__item_2 {
+  font-size: 80px;
+}
+
+/* Приклад 5 - flex-wrap - перехід елемента на нову стрічку*/
+.blokwrap__row {
+  border: 20px solid #ece89d;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blokwrap__row_nowrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.blokwrap__row_wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blokwrap__row_wrap-reverse {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.blokwrap__column {
+  border: 20px solid #5e5373;
+}
+
+.blokwrap__item {
+  background-color: #18b5a4;
+  padding: 150px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  line-height: 50px;
+}

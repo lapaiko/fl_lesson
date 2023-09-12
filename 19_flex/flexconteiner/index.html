@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 19 Теорія flex - контейнер</title>
+	<link rel="stylesheet" href="/css/styleflax_19.css">
+</head>
+
+<body>
+
+	<h1>Урок 19 Теорія flex - контейнер</h1>
+	<div class="css">Стенд<br>
+		css:
+		.block { margin: 0 0 30px 0; } <br>
+		.block p { font-size: 18px; line-height: 24px; margin: 0 0 20px 0; } <br>
+		.link { color: red; } <br>
+		.textinput { border: 1px solid #666; height: 50px; padding: 0 15px; font-size: 18px; width: 300px; margin: 0 0
+		10px 0; } <br>
+		.textbutton { display: block; width: 300px; height: 50px; background: #666; font-size: 18px; color: #fff;
+		text-transform: uppercase; margin: 0 0 30px 0; } <br>
+		.list {} <br>
+		.list li font-size: 18px; margin: 0 0 15px 0;
+	</div> <br>
+
+
+	<!--Приклад 1 - display:flex-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 1 - display:flex</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			display:flex - блочний flex-контенер за замовчуванням:<br>
+			- контейнер займає всю ширину області в якій він знаходиться (блочний)<br>
+			- елементи стають в ряд, не перходять на іншу стрічку і не стискаються (строчний) <br>
+		</div>
+		<div class="theory">
+			- flex-box - flex-conteiner - flex-element - набір властивостей, що дозволяє задавати висоту, ширину, простір
+			навколо та порядок елементів
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			//флекс контейнер<br>
+			.blokflex__row{<br>
+			display: flex;<br>
+			.border: 20px solid #ece89d; margin: 0 0 10px 0;<br>
+			}<br>
+			//флекс елемент<br>
+			.blokflex__column { border: 20px solid #5e5373; }<br>
+			//вміст<br>
+			.blokflex__item { background-color: #18b5a4; padding: 50px; font-size: 50px; color: #fff; font-weight:
+			700;}<br>
+
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+
+				<!-- wrapper - обгортка -->
+				<div class="wrapper">
+
+
+					<!-- blok - батьківський блок -->
+					<div class="blokflex">
+
+						<h2>display: flex; (за замовчуванням)</h2>
+						<!-- blok__row - флекс контейнер -->
+						<div class="blokflex__row">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokflex__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokflex__item">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokflex__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokflex__item">2</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokflex__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokflex__item">3</div>
+							</div>
+						</div>
+
+						<ul class="blok__list">
+							<li>
+								<div class="blok__info blok__info_c">FLEX контейнер</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_e">FLEX елемент</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_v">Вміст FLEX елементу (контент)</div>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 2 - display:inline-flex-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 2 - display:inline-flex</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			display:inline-flex - строчний flex-контенер за замовчуванням:<br>
+			- контейнер займає ширину вмісту (строчний)<br>
+			- елементи стають в ряд, не перходять на іншу стрічку і не стискаються (строчний) <br>
+		</div>
+		<div class="theory">
+			- flex-box - flex-conteiner - flex-element - набір властивостей, що дозволяє задавати висоту, ширину, простір
+			навколо та порядок елементів
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			//батьківський блок<br>
+			.blokinline-flex { text-align: center; //центрування вмісту блоку<br>
+			//флекс контейнер<br>
+			.blokinline-flex__row {<br>
+			display: flex;<br>
+			.border: 20px solid #ece89d; margin: 0 0 10px 0;<br>
+			}<br>
+			//флекс елемент<br>
+			.blokinline-flex__column { border: 20px solid #5e5373; }<br>
+			//вміст<br>
+			.blokinline-flex__item { background-color: #18b5a4; padding: 50px; font-size: 50px; color: #fff; font-weight:
+			700;}<br>
+
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+
+				<!-- wrapper - обгортка -->
+				<div class="wrapper">
+
+					<h2>display:inline-flex</h2>
+					<!-- blok - батьківський блок -->
+					<div class="blokinline-flex">
+
+						<!-- blok__row - флекс контейнер -->
+						<div class="blokinline-flex__row">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokinline-flex__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokinline-flex__item">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokinline-flex__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokinline-flex__item">2</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokinline-flex__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokinline-flex__item">3</div>
+							</div>
+						</div>
+
+						<ul class="blok__list">
+							<li>
+								<div class="blok__info blok__info_c">FLEX контейнер</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_e">FLEX елемент</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_v">Вміст FLEX елементу (контент)</div>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 3 - justify-content - вирівнювання за основною віссю-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 3 - justify-content - вирівнювання за основною віссю</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			justify-content - вирівнювання за основною віссю:<br>
+			- flex-start - вирівнювання по лівому краю (між елементами немає простору);<br>
+			- center - вирівнювання по центру (між елементами немає простору);<br>
+			- flex-end - вирівнювання по правому краю (між елементами немає простору)<br>
+			- space-between - простір між крайням контейнера і елементом відсутній, а між елементами однаковий (відступів
+			немає);<br>
+			- space-around - простір між крайням контейнера і елементом складає половину простору між елементами, а між
+			елементами однаковий (відступів немає);<br>
+		</div>
+		<div class="theory">
+			- властивість - flex-element
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			//флекс контейнер<br>
+			.blokjustify-content__row{<br>
+			display: flex;<br>
+			&_left { justify-content: flex-start; }<br>
+			&_center { justify-content: center; }<br>
+			&_right { justify-content: flex-end; }<br>
+			&_between { justify-content: space-between; } <br>
+			&_around { justify-content: space-around; } <br>
+			.border: 20px solid #ece89d; margin: 0 0 10px 0;<br>
+			}<br>
+			//флекс елемент<br>
+			.blokjustify-content__column { border: 20px solid #5e5373; }<br>
+			//вміст<br>
+			.blokjustify-content__item { background-color: #18b5a4; padding: 50px; font-size: 50px; color: #fff;
+			font-weight:
+			700;}<br>
+
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+
+				<!-- wrapper - обгортка -->
+				<div class="wrapper">
+
+					<!-- blok - батьківський блок -->
+					<div class="blokjustify-content">
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>justify-content: flex-start; (за замовчуванням)</h2>
+						<div class="blokjustify-content__row blokjustify-content__row_left">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">2</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">3</div>
+							</div>
+						</div>
+
+						<h2>justify-content: center;</h2>
+						<!-- blok__row - флекс контейнер -->
+						<div class="blokjustify-content__row blokjustify-content__row_center">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">2</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">3</div>
+							</div>
+						</div>
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>justify-content: flex-end</h2>
+						<div class="blokjustify-content__row blokjustify-content__row_right">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">2</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">3</div>
+							</div>
+						</div>
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>justify-content: space-between</h2>
+						<div class="blokjustify-content__row blokjustify-content__row_between">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">2</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">3</div>
+							</div>
+						</div>
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>justify-content: space-around</h2>
+						<div class="blokjustify-content__row blokjustify-content__row_around">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">2</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokjustify-content__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokjustify-content__item">3</div>
+							</div>
+						</div>
+						<ul class="blok__list">
+							<li>
+								<div class="blok__info blok__info_c">FLEX контейнер</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_e">FLEX елемент</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_v">Вміст FLEX елементу (контент)</div>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 4 - align-items - вирівнювання за не основною віссю-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 4 - align-items - вирівнювання за не основною віссю</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			align-items - вирівнювання за не основною віссю:
+			- stretch - елементи вирівннюються по верху, а висота приймає значення елемента з найвищим контентом;
+			- flex-start - елементи вирівннюється по верху, а висота приймає значення контенту елементу;
+			- flex-end - елементи вирівннюються по низу, а висота приймає значення контенту елементу;
+			- flex-center - елементи вирівннюються по середині, а висота приймає значення контенту елементу;
+			- baseline - елементи вирівннюються по базовій лінії, а висота приймає значення контенту елементу;
+		</div>
+		<div class="theory">
+			- властивість - flex-element
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			//флекс контейнер<br>
+			.blokalign-items__row{<br>
+			display: flex;<br>
+
+			&_stretch { align-items: stretch;}<br>
+			&_start { align-items: flex-start;}<br>
+			&_end { align-items: flex-end;}<br>
+			&_center { align-items: center;}<br>
+			&_baseline { align-items: baseline;}<br>
+			.border: 20px solid #ece89d; margin: 0 0 10px 0;<br>
+			}<br>
+			//флекс елемент<br>
+			.blokalign-items__column { border: 20px solid #5e5373; }<br>
+			//вміст<br>
+			.blokalign-items__item { background-color: #18b5a4; padding: 50px; font-size: 50px; color: #fff;
+			font-weight:
+			700;}<br>
+
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+
+				<!-- wrapper - обгортка -->
+				<div class="wrapper">
+
+					<!-- blok - батьківський блок -->
+					<div class="blokalign-items">
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>align-items: stretch; (за замовчуванням)</h2>
+						<div class="blokalign-items__row  blokalign-items__row_stretch">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item">2 <br>високий блок</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item">3</div>
+							</div>
+						</div>
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>align-items: flex-start; </h2>
+						<div class="blokalign-items__row blokalign-items__row_start">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item ">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item">2 <br>високий блок</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item">3</div>
+							</div>
+						</div>
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>align-items: flex-end; </h2>
+						<div class="blokalign-items__row blokalign-items__row_end">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item ">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item">2 <br>високий блок</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item">3</div>
+							</div>
+						</div>
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>align-items: center; </h2>
+						<div class="blokalign-items__row blokalign-items__row_center">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item ">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item">2 <br>високий блок</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item">3</div>
+							</div>
+						</div>
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>align-items: baseline; </h2>
+						<div class="blokalign-items__row blokalign-items__row_baseline">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item ">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item blokalign-items__item_2">2 <br>високий</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokalign-items__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokalign-items__item">3</div>
+							</div>
+						</div>
+
+
+						<ul class="blok__list">
+							<li>
+								<div class="blok__info blok__info_c">FLEX контейнер</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_e">FLEX елемент</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_v">Вміст FLEX елементу (контент)</div>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 5 - flex-wrap - перехід елемента на нову стрічку-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 5 - flex-wrap - перехід елемента на нову стрічку</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			flex-wrap - керує перехідом елементу на нову стрічку:
+			- nowrap - елементи не переходять на нову стрічку;
+			- wrap - елементи переходять на нову стрічку;
+			- wrap-reverse - елементи переходять на нову стрічку у зворотньому порядку.
+
+		</div>
+		<div class="theory">
+			- властивість - flex-element
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			//флекс контейнер<br>
+			.blokwrap__row{<br>
+			display: flex;<br>
+			&_nowrap {flex-wrap: nowrap;} <br>
+			&_wrap { flex-wrap: wrap;}<br>
+			&_wrap-reverse { flex-wrap: wrap-reverse;}<br>
+			.border: 20px solid #ece89d; margin: 0 0 10px 0;<br>
+			}<br>
+			//флекс елемент<br>
+			.blokwrap__column { border: 20px solid #5e5373; }<br>
+			//вміст<br>
+			.blokwrap__item { background-color: #18b5a4; padding: 150px; font-size: 50px; color: #fff;
+			font-weight:1
+			700;}<br>
+
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+
+				<!-- wrapper - обгортка -->
+				<div class="wrapper">
+
+					<!-- blok - батьківський блок -->
+					<div class="blokwrap">
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>flex-wrap: nowrap; (за замовчуванням)</h2>
+						<div class="blokwrap__row  blokwrap__row_nowrap">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokwrap__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokwrap__item">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokwrap__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokwrap__item">2</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokwrap__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokwrap__item">3</div>
+							</div>
+						</div>
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>flex-wrap: wrap;</h2>
+						<div class="blokwrap__row  blokwrap__row_wrap">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokwrap__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokwrap__item">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokwrap__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokwrap__item">2</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokwrap__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokwrap__item">3</div>
+							</div>
+						</div>
+
+						<!-- blok__row - флекс контейнер -->
+						<h2>flex-wrap: wrap-reverse;</h2>
+						<div class="blokwrap__row  blokwrap__row_wrap-reverse">
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokwrap__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokwrap__item">1</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokwrap__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokwrap__item">2</div>
+							</div>
+
+							<!-- blok__column - флес елементи -->
+							<div class="blokwrap__column">
+								<!-- blok__item - вміст флес елемента -->
+								<div class="blokwrap__item">3</div>
+							</div>
+						</div>
+
+
+						<ul class="blok__list">
+							<li>
+								<div class="blok__info blok__info_c">FLEX контейнер</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_e">FLEX елемент</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_v">Вміст FLEX елементу (контент)</div>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
