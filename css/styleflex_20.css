@@ -296,3 +296,230 @@ body {
 }
 
 /* Приклад 1 - display:flex*/
+.blok-align-self__row {
+  border: 20px solid #ece89d;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blok-align-self__column {
+  border: 20px solid #5e5373;
+}
+
+.blok-align-self__column_stretch {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.blok-align-self__column_center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.blok-align-self__column_start {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.blok-align-self__column_end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.blok-align-self__item {
+  background-color: #18b5a4;
+  padding: 50px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+}
+
+/*Приклад 2 - order - порядок виводу flex-елементів*/
+.blok-order__row {
+  border: 20px solid #ece89d;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blok-order__column {
+  border: 20px solid #5e5373;
+}
+
+.blok-order__column_1 {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.blok-order__column_2 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.blok-order__column_3 {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.blok-order__item {
+  background-color: #18b5a4;
+  padding: 50px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+}
+
+/*Приклад 3 - flex-basis - базовий розмір flex-елементів*/
+.blok-basic__row {
+  border: 20px solid #ece89d;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blok-basic__column {
+  border: 20px solid #5e5373;
+}
+
+.blok-basic__column_auto {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+
+.blok-basic__column_p30 {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.blok-basic__column_x250 {
+  -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
+}
+
+.blok-basic__item {
+  background-color: #18b5a4;
+  padding: 50px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+}
+
+/*Приклад 4 - flex-grow - можливість flex-елементів ставати більшим за значення flex-basis*/
+.blok-grow__row {
+  border: 20px solid #ece89d;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blok-grow__column {
+  border: 20px solid #5e5373;
+}
+
+.blok-grow__column_g0 {
+  -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.blok-grow__column_g1 {
+  -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.blok-grow__item {
+  background-color: #18b5a4;
+  padding: 50px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+}
+
+/*Приклад 5 - flex-shrink - можливість flex-елементів ставати меншими за значення flex-basis*/
+.blok-shrink__row {
+  border: 20px solid #ece89d;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blok-shrink__column {
+  border: 20px solid #5e5373;
+}
+
+.blok-shrink__column_s0 {
+  -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.blok-shrink__column_s1 {
+  -ms-flex-negative: 250px;
+      flex-shrink: 250px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.blok-shrink__item {
+  background-color: #18b5a4;
+  padding: 50px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+}
+
+/*Приклад 6 - flex - встановлює значення flex-grow flex-shrink flex-basis*/
+.blok-flex__row {
+  border: 20px solid #ece89d;
+  margin: 0 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blok-flex__column {
+  border: 20px solid #5e5373;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.blok-flex__item {
+  background-color: #18b5a4;
+  padding: 50px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+}

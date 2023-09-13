@@ -63,3 +63,249 @@
 }
 
 /* Приклад 1 - display:flex*/
+
+.blok-align-self {
+
+	//флекс контейнер
+	&__row {
+		border: 20px solid #ece89d;
+		margin: 0 0 10px 0;
+
+		display: flex;
+		align-items: center;
+	}
+
+	//флекс елемент
+	&__column {
+		border: 20px solid #5e5373;
+
+		&_stretch {
+			align-self: stretch;
+		}
+
+		&_center {
+			align-self: center;
+		}
+
+		&_start {
+			align-self: flex-start;
+		}
+
+		&_end {
+			align-self: flex-end;
+		}
+
+	}
+
+	//вміст
+	&__item {
+		background-color: #18b5a4;
+		padding: 50px;
+		font-size: 50px;
+		color: #fff;
+		font-weight: 700;
+		line-height: 50px;
+		text-align: center;
+	}
+
+}
+
+/*Приклад 2 - order - порядок виводу flex-елементів*/
+
+.blok-order {
+
+	//флекс контейнер
+	&__row {
+		border: 20px solid #ece89d;
+		margin: 0 0 10px 0;
+
+		display: flex;
+	}
+
+	//флекс елемент
+	&__column {
+		border: 20px solid #5e5373;
+
+		&_1 {
+			order: 3;
+		}
+
+		&_2 {
+			order: 2;
+		}
+
+		&_3 {
+			order: 1
+		}
+	}
+
+	//вміст
+	&__item {
+		background-color: #18b5a4;
+		padding: 50px;
+		font-size: 50px;
+		color: #fff;
+		font-weight: 700;
+		line-height: 50px;
+		text-align: center;
+	}
+
+}
+
+
+/*Приклад 3 - flex-basis - базовий розмір flex-елементів*/
+
+.blok-basic {
+
+	//флекс контейнер
+	&__row {
+		border: 20px solid #ece89d;
+		margin: 0 0 10px 0;
+
+		display: flex;
+	}
+
+	//флекс елемент
+	&__column {
+		border: 20px solid #5e5373;
+
+		&_auto {
+			flex-basis: auto;
+		}
+
+		&_p30 {
+			flex-basis: 30%;
+		}
+
+		&_x250 {
+			flex-basis: 250px;
+		}
+
+	}
+
+	//вміст
+	&__item {
+		background-color: #18b5a4;
+		padding: 50px;
+		font-size: 50px;
+		color: #fff;
+		font-weight: 700;
+		line-height: 50px;
+		text-align: center;
+	}
+
+}
+
+/*Приклад 4 - flex-grow - можливість flex-елементів ставати більшим за значення flex-basis*/
+
+.blok-grow {
+
+	//флекс контейнер
+	&__row {
+		border: 20px solid #ece89d;
+		margin: 0 0 10px 0;
+
+		display: flex;
+	}
+
+	//флекс елемент
+	&__column {
+		border: 20px solid #5e5373;
+
+		&_g0 {
+			flex-basis: 250px;
+			flex-grow: 0;
+		}
+
+		&_g1 {
+			flex-basis: 250px;
+			flex-grow: 1;
+		}
+
+	}
+
+	//вміст
+	&__item {
+		background-color: #18b5a4;
+		padding: 50px;
+		font-size: 50px;
+		color: #fff;
+		font-weight: 700;
+		line-height: 50px;
+		text-align: center;
+	}
+
+}
+
+/*Приклад 5 - flex-shrink - можливість flex-елементів ставати меншими за значення flex-basis*/
+
+.blok-shrink {
+
+	//флекс контейнер
+	&__row {
+		border: 20px solid #ece89d;
+		margin: 0 0 10px 0;
+
+		display: flex;
+	}
+
+	//флекс елемент
+	&__column {
+		border: 20px solid #5e5373;
+
+		&_s0 {
+			flex-basis: 250px;
+			flex-shrink: 0;
+		}
+
+		&_s1 {
+			flex-shrink: 250px;
+			flex-shrink: 1;
+		}
+
+	}
+
+	//вміст
+	&__item {
+		background-color: #18b5a4;
+		padding: 50px;
+		font-size: 50px;
+		color: #fff;
+		font-weight: 700;
+		line-height: 50px;
+		text-align: center;
+	}
+
+}
+
+/*Приклад 6 - flex - встановлює значення flex-grow flex-shrink flex-basis*/
+
+.blok-flex {
+
+	//флекс контейнер
+	&__row {
+		border: 20px solid #ece89d;
+		margin: 0 0 10px 0;
+
+		display: flex;
+	}
+
+	//флекс елемент
+	&__column {
+		border: 20px solid #5e5373;
+		flex: 0 1 auto;
+
+	}
+
+	//вміст
+	&__item {
+		background-color: #18b5a4;
+		padding: 50px;
+		font-size: 50px;
+		color: #fff;
+		font-weight: 700;
+		line-height: 50px;
+		text-align: center;
+	}
+
+}

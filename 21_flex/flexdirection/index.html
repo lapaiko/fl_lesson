@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 21 Теорія flex - direction</title>
+	<link rel="stylesheet" href="/css/styleflex_21.css">
+</head>
+
+<body>
+
+	<h1>Урок 21 Теорія flex - direction</h1>
+	<div class="css">Стенд<br>
+		css:
+		.block { margin: 0 0 30px 0; } <br>
+		.block p { font-size: 18px; line-height: 24px; margin: 0 0 20px 0; } <br>
+		.link { color: red; } <br>
+		.textinput { border: 1px solid #666; height: 50px; padding: 0 15px; font-size: 18px; width: 300px; margin: 0 0
+		10px 0; } <br>
+		.textbutton { display: block; width: 300px; height: 50px; background: #666; font-size: 18px; color: #fff;
+		text-transform: uppercase; margin: 0 0 30px 0; } <br>
+		.list {} <br>
+		.list li font-size: 18px; margin: 0 0 15px 0;
+	</div> <br>
+
+	<!--Приклад 1 - *-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 1 - *</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			*
+		</div>
+		<div class="theory">
+			- *
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			//флекс контейнер<br>
+			.blokkk__row{<br>
+			display: flex;<br>
+			align-items: center;<br>
+			.border: 20px solid #ece89d; margin: 0 0 10px 0;<br>
+			}<br>
+			//флекс елемент<br>
+			.blokkk__column { border: 20px solid #5e5373; <br>
+			&_stretch { align-self: stretch;} <br>
+			&_center { align-self: center;}
+			&_start { align-self: flex-start;}<br>
+			&_end { align-self: flex-end;}<br>
+			}<br>
+			//вміст<br>
+			.blokkk__item { background-color: #18b5a4; padding: 50px; font-size: 50px; color: #fff; font-weight:
+			700;}<br>
+
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+
+				<!-- Exemple - HTML -->
+
+				<!-- wrapper - обгортка -->
+				<div class="wrapper">
+
+					<!-- blokkk - батьківський блок -->
+					<div class="blokkk">
+
+						<h2>* (за замовчуванням)</h2>
+						<!-- blokkk__row - флекс контейнер -->
+						<div class="blokkk__row">
+
+							<!-- blokkk__column - флес елементи -->
+							<div class="blokkk__column blokkk__column_1 blokkk__column_stretch">
+								<!-- blokkk__item - вміст флес елемента -->
+								<div class="blokkk__item">1</div>
+							</div>
+
+							<!-- blokkk__column - флес елементи -->
+							<div class="blokkk__column blokkk__column_2 blokkk__column_stretch">
+								<!-- blokkk__item - вміст флес елемента -->
+								<div class="blokkk__item">2<br>блок</div>
+							</div>
+
+							<!-- blokkk__column - флес елементи -->
+							<div class="blokkk__column blokkk__column_3 blokkk__column_stretch">
+								<!-- blokkk__item - вміст флес елемента -->
+								<div class="blokkk__item">3</div>
+							</div>
+						</div>
+
+
+
+						<ul class="blok__list">
+							<li>
+								<div class="blok__info blok__info_c">FLEX контейнер</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_e">FLEX елемент</div>
+							</li>
+							<li>
+								<div class="blok__info blok__info_v">Вміст FLEX елементу (контент)</div>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+
+
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
