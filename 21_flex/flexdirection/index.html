@@ -5,13 +5,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Урок 21 Теорія flex - direction</title>
+	<title>Урок 21 Теорія flex - контейнер - властивість direction</title>
 	<link rel="stylesheet" href="/css/styleflex_21.css">
 </head>
 
 <body>
 
-	<h1>Урок 21 Теорія flex - direction</h1>
+	<h1>Урок 21 Теорія flex - контейнер - властивість direction</h1>
 	<div class="css">Стенд<br>
 		css:
 		.block { margin: 0 0 30px 0; } <br>
@@ -25,35 +25,43 @@
 		.list li font-size: 18px; margin: 0 0 15px 0;
 	</div> <br>
 
-	<!--Приклад 1 - *-->
+	<!--Приклад 1 - flex-direction - встановлює основну вісь-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 1 - *</h2>
+			<h2>Приклад 1 - flex-direction - встановлює основну вісь</h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
-			*
+			flex-direction - встановлює основну вісь для flex-елементів:<br>
+			- row - вистроювання flex-елементів у ряд з ліва направо (за замовчуванням);<br>
+			- row-reverse - вистроювання flex-елементів у ряд з права на ліво у зворотньому порядку;<br>
+			- column - вистроювання flex-елементів у колонку;<br>
+			- column-reverse - вистроювання flex-елементів у колонку у зворотньому порядку;<br>
 		</div>
 		<div class="theory">
-			- *
+			- за основною віссю вистроюються flex-елементи
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
 			css:<br>
 			//флекс контейнер<br>
-			.blokkk__row{<br>
+			.blodirection__row{<br>
 			display: flex;<br>
-			align-items: center;<br>
+			&_row{ flex-direction: row; }<br>
+			&_row-reverse { flex-direction: row-reverse;}<br>
+			&_column-stretch { flex-direction: column; align-items: stretch;}<br>
+			&_column-flex-start { flex-direction: column; align-items: flex-start;}<br>
+			&_column-flex-end { flex-direction: column; align-items: flex-end;}<br>
+			&_column-space-between { flex-direction: column; justify-content: space-between; height: 800px;} <br>
+			&_column-maket { flex-direction: column; height: 800px;}<br>
+
 			.border: 20px solid #ece89d; margin: 0 0 10px 0;<br>
 			}<br>
 			//флекс елемент<br>
-			.blokkk__column { border: 20px solid #5e5373; <br>
-			&_stretch { align-self: stretch;} <br>
-			&_center { align-self: center;}
-			&_start { align-self: flex-start;}<br>
-			&_end { align-self: flex-end;}<br>
+			.blodirection__column { border: 20px solid #5e5373; <br>
+			&_m2{ flex: 1 1 auto; }<br>
 			}<br>
 			//вміст<br>
-			.blokkk__item { background-color: #18b5a4; padding: 50px; font-size: 50px; color: #fff; font-weight:
+			.blodirection__item { background-color: #18b5a4; padding: 50px; font-size: 50px; color: #fff; font-weight:
 			700;}<br>
 
 		</div>
@@ -66,32 +74,192 @@
 				<!-- wrapper - обгортка -->
 				<div class="wrapper">
 
-					<!-- blokkk - батьківський блок -->
-					<div class="blokkk">
+					<!-- blodirection - батьківський блок -->
+					<div class="blodirection">
 
-						<h2>* (за замовчуванням)</h2>
-						<!-- blokkk__row - флекс контейнер -->
-						<div class="blokkk__row">
+						<h2>flex-direction: row; (за замовчуванням)</h2>
+						<!-- blodirection__row - флекс контейнер -->
+						<div class="blodirection__row blodirection__row_row">
 
-							<!-- blokkk__column - флес елементи -->
-							<div class="blokkk__column blokkk__column_1 blokkk__column_stretch">
-								<!-- blokkk__item - вміст флес елемента -->
-								<div class="blokkk__item">1</div>
+							<!-- blodirection__column - флес елементи -->
+							<div class=" blodirection__column blodirection__column_1">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">1</div>
 							</div>
 
-							<!-- blokkk__column - флес елементи -->
-							<div class="blokkk__column blokkk__column_2 blokkk__column_stretch">
-								<!-- blokkk__item - вміст флес елемента -->
-								<div class="blokkk__item">2<br>блок</div>
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_2">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">2<br>блок</div>
 							</div>
 
-							<!-- blokkk__column - флес елементи -->
-							<div class="blokkk__column blokkk__column_3 blokkk__column_stretch">
-								<!-- blokkk__item - вміст флес елемента -->
-								<div class="blokkk__item">3</div>
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_3">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">3</div>
 							</div>
 						</div>
 
+						<h2>flex-direction: row-reverse;</h2>
+						<!-- blodirection__row - флекс контейнер -->
+						<div class="blodirection__row blodirection__row_row-reverse">
+
+							<!-- blodirection__column - флес елементи -->
+							<div class=" blodirection__column blodirection__column_1">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">1</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_2">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">2<br>блок</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_3">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">3</div>
+							</div>
+						</div>
+
+						<h2>flex-direction: columne; align-items: stretch;</h2>
+						<!-- blodirection__row - флекс контейнер -->
+						<div class="blodirection__row blodirection__row_column-stretch">
+
+							<!-- blodirection__column - флес елементи -->
+							<div class=" blodirection__column blodirection__column_1">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">1</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_2">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">2<br>блок</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_3">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">3</div>
+							</div>
+						</div>
+
+						<h2>flex-direction: columne; align-items: flex-start;</h2>
+						<!-- blodirection__row - флекс контейнер -->
+						<div class="blodirection__row blodirection__row_column-flex-start">
+
+							<!-- blodirection__column - флес елементи -->
+							<div class=" blodirection__column blodirection__column_1">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">1</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_2">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">2<br>блок</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_3">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">3</div>
+							</div>
+						</div>
+
+						<h2>flex-direction: columne; align-items: flex-end; </h2>
+						<!-- blodirection__row - флекс контейнер -->
+						<div class="blodirection__row blodirection__row_column-flex-end">
+
+							<!-- blodirection__column - флес елементи -->
+							<div class=" blodirection__column blodirection__column_1">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">1</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_2">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">2<br>блок</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_3">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">3</div>
+							</div>
+						</div>
+
+						<h2>flex-direction: columne; justify-content: space-between;</h2>
+						<!-- blodirection__row - флекс контейнер -->
+						<div class="blodirection__row blodirection__row_column-space-between">
+
+							<!-- blodirection__column - флес елементи -->
+							<div class=" blodirection__column blodirection__column_1">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">1</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_2">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">2<br>блок</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_3">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">3</div>
+							</div>
+						</div>
+
+						<h2>flex-direction: columne; flex: 1 1 auto;</h2>
+						<!-- blodirection__row - флекс контейнер -->
+						<div class="blodirection__row blodirection__row_column-maket">
+
+							<!-- blodirection__column - флес елементи -->
+							<div class=" blodirection__column blodirection__column_m1">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">1 head</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_m2">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">2 body</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_m3">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">3 footer</div>
+							</div>
+						</div>
+
+						<h2>flex-direction: column-reverse; flex: 1 1 auto;</h2>
+						<!-- blodirection__row - флекс контейнер -->
+						<div class="blodirection__row blodirection__row_column-reverse">
+
+							<!-- blodirection__column - флес елементи -->
+							<div class=" blodirection__column blodirection__column_m1">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">1 head</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_m2">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">2 body</div>
+							</div>
+
+							<!-- blodirection__column - флес елементи -->
+							<div class="blodirection__column blodirection__column_m3">
+								<!-- blodirection__item - вміст флес елемента -->
+								<div class="blodirection__item">3 footer</div>
+							</div>
+						</div>
 
 
 						<ul class="blok__list">

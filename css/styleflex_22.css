@@ -1,0 +1,426 @@
+@charset "UTF-8";
+/* Приклад 5 - Змінні та імпорт*/
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Оболонка wrapper сторінки:*/
+.wrapper {
+  /* - задає висоту сторінки*/
+  min-height: 100%;
+  /* - прибирає скроли */
+  overflow: hidden;
+  /* - ділить сторінку на header body footer*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* Оболонка conteiner для контенту сторінки/блоків сторінки:*/
+.conteiner {
+  /* - задає ширину*/
+  max-width: 1180px;
+  /* - центрує*/
+  margin: 0 auto;
+}
+
+/*Блок content - Тіло сторінки*/
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.hi {
+  background-color: #445162;
+  /* flex-container */
+  /* flex-element */
+}
+
+.hi__row {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hi__body {
+  color: #fff;
+  /*відступ від картинки - з правою сторонм*/
+  padding: 0 30px 0 0;
+}
+
+.hi__title {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 60px;
+  margin: 0 0 38px 0;
+}
+
+.hi__list li {
+  background: url("/22_flex/flexmaket/img/icons/icon.png") 0 1px no-repeat;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  padding: 0 0 0 36px;
+  margin: 0 0 15px 0;
+  line-height: 22px;
+}
+
+.hi__list li:last-child {
+  margin: 00;
+}
+
+.hi__image {
+  /* розмір картинки жорсткий і не змінний*/
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 469px;
+          flex: 0 0 469px;
+  /* картинкf займає всю ширину flex-element*/
+}
+
+.hi__image img {
+  max-width: 100%;
+}
+
+/* title - загальний для всіх */
+.title {
+  color: #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.what {
+  /* flex-container */
+  /* flex-element */
+  /* flex-element */
+  /* title - для блоку what */
+}
+
+.what__row {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.what__image {
+  /* розмір картинки жорсткий і не змінний*/
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 430px;
+          flex: 0 0 430px;
+  /* картинкf займає всю ширину flex-element*/
+}
+
+.what__image img {
+  max-width: 100%;
+}
+
+.what__body {
+  /*розмір тесту адаптивний*/
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0 0 0 30px;
+}
+
+.what__title {
+  margin: 0 0 33px 0;
+}
+
+.what__text p:first-child {
+  margin: 0 0 25px 0;
+}
+
+.what__text p {
+  color: #333;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/*Блок - Колонки*/
+.columns {
+  background-color: #f5f5f5;
+  padding: 50px 0 20px 0;
+  /*FLEX - контейнер*/
+  /*FLEX - елемент*/
+}
+
+.columns__title {
+  text-align: center;
+  /*відступ від заголовка до колонок з текстом*/
+  margin: 0 0 30px 0;
+}
+
+.columns__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*дозволяємо пернос конок*/
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /*відступи між КОЛОНКАМИ*/
+  /*розширяємо FLEX-контейнер на 1/2 відступу між FLEX-елементами*/
+  margin: 0 -8px;
+}
+
+.columns__column {
+  /*звужуємо FLEX-елемент на 1/2 відступу між ними*/
+  padding: 0 8px;
+  /*збільшуватись забороняємо дозволяємо зменшуватись базова ширина колонки*/
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  margin: 0 0 30px 0;
+}
+
+.item__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item__image {
+  /*фіксуємо розмір картинки*/
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 200px;
+          flex: 0 0 200px;
+}
+
+.item__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0 0 0 10px;
+}
+
+.item__title {
+  color: #445161;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 13px 0;
+}
+
+.item__text {
+  color: #333;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/*Блок Вертикальний */
+.vertical {
+  padding: 50px 0;
+}
+
+.vertical__title {
+  text-align: center;
+  margin: 0 0 29px 0;
+}
+
+.vertical__body {
+  /*ширина блоку*/
+  max-width: 990px;
+  /*центрування блоку*/
+  margin: 0 auto;
+}
+
+.vertical__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*відступи між flex-елементами*/
+  margin: 0 -22.5px;
+}
+
+.vertical__column {
+  /*відступи між flex-елементами*/
+  padding: 0 22.5px;
+  /*ширина flex-елементами*/
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.33%;
+          flex: 0 1 33.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vertical__item {
+  background-color: #445162;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #445162;
+  padding: 0 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.vertical__subtitle {
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 12px 0;
+}
+
+.vertical__lable {
+  background-color: #fff;
+  color: #445162;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 40px;
+}
+
+.vertical__text {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.vertical__text p {
+  margin: 0 0 15px 0;
+}
+
+.vertical__text p:last-child {
+  margin: 0;
+}
+
+.vertical__btn {
+  display: block;
+  height: 40px;
+  background-color: #fff;
+  color: #445162;
+  margin: 0 20px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+/* Блок footer - Підвал сторінки*/
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer__row {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__text {
+  color: #445162;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}

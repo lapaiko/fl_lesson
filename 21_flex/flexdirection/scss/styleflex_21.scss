@@ -62,9 +62,9 @@
 	padding: 50px;
 }
 
-/* Приклад 1 - */
+/* Приклад 1 - flex-direction - встановлює основну вісь */
 
-.blokkk {
+.blodirection {
 
 	//флекс контейнер
 	&__row {
@@ -72,13 +72,56 @@
 		margin: 0 0 10px 0;
 
 		display: flex;
-		align-items: center;
+
+		&_row {
+			flex-direction: row;
+		}
+
+		&_row-reverse {
+			flex-direction: row-reverse;
+		}
+
+		&_column-stretch {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		&_column-flex-start {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&_column-flex-end {
+			flex-direction: column;
+			align-items: flex-end;
+		}
+
+		&_column-space-between {
+			flex-direction: column;
+			justify-content: space-between;
+			height: 800px;
+		}
+
+		&_column-maket {
+			flex-direction: column;
+			height: 800px;
+		}
+
+		&_column-reverse {
+			flex-direction: column-reverse;
+			height: 800px;
+		}
+
+
 	}
 
 	//флекс елемент
 	&__column {
 		border: 20px solid #5e5373;
 
+		&_m2 {
+			flex: 1 1 auto;
+		}
 	}
 
 	//вміст
