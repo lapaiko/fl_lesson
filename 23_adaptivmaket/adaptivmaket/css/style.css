@@ -1,0 +1,120 @@
+/*Обнулення рамок та відступів в усіх тегах*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*зміна принципу визначення ширини блоку - ширина блоку включає товщину рамок*/
+*,
+*::before,
+*::after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*Прибираємо лінії обводки тегів*/
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+/*Наступні теги визначаємо як блочні*/
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+/*Урівнювання поведінки шрифтів для всіз бразерів та платформ та забороняє самовільне збільшення шрифта*/
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/*Встановлюємо наслідування сімейства шрифта для тегів*/
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+/*Визначаємо параметри для тегів, що прибирають їх особливості у різних браузерах*/
+input::-ms-clear {
+	/*прибирає хрестик в input у ІЕ*/
+	display: none;
+}
+
+button {
+	/*при наведені курсору на кнопку він пертворюється на вказівник*/
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	/*Прибирають зайві відступи в FF*/
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	/*скидаємо оформлення посилання, що відвідувалось*/
+	text-decoration: none;
+}
+
+a:hover {
+	/*скидаємо оформлення посилання НА ЯКЕ НАВОДИТЬСЯ КУРСОР*/
+	text-decoration: none;
+}
+
+ul,
+li {
+	list-style: none;
+	/*чистка стилів маркованих стилів*/
+}
+
+img {
+	vertical-align: top;
+	/*Піднімаємо картинку в гору*/
+}
+
+/*Обнуляємо заголовків*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 20px;
+	margin: 0px 0 20px 0px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+
+html,
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	line-height: 16px;
+}
