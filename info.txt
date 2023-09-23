@@ -253,3 +253,71 @@
 	- ВІДСТУПИ МІЖ FFLEX-елементами:
 		- margin: 0 -10px; - розширяємо FLEX-контейнер на 1/2 відступу між FLEX-елементами  
 		- padding: 0 10px; - звужуємо FLEX-елемент на 1/2 відступу між ними  			
+21. 23 Теорія Адаптивної вестки - маке:
+	- контейнер - conteiner - визначає ШИРИНУ контентної частини: 
+		- max-width: 1180px - задає ширину;
+		- margin: 0 auto; - центрує
+	- фіксована верстка - не адаптується:
+		- <meta name="viewport" content="width=1200">
+		- body
+			min-width:1200px	
+		- conteiner
+			width: 1200px - задає ширину;
+	- чуйна вестка - резинова
+		- <meta name="viewport" content="width=device-width">
+		- conteiner
+			max-width: 1200px - задає ширину;
+	- адаптивна верстка - з брейкпоінтами
+		- <meta name="viewport" content="width=device-width">
+		- max-width:1200px для HD моніторів шириною 1180рх
+			.contener	{	max-width: 1200px;		}
+		- 1 брейкпоинт переходить на max-width: 970px; - для моніторів шириною 1024p
+			@media (max-width:1200px) 	{	.contener	{	max-width: 970px;		}	}
+		- 2 брейкпоинт переходить на max-width: 750px; - для планшетів шириною 760px
+			@media (max-width:992px) 	{	.contener	{	max-width: 750px;		}	}
+		- 3 брейкпоинт переходить на max-width: none;
+			@media (max-width:767px)	{	.contener	{	max-width: none;		}	}
+	- чуйно - резинова з брейкпоінтами
+		- @media ТИП УМОВИ (ХАРАКТЕРИСТИКА ПРИСТРОЮ) { СТИЛІ } :
+			- ТИП УМОВИ - пристрої:
+				- all - стилі для всіх типів пристрою (значення за замовчуванням)
+				- print - стилі для попереднього переглюду документів 
+				- screen - стілі для кольорових моніторів
+				- speech - стілі для синтезаторів мови
+			- ХАРАКТЕРИСТИКА ПРИСТРОЮ - визначає коли будуть застосовані { СТИЛІ }	
+				- orientation - відповідає за положення пристрою:
+					- portrait - портретне
+					- landscape - альбомне
+				- resolution (: 360dpi) - кількість точок на 1 дюйм екрана
+				- max-resolution - максимальна кількість точок на 1 дюйм екрана 
+				- min-resolution - мінімальна кількість точок на 1 дюйм екрана
+				- monochrome - для чорнобілого екрану
+				- max-width (: 767px) - максимальній ширині екрану
+				- min-width (: 767px) - мінімальній ширині екрану
+				- max-height (: 500px) - максимальній висоті екрану - для full-screen сайту
+				- min-height (: 500px) - мінімальній висоті екрану - для full-screen сайту
+			- логічні оперції:
+				- AND - жорстка умова:
+					@media screen and (max-width: 767px;)
+				- OR/"," - гнучка умова:
+					@media screen or (max-width: 767px;)
+					@media screen and (max-width: 767px;) , screen and (max-height: 500px;)
+					@media screen and (max-width: 767px;) or screen and (max-height: 500px;)
+		- медіа запити краще групувати під стилями до яких вони відносяться;	
+		- css - медіа запит підключає файл стилю якщо виконуються вказані умови:
+			@import url(/23_adaptivmaket/adaptivmaket/css/color.css) screen and (color);
+		- html - медіа	запит підключає файл стилю якщо виконуються вказані умови:
+			<link rel="stylesheet" media="screen and (color)" href="css/adaptiv.css">
+	- mobile-first - для мобільних:
+		- спочатку верстається мобільна версія сайту 
+	 	- за домогою @media-запитів верстається на більші екрани:
+			- min-width - задається при перході на більший екран;
+			- min-height - задається при перході на більший екран;
+		- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0"> - 
+			- initial-scale=1.0 - скидання в 1 початкового маштабу сайта
+			- maximum-scale=1.0 - забороняємо збільшувати маштаб
+			- user-scable=0 - забороняємо для інших пристрої маштабувати верстку
+		- перед застосуванням необхідно впевнитись:
+			- розмір і шрифт тексту хорошо видно і читтається
+			- верстка зручна
+			- адаптив не ламає верстку 

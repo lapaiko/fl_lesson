@@ -5,12 +5,174 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Фіксована верстка meta name="viewport" content="width=1200"-->
+	<!--meta name="viewport" content="width=1200"-->
+
+	<!-- Чуйна верстка meta name="viewport" content="width=device-width"-->
+	<!-- Адаптивна верстка meta name="viewport" content="width=device-width"-->
+	<meta name="viewport" content="width=device-width">
+
+	<!-- Для мобільних пристроїв додаються:-->
+	<!-- initial-scale=1.0 - скидання в 1 початкового маштабу сайта -->
+	<!-- maximum-scale=1.0 - забороняємо збільшувати маштаб -->
+	<!-- user-scable=0 - забороняємо для інших пристрої маштабувати верстку -->
+	<!--meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scable=0"-->
+
 	<title>Урок 23 Теорія Адаптивної вестки - макет</title>
-	<link rel="stylesheet" href="/css/styleflex_22.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- html - медіа	запит підключає файл стилю якщо виконуються вказані умови -->
+	<link rel="stylesheet" media="screen and (color)" href="css/adaptiv.css">
+	<script src="/js/jquery-3.7.1.js"></script>
 </head>
 
-<body> <!-- 1 Оболонка усієї сторінки -->
+<body>
+	<!-- 1 Оболонка усієї сторінки -->
+	<div class="wrapper">
 
+		<!-- 2.1 Голова сторінки (меню) -->
+		<header class="header">
+
+			<!-- 3 Контейнер, що обмежує ширину вмісту -->
+			<div class="contener">
+
+				<!-- 4 FLEX-контейнер - меню -->
+				<div class="header__row">
+
+					<!-- 5.1 FLEX-елемент - логотип -->
+					<a href="" class="header__logo"><img src="img/avatar_2.jpg" alt=""></a>
+
+					<!-- 5.2 FLEX-елемент - тіло меню -->
+					<div class="header__menu menu">
+
+						<!-- 6.1 Кнопка - меню - адаптивна верстка-->
+						<div class="menu__burger burger-menu">
+							<span></span>
+						</div><!-- 6.1 Кнопка - меню - адаптивна верстка -->
+
+						<!-- 6.2 Меню - чутлива верстка - для Меню БУРГЕР - спускає блок під кнопку БУРГЕРА-->
+						<div class="menu__body">
+							<!-- 7 Меню - список пунктів -->
+							<ul class="menu__list">
+								<li><a href="#" class="menu__link">головна</a></li>
+								<li><a href="#" class="menu__link">уроки</a></li>
+								<li><a href="#" class="menu__link">шпаргалки</a></li>
+								<li><a href="#" class="menu__link">корисне</a></li>
+								<li><a href="#" class="menu__link">про канал</a></li>
+								<li><a href="#" class="menu__link">контакти</a></li>
+							</ul><!-- 7 Меню - список пунктів -->
+						</div><!-- 6.2 Меню - чутлива верстка -->
+
+					</div>
+
+				</div><!-- 4 FLEX-контейнер - меню -->
+
+			</div><!-- 3 Контейнер, що обмежує ширину вмісту -->
+
+		</header><!-- 2.1 Голова сторінки (меню) -->
+
+		<!-- 2.2 Контент сторінки -->
+		<maine class="page">
+
+			<!-- 3 Контейнер, що обмежує ширину вмісту -->
+			<div class="contener">
+
+				<!-- 4.1 Задає висоту блоку за допомогою display:flex-->
+				<div class="three-block">
+					<div class="three-block__title">Заголовок</div>
+					<!-- 5 FLEX - контейнер-->
+					<div class="three-block__row">
+						<!-- 6.1 FLEX - елемент-->
+						<div class="three-block__column">
+							<div class="three-block__item">
+								<div class="three-block__imege">
+									<img src="img/image.jpg" alt="">
+								</div>
+								<div class="three-block__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
+									itaque
+									cupiditate quos! Animi soluta ad quis aliquid ea quia, blanditiis quibusdam in voluptates
+									veniam
+									facilis quisquam totam sint autem na</div>
+							</div>
+						</div><!-- 6.1 FLEX - елемент-->
+
+						<!-- 6.2 FLEX - елемент-->
+						<div class="three-block__column">
+							<div class="three-block__item">
+								<div class="three-block__imege"><img src="img/image.jpg" alt=""></div>
+								<div class="three-block__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
+									itaque
+									cupiditate quos! Animi soluta ad quis aliquid ea quia, blanditiis quibusdam in voluptates
+									veniam
+									facilis quisquam totam sint autem na</div>
+							</div>
+						</div><!-- 6.2 FLEX - елемент-->
+
+						<!-- 6.3 FLEX - елемент-->
+						<div class="three-block__column">
+							<div class="three-block__item">
+								<div class="three-block__imege"><img src="img/image.jpg" alt=""></div>
+								<div class="three-block__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
+									itaque
+									cupiditate quos! Animi soluta ad quis aliquid ea quia, blanditiis quibusdam in voluptates
+									veniam
+									facilis quisquam totam sint autem na</div>
+							</div>
+						</div><!-- 6.1 FLEX - елемент-->
+
+					</div><!-- 5 FLEX - контейнер-->
+
+				</div><!-- 4.1 Задає висоту блоку за допомогою display:flex-->
+
+				<div class="two-block">
+					<div class="two-block__row">
+						<div class="two-block__column">
+							<div class="two-block__item">
+								<div class="two-block__image"></div>
+								<div class="two-block__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+									Aliquid
+									nam deleniti, delectus amet fugiat consequatur consequuntur accusantium similique
+									laudantium,
+									impedit natus nostrum quo suscipit quasi quidem ratione minus expedita. Eveniet.</div>
+							</div>
+						</div>
+						<div class="two-block__column">
+							<div class="two-block__item">
+								<div class="two-block__image"></div>
+								<div class="two-block__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+									Aliquid
+									nam deleniti, delectus amet fugiat consequatur consequuntur accusantium similique
+									laudantium,
+									impedit natus nostrum quo suscipit quasi quidem ratione minus expedita. Eveniet.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div><!-- 3 Контейнер, що обмежує ширину вмісту -->
+
+
+		</maine><!-- 2.2 Контент сторінки -->
+
+		<!-- 2.3 Футер сторінки -->
+		<footer class="footer">
+
+			<!-- 3 Контейнер, що обмежує ширину вмісту -->
+			<div class="contener">
+
+				<div class="footer__row">
+					<div class="footer__column"></div>
+					<div class="footer__column"></div>
+					<div class="footer__column"></div>
+				</div>
+			</div><!-- 3 Контейнер, що обмежує ширину вмісту -->
+
+		</footer><!-- 2.3 Футер сторінки -->
+
+	</div><!-- 1 Оболонка усієї сторінки -->
+
+	<script src="js/burger.js"></script>
 </body>
 
 </html>
