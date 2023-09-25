@@ -1,0 +1,2 @@
+24 Теорія CSS - transitions: 
+	- 
