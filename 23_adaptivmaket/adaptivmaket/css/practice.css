@@ -105,4 +105,242 @@ h6 {
 
 body {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.conteiner {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+/* Шапка - фіксуємо вверху; витягуємо наверх */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+}
+
+/* Шапка - Плашка, що постійно присутня*/
+.header::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #5e5373;
+	/* z-index: 2 - для Бургер-Меню */
+	z-index: 2;
+}
+
+/* Шапка-тіло - flex контейнер */
+/* Шапка-тіло - задає висоту  */
+.header__body {
+	position: relative;
+	/*z-index: 2;  Монтажний - для верстки Меню для ПК*/
+
+	height: 80px;
+	/* Висота швпки */
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Логотип - розміри та форма*/
+.header__logo {
+	flex: 0 0 60px;
+	border-radius: 50%;
+	overflow: hidden;
+	/* z-index: 3 - для Бургер-Меню */
+	z-index: 3;
+}
+
+/* Логотип-картинка - адаптація розмірів */
+.header__logo img {
+	width: 100%;
+	display: block;
+	/* прибираємо відступи */
+}
+
+/* Бургер - скриваємо для ПК*/
+.header__burger {
+	display: none;
+}
+
+/*.header__menu {}*/
+
+/* Меню -  - flex контейнер */
+.header__list {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Меню-пункти  - відступи, позиціонування */
+.header__list li {
+	margin: 0 0 0 20px;
+	/* Виводимо на рівенб Плашки .header::before */
+	position: relative;
+	z-index: 2;
+}
+
+/* Меню-посилання  - оформлення */
+.header__link {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+
+/* Контент - вихід з під шапки */
+.content {
+	/* відступ зверху */
+	padding: 100px 0 0 0;
+}
+
+.content__text {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.content__text p {
+	margin: 0 0 20px 0;
+}
+
+.content__text p:last-child {
+	margin: 0;
+}
+
+
+/* MOBILE - Бургер, Меню */
+@media (max-width:767px) {
+
+	/* Блокуємо прокрутку контенту якщо є Бургер-вікно*/
+	body._lock {
+		overflow: hidden;
+	}
+
+	/* Шапка-тіло - задає висоту  */
+	.header__body {
+		height: 50px;
+	}
+
+	/* Логотип - розміри та форма*/
+	.header__logo {
+		flex: 0 0 40px;
+	}
+
+	/* Бургер-кнопка: позиціонування, розміри */
+	.header__burger {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		/* z-index: 3 - для Бургер-Меню */
+		z-index: 3;
+	}
+
+	/* Бургер-кнопка: розміри, верхнньої та нижньох ліній */
+	.header__burger span,
+	.header__burger::before,
+	.header__burger::after {
+		position: absolute;
+		left: 0;
+		height: 10%;
+		width: 100%;
+		transition: all 0.3s ease 0s;
+		background-color: #fff;
+	}
+
+	.header__burger::before,
+	.header__burger::after {
+		content: "";
+	}
+
+	/* Бургер-кнопка: позиціонування верхнньої лінії */
+	.header__burger::before {
+		top: 0;
+	}
+
+	/* Бургер-кнопка: позиціонування нижньох лінії */
+	.header__burger::after {
+		bottom: 0;
+	}
+
+	/* Бургер-кнопка: розміри та позиціонування середньої лінії */
+	.header__burger span {
+		top: 50%;
+		transform: scale(1) translate(0px, -50%);
+	}
+
+	/* Бургер-Вікно - скриваємо, задаєм розміри */
+	.header__menu {
+		position: fixed;
+		/* Скриваємо вікно меню*/
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #18b5a4;
+		/* Виводимо меню з під Плашки .header::before */
+		padding: 70px 10px 20px 10px;
+		/* Для плавного виводу/приховування вікна меню*/
+		transition: all 0.3s ease 0s;
+		/* Додаємо скрол у вікно меню*/
+		overflow-y: auto;
+	}
+
+	/* Бургер-Меню - block - контейнер*/
+	.header__list {
+		display: block;
+	}
+
+	/* Меню-пункти  - відступи, позиціонування */
+	.header__list li {
+		margin: 0 0 20px 0;
+	}
+
+	/* Меню-посилання  - збільшуємо шоифт */
+	.header__link {
+		font-size: 24px;
+	}
+
+
+	/* Контент - вихід з під шапки */
+	.content {
+		padding: 70px 0 0 0;
+		/* відступ зверху */
+	}
+
+	/* _ACTIVE - блок класу*/
+
+	/* Бургер-кнопка: приховування середньої лінії */
+	.header__burger._active span {
+		transform: scale(0) translate(0px, -50%);
+	}
+
+	/* Бургер-кнопка: нахил верхнньої лінії на 45 градусів*/
+	.header__burger._active::before {
+		top: 50%;
+		transform: rotate(45deg);
+	}
+
+	/* Бургер-кнопка: нахил верхнньої лінії на 45 градусів*/
+	.header__burger._active::after {
+		top: 50%;
+		transform: rotate(-45deg);
+	}
+
+	/* Бургер-Вікно - виводимо */
+	.header__menu._active {
+		top: 0;
+	}
 }
