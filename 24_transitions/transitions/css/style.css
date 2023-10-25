@@ -249,6 +249,192 @@ body {
 	margin: 0 0 15px 0;
 }
 
+.shpargalka {
+	display: block;
+	font-size: 18px;
+	text-decoration: underline;
+	margin: 0 0 20px 0;
+}
+
+/* Клас для Приклад 1-3, 5*/
+
+.button {
+	position: relative;
+	top: 0;
+
+	display: inline-block;
+	line-height: 60px;
+	align-items: center;
+
+	padding: 0 30px;
+
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 18px;
+
+	border-radius: 10px;
+
+	cursor: pointer;
+}
 
 
-/*Приклад 1 - */
+/*Приклад 1 - Тривалість переходу - transition-duration*/
+
+.button__duration {
+	color: #fff;
+	background-color: #5e5373;
+	box-shadow: 0 5px 0px #3c354a;
+
+	transition-duration: 500ms;
+}
+
+.button__duration:hover {
+	top: 2px;
+	background-color: #18b5a4;
+	box-shadow: 0 3px 0px #3c354a;
+}
+
+/*Приклад 2 - Перелік властивостей переходу - transition-property*/
+
+.button__property {
+	color: #fff;
+	background-color: #5e5373;
+	box-shadow: 0 5px 0px #3c354a;
+	transition-duration: 500ms, 1500ms;
+	transition-property: background-color, top;
+
+}
+
+.button__property:hover {
+	top: 2px;
+	background-color: #18b5a4;
+	box-shadow: 0 3px 0px #3c354a;
+}
+
+
+/*Приклад 3 - Затримка переходу - transition-delay*/
+
+.button__delay {
+	color: #fff;
+	background-color: #5e5373;
+	box-shadow: 0 5px 0px #3c354a;
+	transition-delay: 0s, 500ms, 500ms;
+	transition-duration: 0s, 100ms, 100ms;
+	transition-property: background-color, top, box-shadow;
+
+}
+
+.button__delay:hover {
+	top: 2px;
+	background-color: #18b5a4;
+	box-shadow: 0 3px 0px #3c354a;
+}
+
+/*Приклад 4 - Стиль/сценарій переходу - transition-timing-function*/
+
+.button__timing-function {
+	position: relative;
+	top: 0;
+
+	display: block;
+	width: 300px;
+	line-height: 60px;
+	align-items: center;
+
+	padding: 0 30px;
+	margin: 20px 0 0 0;
+
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 18px;
+
+	border-radius: 10px;
+
+	cursor: pointer;
+	color: #fff;
+
+	transition-property: width;
+	transition-duration: 1s;
+}
+
+.button__timing-function_easy {
+	background-color: #5e5373;
+	transition-timing-function: ease;
+}
+
+.button__timing-function_easy-in {
+	background-color: #18b5a4;
+	transition-timing-function: ease-in;
+}
+
+.button__timing-function_easy-out {
+	background-color: #ece89d;
+	transition-timing-function: ease-out;
+}
+
+.button__timing-function_easy-in-out {
+	background-color: #5e5373;
+	transition-timing-function: ease-in-out;
+}
+
+.button__timing-function_linear {
+	background-color: #18b5a4;
+	transition-timing-function: linear;
+}
+
+.button__timing-function_steps-start {
+	background-color: #ece89d;
+	;
+	transition-timing-function: steps(5, start);
+}
+
+.button__timing-function_steps-end {
+	background-color: #5e5373;
+	transition-timing-function: steps(5, end);
+}
+
+.button__timing-function_cubic-bezier {
+	background-color: #18b5a4;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.block__timing-function {
+
+	padding: 0 10px 20px 10px;
+	margin: 20px;
+	border: 1px solid #999;
+	border-radius: 10px;
+	background-color: #dfd;
+
+}
+
+.block__timing-function:hover .button__timing-function_easy,
+.block__timing-function:hover .button__timing-function_easy-in,
+.block__timing-function:hover .button__timing-function_easy-out,
+.block__timing-function:hover .button__timing-function_easy-in-out,
+.block__timing-function:hover .button__timing-function_linear,
+.block__timing-function:hover .button__timing-function_steps-end,
+.block__timing-function:hover .button__timing-function_steps-start,
+.block__timing-function:hover .button__timing-function_cubic-bezier {
+	width: 100%;
+}
+
+/*Приклад 5 - Тривалість переходу - transition*/
+
+.button__transition {
+	color: #fff;
+	background-color: #5e5373;
+	box-shadow: 0 5px 0px #3c354a;
+
+	transition: all 1s ease 0s;
+	/*transition: padding 1s ease 0s, color 2s ease-in 0.5s;*/
+}
+
+.button__transition:hover {
+	top: 2px;
+	background-color: #18b5a4;
+	box-shadow: 0 3px 0px #3c354a;
+	transition: all 2s ease 0s;
+}

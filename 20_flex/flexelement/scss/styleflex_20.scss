@@ -2,6 +2,7 @@
 // Файл обнуляющих стилей
 @import "nullstyleflex_20.scss";
 
+
 // Блок опису flex-box
 .blok {
 
@@ -60,6 +61,13 @@
 	overflow: hidden;
 	min-height: 100%;
 	padding: 50px;
+}
+
+.shpargalka {
+	display: block;
+	font-size: 18px;
+	text-decoration: underline;
+	margin: 0 0 20px 0;
 }
 
 /* Приклад 1 - display:flex*/

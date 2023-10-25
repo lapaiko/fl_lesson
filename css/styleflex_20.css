@@ -295,6 +295,13 @@ body {
   padding: 50px;
 }
 
+.shpargalka {
+  display: block;
+  font-size: 18px;
+  text-decoration: underline;
+  margin: 0 0 20px 0;
+}
+
 /* Приклад 1 - display:flex*/
 .blok-align-self__row {
   border: 20px solid #ece89d;

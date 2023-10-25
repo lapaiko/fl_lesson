@@ -1,2 +1,14 @@
 24 Теорія CSS - transitions: 
-	- 
+	- transition-duration - тривалість 
+		- transition-duration: 500ms; - 500 мілісекунд
+		- transition-duration: 5s; - 5 секунд
+		- transition-duration: 3s, 200ms, 0.8s; - 3 секунди тривалість властивості-1; 200 мілісекунд тривалістьвластивості-2; 0,8 секунди тривалість властивості-3
+	- transition-property - вказано перелік властивостей за якими виконується перехід
+		- transition-property: all; - для всіх властивостей перходу
+		- transition-property: background-color; - перхід тільки для фону
+		- transition-property: background-color, top; - перхід для фону, відступу зверху
+	- transition-delay - затримка виконання переходу
+		- transition-delay: 200ms; - затримка виконання на 200мс
+		- transition-duration: 0s, 100ms, 100ms; - 0c затримка 1-перходу; 100мc затримка 2-перходу;100мc затримка 3-перходу
+	- transition: property (властивість), duration (тривалість), timing-function(сценарій перходу), delay (затримка)
+

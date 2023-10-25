@@ -200,6 +200,13 @@ a:hover {
 	border: 1px solid #777;
 }
 
+.shpargalka {
+	display: block;
+	font-size: 18px;
+	text-decoration: underline;
+	margin: 0 0 20px 0;
+}
+
 /*Приклад 1 - background або background-color - визначає колір фону елекмента*/
 .block-background-color-transparent {
 	background: #18b5a4;

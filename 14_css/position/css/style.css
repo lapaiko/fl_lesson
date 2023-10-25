@@ -249,6 +249,13 @@ body {
 	margin: 0 0 15px 0;
 }
 
+.shpargalka {
+	display: block;
+	font-size: 18px;
+	text-decoration: underline;
+	margin: 0 0 20px 0;
+}
+
 
 
 /*Приклад 1 - позиціонування position:static;*/

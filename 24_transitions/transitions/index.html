@@ -12,6 +12,7 @@
 <body>
 
 	<h1>Урок 24 Теорія CSS - transitions</h1>
+	<a class="shpargalka" href="https://fls.guru/csstransition.html">Шпаргалка по CSS переходам (CSS transition)</a>
 	<div class="css">Стенд<br>
 		css:
 		.block { margin: 0 0 30px 0; } <br>
@@ -26,138 +27,215 @@
 	</div> <br>
 
 
-	<!--Приклад 1-->
+	<!--Приклад 1 - Тривалість переходу - transition-duration-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 1 - </h2>
+			<h2>Приклад 1 - Тривалість переходу - transition-duration</h2>
 		</div>
-		<div class="descript">Загальні відомості: <br>
+		<div class="descript">Загальні відомості:
+			- transition-duration - тривалість переходу<br>
 		</div>
 		<div class="theory">
+			- transition-duration: 0.5s; - 0,5 секунди <br>
+			- transition-duration: 500ms; - 500 мілісекунд<br>
+			- transition-duration: 5s; - 5 секунд<br>
+			- transition-duration: 3s, 200ms, 0.8s; - 3 секунди тривалість властивості-1; 200 мілісекунд тривалість
+			властивості-2; 0,8 секунди тривалість властивості-3
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
-			css:
+			css:<br>
+			.button { position: relative; top: 0 display: inline-block; line-height: 60px; align-items: center padding: 0
+			30px text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 18px border-radius:
+			10px;} <br>
+			.button__duration { color: #fff; background-color: #5e5373; box-shadow: 0 5px 0px #3c354a; transition-duration:
+			500ms;}<br>
+			.button__duration:hover { top: 2px; background-color: #18b5a4; box-shadow: 0 3px 0px #3c354a;} <br>
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
 				<!-- Exemple - HTML -->
+				<div class="button button__duration">Наведи на мене</div>
 			</div>
 		</div>
+	</div>
 
 	</div>
 
-	<!--Приклад * -->
+	<!--Приклад 2 - Перелік властивостей переходу - transition-property -->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад * - </h2>
+			<h2>Приклад 2 - Перелік властивостей переходу - transition-property</h2>
 		</div>
-		<div class="descript">Загальні відомості: <br>
+		<div class="descript">Загальні відомості:
+			- transition-property - вказано перелік властивостей за якими виконується перехід<br>
 		</div>
 		<div class="theory">
+			- transition-property: all; - для всіх властивостей перходу<br>
+			- transition-property: background-color; - перхід тільки для фону<br>
+			- transition-property: background-color, top; - перхід для фону, відступу зверху<br>
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
-			css:
+			css:<br>
+			.button { position: relative; top: 0 display: inline-block; line-height: 60px; align-items: center padding: 0
+			30px text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 18px border-radius:
+			10px;} <br>
+			.button__property { color: #fff; background-color: #5e5373; box-shadow: 0 5px 0px #3c354a; transition-duration:
+			500ms, 1500ms; transition-property: background-color, top;}<br>
+			.button__property:hover { top: 2px; background-color: #18b5a4; box-shadow: 0 3px 0px #3c354a;} <br>
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
 				<!-- Exemple - HTML -->
+				<div class="button button__property">Наведи на мене</div>
 			</div>
+
 		</div>
 
-	</div>
-
-	<!--Приклад * -->
-	<div class="example">
-		<div class="head">
-			<h2>Приклад * - </h2>
-		</div>
-		<div class="descript">Загальні відомості: <br>
-		</div>
-		<div class="theory">
-		</div>
-		<div class="css">
-			<!-- Exemple - CSS -->
-			css:
-		</div>
-
-		<div class="code code__border">
-			<div class="block">
-				<!-- Exemple - HTML -->
+		<!--Приклад 3 - Затримка переходу - transition-delay -->
+		<div class="example">
+			<div class="head">
+				<h2>Приклад 3 - Затримка переходу - transition-delay</h2>
 			</div>
-		</div>
-
-	</div>
-
-	<!--Приклад * -->
-	<div class="example">
-		<div class="head">
-			<h2>Приклад * - </h2>
-		</div>
-		<div class="descript">Загальні відомості: <br>
-		</div>
-		<div class="theory">
-		</div>
-		<div class="css">
-			<!-- Exemple - CSS -->
-			css:
-		</div>
-
-		<div class="code code__border">
-			<div class="block">
-				<!-- Exemple - HTML -->
+			<div class="descript">Загальні відомості: <br>
+				- transition-delay - затримка виконання переходу
 			</div>
-		</div>
-
-	</div>
-
-	<!--Приклад * -->
-	<div class="example">
-		<div class="head">
-			<h2>Приклад * - </h2>
-		</div>
-		<div class="descript">Загальні відомості: <br>
-		</div>
-		<div class="theory">
-		</div>
-		<div class="css">
-			<!-- Exemple - CSS -->
-			css:
-		</div>
-
-		<div class="code code__border">
-			<div class="block">
-				<!-- Exemple - HTML -->
+			<div class="theory">
+				- transition-delay: 200ms; - затримка виконання на 200мс<br>
+				- transition-duration: 0s, 100ms, 100ms; - 0c затримка 1-перходу; 100мc затримка 2-перходу;100мc затримка
+				3-перходу
 			</div>
-		</div>
-
-	</div>
-
-	<!--Приклад * -->
-	<div class="example">
-		<div class="head">
-			<h2>Приклад * - </h2>
-		</div>
-		<div class="descript">Загальні відомості: <br>
-		</div>
-		<div class="theory">
-		</div>
-		<div class="css">
-			<!-- Exemple - CSS -->
-			css:
-		</div>
-
-		<div class="code code__border">
-			<div class="block">
-				<!-- Exemple - HTML -->
+			<div class="css">
+				<!-- Exemple - CSS -->
+				css:<br>
+				.button { position: relative; top: 0 display: inline-block; line-height: 60px; align-items: center padding:
+				0
+				30px text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 18px border-radius:
+				10px;} <br>
+				.button__delay { color: #fff; background-color: #5e5373; box-shadow: 0 5px 0px #3c354a; transition-delay:
+				0s, 500ms, 500ms; transition-duration: 0s, 100ms, 100ms; transition-property: background-color, top,
+				box-shadow;}<br>
+				.button__delay:hover { top: 2px; background-color: #18b5a4; box-shadow: 0 3px 0px #3c354a;} <br>
 			</div>
+
+			<div class="code code__border">
+				<div class="block">
+					<!-- Exemple - HTML -->
+					<div class="button button__delay">Наведи на мене</div>
+				</div>
+			</div>
+
 		</div>
 
-	</div>
+		<!--Приклад 4 - Стиль/сценарій переходу - transition-timing-function -->
+		<div class="example">
+			<div class="head">
+				<h2>Приклад 4 - Стиль/сценарій переходу - transition-timing-function</h2>
+			</div>
+			<div class="descript">Загальні відомості: <br>
+				- transition-timing-function
+			</div>
+			<div class="theory">
+				- ease - (за замовчуванням) початок-пришвидшується, середина-уповільнюється, завершення-пришвидшується<br>
+				- easy-in - початок-повільний, середина-рівна, завершення-пришвидшується<br>
+				- easy-out - початок-швидкий, середина-рівна, завершення-уповільнюється<br>
+				- easy-in-out - початок-повільний, середина-рівна, завершення-уповільнюється<br>
+				- linear - початок, середина, завершення - -рівномірні<br>
+				- steps(5, start) - тривалість перходу поділена на 5 кроків, анімація починається відразу на кожному
+				кроці<br>
+				- steps(5, end) - тривалість перходу поділена на 5 кроків, анімація починається з атримкою на кожному
+				кроці<br>
+				- cubic-bezier - створення власного сценарію
+			</div>
+			<div class="css">
+				<!-- Exemple - CSS -->
+				css:<br>
+				.button__timing-function {position: relative;top: 0display: block;width: 300px;line-height:
+				60px;align-items: center; padding: 0 30px; margin: 20px 0 0 0; text-decoration: none; text-transform:
+				uppercase; letter-spacing: 2px; font-size: 18px; border-radius: 10px; cursor: pointer; color: #fff;
+				transition-property: width; transition-duration: 1s;}<br>
+				.button__timing-function_easy { background-color: #5e5373; transition-timing-function: ease;}<br>
+				.button__timing-function_easy-in { background-color: #18b5a4; transition-timing-function: ease-in;}<br>
+				.button__timing-function_easy-out { background-color: #ece89d; transition-timing-function: ease-out;}<br>
+				.button__timing-function_easy-in-out { background-color: #5e5373; transition-timing-function:
+				ease-in-out;}<br>
+				.button__timing-function_linear { background-color: #18b5a4; transition-timing-function: linear;}<br>
+				.button__timing-function_steps-start { background-color: #ece89d; transition-timing-function: steps(5,
+				start);}<br>
+				.button__timing-function_steps-end { background-color: #5e5373; transition-timing-function: steps(5,
+				end);}<br>
+				.button__timing-function_cubic-bezier { background-color: #18b5a4; transition-timing-function:
+				cubic-bezier(0.68, -0.55, 0.265, 1.55);} <br>
+				.block__timing-function { padding: 0 10px 20px 10px; margin: 20px; border: 1px solid #999; border-radius:
+				10px; background-color: #dfd;}<br>
+				<br>.block__timing-function:hover .button__timing-function_easy,
+				<br>.block__timing-function:hover .button__timing-function_easy-in,
+				<br>.block__timing-function:hover .button__timing-function_easy-out,
+				<br>.block__timing-function:hover .button__timing-function_easy-in-out,
+				<br>.block__timing-function:hover .button__timing-function_linear,
+				<br>.block__timing-function:hover .button__timing-function_steps-end,
+				<br>.block__timing-function:hover .button__timing-function_steps-start,
+				<br>.block__timing-function:hover .button__timing-function_cubic-bezier {
+				<br> width: 100%;
+				}
+			</div>
 
+			<div class="code code__border">
+				<div class="block">
+					<!-- Exemple - HTML -->
+					<div class="block__timing-function">
+						<div class="button__timing-function button__timing-function_easy">easy</div>
+						<div class="button__timing-function button__timing-function_easy-in">easy-in</div>
+						<div class="button__timing-function button__timing-function_easy-out">easy-out</div>
+						<div class="button__timing-function button__timing-function_easy-in-out">easy-in-out</div>
+						<div class="button__timing-function button__timing-function_linear">linear</div>
+						<div class="button__timing-function button__timing-function_steps-start">steps-start</div>
+						<div class="button__timing-function button__timing-function_steps-end">steps-end</div>
+						<div class="button__timing-function button__timing-function_cubic-bezier">cubic-bezier</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!--Приклад 5 - Тривалість переходу - transition -->
+		<div class="example">
+			<div class="head">
+				<h2>Приклад 5 - Тривалість переходу - transition</h2>
+			</div>
+			<div class="descript">Загальні відомості: <br>
+				- transition: property (властивість), duration (тривалість), timing-function(сценарій перходу), delay
+				(затримка)
+				- анімація встановлюється як на класі так і псевдокласі
+			</div>
+			<div class="theory">
+				- transition: all 1s ease 0s; - всі властивості, тривалість 1с, ease-сценарій, затримка=0<br>
+				- transition: padding 1s ease 0s, color 2s ease-in 0.5s; - padding, тривалість 1с, ease-сценарій, затримка=0
+				та color, тривалість 2с, ease-in-сценарій, затримка 0.5c<br>
+			</div>
+			<div class="css">
+				<!-- Exemple - CSS -->
+				css:<br>
+				.button { position: relative; top: 0 display: inline-block; line-height: 60px; align-items: center; padding:
+				0 30px text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 18px
+				border-radius:10px;} <br>
+				.button__transition { color: #fff; background-color: #5e5373; box-shadow: 0 5px 0px #3c354a; transition: all
+				1s ease 0s; /*transition: padding 1s ease 0s, color 2s ease-in 0.5s;*/}<br>
+				.button__transition:hover { top: 2px; background-color: #18b5a4; box-shadow: 0 3px 0px #3c354a; transition:
+				all 2s ease 0s;}<br>
+			</div>
+
+			<div class="code code__border">
+				<div class="block">
+					<!-- Exemple - HTML -->
+					<div class="button button__transition">Наведи на мене</div>
+				</div>
+			</div>
+
+		</div>
 
 
 </body>
