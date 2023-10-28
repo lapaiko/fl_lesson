@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 27. Теорія Зображення - адаптивні зображення. Практичні прийоми верстки картинок. CSS object-fit HTML
+		picture</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<h1>Урок 27. Теорія Зображення - адаптивні зображення. Практичні прийоми верстки картинок. CSS object-fit HTML
+		picture
+	</h1>
+	<a class="shpargalka" href="https://fls.guru/ibg.html">Шпаргалка - застосування класу "ibg"</a>
+
+	<div class="css">Стенд<br>
+		css:
+		.block { margin: 0 0 30px 0; } <br>
+		.block p { font-size: 18px; line-height: 24px; margin: 0 0 20px 0; } <br>
+		.link { color: red; } <br>
+		.textinput { border: 1px solid #666; height: 50px; padding: 0 15px; font-size: 18px; width: 300px; margin: 0 0
+		10px 0; } <br>
+		.textbutton { display: block; width: 300px; height: 50px; background: #666; font-size: 18px; color: #fff;
+		text-transform: uppercase; margin: 0 0 30px 0; } <br>
+		.list {} <br>
+		.list li font-size: 18px; margin: 0 0 15px 0;
+	</div> <br>
+
+
+	<!--Приклад 1 - Зображення у контентні-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 1 - Зображення у контентні</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- widht - задається розмір картинки
+		</div>
+		<div class="theory">
+			- widht:100% - роздягує/стискає всі зображення<br>
+			- max-widht:100% - задає максимальну ширину тому малі картинки мають власний розмір (не розтягуються)<br>
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			.text__image { text-align: center;}<br>
+			.text__image img { max-width: 100%;}<br>
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="text">
+					<h2 class="text__title title">У тексті</h2>
+					<div class="text__image">
+						<img src="img/1300x400.jpg" alt="">
+					</div>
+					<div class="text__value">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+					</div>
+					<div class="text__image">
+						<img src="img/800x400.jpg" alt="">
+					</div>
+					<div class="text__value">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 2 - Зображення у колонках -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 2 - Зображення у колонках</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- зображення у колонках складається з :<br>
+			&nbsp;- div - блоку зображення<br>
+			&nbsp; - img - зображення<br>
+		</div>
+		<div class="theory">
+			- блоку зображення div:<br>
+			&nbsp; - position: relative; - позиціонування - відносне (адаптивна верстка)<br>
+			&nbsp; - padding: 0 0 58% 0; - задаємо висоту блоку і картинки (адаптивна верстка)<br>
+			&nbsp; - overflow: hidden; за межами блоку все скриваємо<br>
+			- зображенню img:<br>
+			&nbsp; - position: absolute; - позицонування - абсолютне (адаптивна верстка)<br>
+			&nbsp; - top: 0; - відступ зверху =0 (адаптивна верстка)<br>
+			&nbsp; - width: 100%; - ширина<br>
+			&nbsp; - height: 100%; - висота<br>
+			&nbsp; - object-fit: cover; (потрбне значення) - тип заповнення<br>
+			&nbsp;&nbsp; - fill - повністю заповнює ширину та висоту;<br>
+			&nbsp;&nbsp; - contain - повністю помістись у батьківсбкий контейнер<br>
+			&nbsp;&nbsp; - none - зображення повністю вбудовуються у батьківсбкий контейнер<br>
+			&nbsp;&nbsp; - cover - зображення маштабуються так, щоб максимально вбудуватись у батьківсбкий контейнер<br>
+			&nbsp;- object-position:center; (потрбне значення) - позиціонування зображеня:<br>
+			&nbsp;&nbsp; - center - центрування по вертикалі/горизонталі;<br>
+			&nbsp;&nbsp; - top - вирівнювання по верхньому краю батьківського контейнеру<br>
+			&nbsp;&nbsp; - bottom - вирівнювання по нижньому краю батьківського контейнеру<br>
+			&nbsp;&nbsp; - left - вирівнювання по лівому краю батьківського контейнеру<br>
+			&nbsp;&nbsp; - right - вирівнювання по правому краю батьківського контейнеру<br>
+			&nbsp;&nbsp; - 0 0 - відступ злівого та верхнього краю батьківського контейнеру у пікселях/процентах<br>
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			.cards__row { display: flex; margin: 0 -15px;}<br>
+			.cards__column { flex: 1 1 33.333%; padding: 0 15px;}<br>
+
+			<br>.cards__image {
+			<br> position: relative; // - адаптація розміру
+			<br> padding: 0 0 58% 0; // - чуйна висота контейнера
+			<br> overflow: hidden; // - все за межами контейнеру приховано
+			<br> margin: 0 0 20px 0;}
+			<br>
+			<br>.cards__image img {
+			<br> width: 100%; // - висота
+			<br> height: 100%; // - ширина
+			<br> object-fit: cover; // - максимальне відображення картинки
+			<br> object-position: center; // - позиціонування картинки у контейнері
+			<br> position: absolute; top: 0; } // - позицонування
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="cards">
+					<div class="cards__title title">У картах (три колонки)</div>
+					<div class="cards__row">
+						<div class="cards__column">
+							<div class="cards__item">
+								<div class="cards__image"><img src="img/800x400.jpg" alt=""></div>
+								<div class="cards__body">
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic temporibus architecto tenetur
+									iste corrupti ex aut ullam, doloribus exercitationem atque odit voluptatem officia iure
+									asperiores non, distinctio quaerat optio adipisc
+								</div>
+							</div>
+						</div>
+						<div class="cards__column">
+							<div class="cards__item">
+								<div class="cards__image"><img src="img/400x600.jpg" alt=""></div>
+								<div class="cards__body">
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic temporibus architecto tenetur
+									iste corrupti ex aut ullam, doloribus exercitationem atque odit voluptatem officia iure
+									asperiores non, distinctio quaerat optio adipisc
+								</div>
+							</div>
+						</div>
+						<div class="cards__column">
+							<div class="cards__item">
+								<div class="cards__image"><img src="img/1300x200.jpg" alt=""></div>
+								<div class="cards__body">
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic temporibus architecto tenetur
+									iste corrupti ex aut ullam, doloribus exercitationem atque odit voluptatem officia iure
+									asperiores non, distinctio quaerat optio adipisc
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 3 - Зображення у рядках -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 3 - Зображення у рядках</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- зображення у рядках складається з :<br>
+			&nbsp;- div - блоку зображення<br>
+			&nbsp; - img - зображення<br>
+		</div>
+		<div class="theory">
+			- блоку зображення div:<br>
+			&nbsp; - position: relative; - позиціонування - відносне (адаптивна висота)<br>
+			&nbsp; - flex: 0 0 33.333%; - ширина 33% (адаптивна ширина)<br>
+			&nbsp; - min-height: 150px; - мінімальна висота на випадок відсутності/малого контенту<br>
+			&nbsp; - overflow: hidden; за межами блоку все скриваємо<br>
+			- зображенню img:<br>
+			&nbsp; - position: absolute; - позицонування - абсолютне (адаптивна верстка)<br>
+			&nbsp; - top: 0; - відступ зверху =0 (адаптивна висота)<br>
+			&nbsp; - left: 0; - відступ зліва =0 (адаптивна висота)<br>
+			&nbsp; - width: 100%; - ширина<br>
+			&nbsp; - height: 100%; - висота<br>
+			&nbsp; - object-fit: cover; (потрбне значення) - тип заповнення<br>
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:<br>
+			.items__title { font-size: 16px; font-weight: 700; margin: 0 0 15px 0;}<br>
+
+			.items__item { display: flex; justify-content: space-between; margin: 0 -15px 20px -15px;}<br>
+			<br>.items__image {padding: 0 15px;
+			<br> flex: 0 0 33.333%; // - адаптація ширини
+			<br> min-height: 150px; // - мінімальна висоти у разі відсутності /малого контенту
+			<br> position: relative;} // - адаптація розміру
+			<br>
+			<br>.items__image img {
+			<br> width: 100%; // - ширина
+			<br> height: 100%; // - висота
+			<br> object-fit: cover; // - максимальне відображення картинки
+			<br> position: absolute; // - адаптація позиціонування
+			<br> top: 0; left: 0; } // - позиціонування
+			<br>
+			<br>.items__body { flex: 1 1 auto; padding: 0 15px;}<br>
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="items">
+					<div class="items__title title">Карти у ряд</div>
+					<div class="items__item">
+						<div class="items__image">
+							<img src="img/1300x400.jpg" alt="">
+						</div>
+						<div class="items__body">
+							<div class="items__title">Заголовок</div>
+							<div class="items__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nulla
+								impedit
+								recusandae esse illo corporis adipisci officiis perferendis! Expedita nulla, vitae autem saepe
+								consectetur minus tempora? Autem consequatur veritatis sed.</div>
+						</div>
+					</div>
+					<div class="items__item">
+						<div class="items__image">
+							<img src="img/400x600.jpg" alt="">
+						</div>
+						<div class="items__body">
+							<div class="items__title">Заголовок</div>
+							<div class="items__text">Lorem
+							</div>
+						</div>
+					</div>
+					<div class="items__item">
+						<div class="items__image">
+							<img src="img/800x400.jpg" alt="">
+						</div>
+						<div class="items__body">
+							<div class="items__title">Заголовок</div>
+							<div class="items__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
+								tempora libero omnis obcaecati harum voluptatibus aspernatur, soluta, quis, molestiae excepturi
+								architecto velit ea necessitatibus neque maiores aperiam est repellendus magnam?</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 4 - Тег Picture -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 4 - Тег Picture</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- picture - контейнер з зображеннями, вивід яких визначають умови
+
+		</div>
+		<div class="theory">
+			- source - вихідне зображення, що відповідає вказаній умові:<br>
+			&nbsp;&nbsp;- srcset="img/1300x400.jpg 2x" - де:<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;- img/1300x400.jpg - шлях до зображення<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;- 2х - щільність пікселей екрана (зображення зменшиться у 2 рази)
+			&nbsp;&nbsp;- type="image/jpeg" - тип зображення<br>
+			&nbsp;&nbsp;- media="(min-width:1330px)" - медіазапит-умова виводу зображення<br>
+			- img - для ІЕ <br>
+
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="text">
+					<h2 class="text__title title">У тексті</h2>
+					<div class="text__image">
+						<picture>
+							<source srcset="img/1300x400.jpg" type="image/jpeg" media="(min-width:1330px)">
+							<source srcset="img/800x400.jpg" type="image/jpeg" media="(min-width:992px)">
+							<source srcset="img/400x600.jpg" type="image/jpeg" media="(max-width:992px)">
+							<img srcset="img/1300x400.jpg" all="">
+						</picture>
+					</div>
+					<div class="text__value">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+					</div>
+					<div class="text__image">
+						<picture>
+							<source srcset="img/1300x400.jpg 2x" type="image/jpeg" media="(min-width:1330px)">
+							<source srcset="img/800x400.jpg 2x" type="image/jpeg" media="(min-width:992px)">
+							<source srcset="img/400x600.jpg 2x" type="image/jpeg" media="(max-width:992px)">
+							<img srcset="img/1300x400.jpg" all="">
+						</picture>
+					</div>
+					<div class="text__value">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quam nobis quasi maxime odit ut
+							similique aliquam quas esse corporis nesciunt! Assumenda perspiciatis animi cumque, eligendi maxime
+							aliquam expedita praesentium?</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад * -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад * - </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад * -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад * - </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+
+
+</body>
+
+</html>

@@ -28,137 +28,99 @@
 	</div> <br>
 
 
-	<!--Приклад 1-->
+	<!--Приклад 1 - Анимація-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 1 - </h2>
+			<h2>Приклад 1 - Анимація</h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			- animation-name: "им'я ключових кадрів - 1" , "им'я ключових кадрів - 2"<br>
+			- animation-duration: "тривалість анімації - 1", "тривалість анімації - 2"<br>
+			- animation-timing-function - "сценарій анімації - 1", "сценарій анімації - 2"<br>
+			- animation-iteration-count - "кількість повторів - 1", "кількість повторів - 2"<br>
+			- animation-direction - "напрям програвання анімації - 1", "напрям програвання анімації - 2"<br>
+			- animation-play-state - старт/стоп анімації<br>
+			- animation-delay - затримка анімації<br>
+			- animation-fill-mode - які значення властивостей, що анімуються застосуються після завершення агмації<br>
+			- animation - короткий запис анімації<br>
 		</div>
 		<div class="theory">
+			- animation-timing-function - стиль/сценарій анімації між ключовими кадрами:
+			- ease - (за замовчуванням) початок-пришвидшується, середина-уповільнюється, завершення-пришвидшується<br>
+			- easy-in - початок-повільний, середина-рівна, завершення-пришвидшується<br>
+			- easy-out - початок-швидкий, середина-рівна, завершення-уповільнюється<br>
+			- easy-in-out - початок-повільний, середина-рівна, завершення-уповільнюється<br>
+			- linear - початок, середина, завершення - -рівномірні<br>
+			- steps(5, start) - тривалість перходу поділена на 5 кроків, анімація починається відразу на кожному
+			кроці<br>
+			- steps(5, end) - тривалість перходу поділена на 5 кроків, анімація починається з атримкою на кожному
+			кроці<br>
+			- cubic-bezier - створення власного сценарію<br><br>
+			- animation-iteration-count - кількість повторів:<br>
+			- infinite - програється нескінченно<br><br>
+
+			- animation-direction - напрям програвання анімації<br>
+			- normal - звичайний прохід<br>
+			- alternate - кожен парний прохід у програється у зворотньому напрямку<br>
+			- alternate-reverse - кожен непарний прохід у програється у зворотньому напрямку<br>
+			- reverse - програється задом наперед<br><br>
+
+			- animation-fill-mode - які значення властивостей, що анімуються застосуються після завершення агмації
+			- forwards - застосовуються кінцеві значення анімації<br>
+			- none -повернення до початкових значень<br><br>
+
+			- animation - короткий запис анімації:<br>
+			- animation-name - им'я ключових кадрів<br>
+			- animation-duration - тривалість анімації<br>
+			- animation-timing-function - сценарій анімації<br>
+			- animation-iteration-count - кількість повторів<br>
+			- animation-direction - напрям програвання анімації<br>
+			- animation-delay - затримка анімації<br>
+			- animation-fill-mode - значення властивостей після завершення агмації<br>
+
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
-			css:
+			css:<br>
+			.circle { position: relative; left: 0px; width: 100px; height: 100px; border-radius: 50%;
+			background-color:#3c354a; <br>
+			/*animation-name: black-circle;<br>
+			animation-duration: 10s;<br>
+			animation-timing-function: linear;<br>
+			animation-iteration-count: infinite;<br>
+			animation-direction: alternate;<br>
+			animation-delay: 2s;<br>
+			animation-fill-mode: forwards;*/<br><br>
+
+			animation: <br>black-circle 3s linear infinite alternate 2s forwards, <br>red-circle 5s ease infinite alternate
+			2s forwards;<br>
+
+			}<br>
+			@keyframes black-circle {<br>
+			0% { left: 0;} <br>
+			100% { left: 500px;} <br>
+			}<br>
+			@keyframes red-circle {<br>
+			0% { background-color: #fff; }<br>
+			50% { background-color: red;} <br>
+			100% { background-color: #fff;}<br>
+			}<br>
+
+			<br>.block:hover .circle {
+			<br> animation-play-state: paused;
+			<br>}
 		</div>
 
 		<div class="code code__border">
-			<div class="block">
+			<div class="block ">
 				<!-- Exemple - HTML -->
+				<div class="circle"></div>
 			</div>
 		</div>
 
 	</div>
 
-	<!--Приклад * -->
-	<div class="example">
-		<div class="head">
-			<h2>Приклад * - </h2>
-		</div>
-		<div class="descript">Загальні відомості: <br>
-		</div>
-		<div class="theory">
-		</div>
-		<div class="css">
-			<!-- Exemple - CSS -->
-			css:
-		</div>
 
-		<div class="code code__border">
-			<div class="block">
-				<!-- Exemple - HTML -->
-			</div>
-		</div>
-
-	</div>
-
-	<!--Приклад * -->
-	<div class="example">
-		<div class="head">
-			<h2>Приклад * - </h2>
-		</div>
-		<div class="descript">Загальні відомості: <br>
-		</div>
-		<div class="theory">
-		</div>
-		<div class="css">
-			<!-- Exemple - CSS -->
-			css:
-		</div>
-
-		<div class="code code__border">
-			<div class="block">
-				<!-- Exemple - HTML -->
-			</div>
-		</div>
-
-	</div>
-
-	<!--Приклад * -->
-	<div class="example">
-		<div class="head">
-			<h2>Приклад * - </h2>
-		</div>
-		<div class="descript">Загальні відомості: <br>
-		</div>
-		<div class="theory">
-		</div>
-		<div class="css">
-			<!-- Exemple - CSS -->
-			css:
-		</div>
-
-		<div class="code code__border">
-			<div class="block">
-				<!-- Exemple - HTML -->
-			</div>
-		</div>
-
-	</div>
-
-	<!--Приклад * -->
-	<div class="example">
-		<div class="head">
-			<h2>Приклад * - </h2>
-		</div>
-		<div class="descript">Загальні відомості: <br>
-		</div>
-		<div class="theory">
-		</div>
-		<div class="css">
-			<!-- Exemple - CSS -->
-			css:
-		</div>
-
-		<div class="code code__border">
-			<div class="block">
-				<!-- Exemple - HTML -->
-			</div>
-		</div>
-
-	</div>
-
-	<!--Приклад * -->
-	<div class="example">
-		<div class="head">
-			<h2>Приклад * - </h2>
-		</div>
-		<div class="descript">Загальні відомості: <br>
-		</div>
-		<div class="theory">
-		</div>
-		<div class="css">
-			<!-- Exemple - CSS -->
-			css:
-		</div>
-
-		<div class="code code__border">
-			<div class="block">
-				<!-- Exemple - HTML -->
-			</div>
-		</div>
-
-	</div>
 
 
 

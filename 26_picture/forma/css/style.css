@@ -256,58 +256,5 @@ body {
 	margin: 0 0 20px 0;
 }
 
-.block {
-	padding: 20px;
-}
 
-/*Приклад 1 - Анимація*/
-.circle {
-	position: relative;
-	left: 0px;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	background-color: #3c354a;
-
-	/*animation-name: black-circle;
-	animation-duration: 3s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-delay: 2s;
-	animation-fill-mode: forwards;*/
-
-	animation: black-circle 3s linear infinite alternate 2s forwards, red-circle 5s ease infinite alternate 2s forwards;
-}
-
-@keyframes black-circle {
-	0% {
-		left: 0;
-	}
-
-	50% {
-		border-radius: 0;
-	}
-
-	100% {
-		left: 500px;
-	}
-}
-
-@keyframes red-circle {
-	0% {
-		background-color: #fff;
-	}
-
-	50% {
-		background-color: red;
-	}
-
-	100% {
-		background-color: #fff;
-	}
-}
-
-.block:hover .circle {
-	animation-play-state: paused;
-}
+/*Приклад 1 - */
