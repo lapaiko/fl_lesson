@@ -1,0 +1,668 @@
+/*Обнулення рамок та відступів в усіх тегах*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*зміна принципу визначення ширини блоку - ширина блоку включає товщину рамок*/
+*,
+*::before,
+*::after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*Прибираємо лінії обводки тегів*/
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+/*Наступні теги визначаємо як блочні*/
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+/*Урівнювання поведінки шрифтів для всіз бразерів та платформ та забороняє самовільне збільшення шрифта*/
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/*Встановлюємо наслідування сімейства шрифта для тегів*/
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+/*Визначаємо параметри для тегів, що прибирають їх особливості у різних браузерах*/
+input::-ms-clear {
+	/*прибирає хрестик в input у ІЕ*/
+	display: none;
+}
+
+button {
+	/*при наведені курсору на кнопку він пертворюється на вказівник*/
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	/*Прибирають зайві відступи в FF*/
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	/*скидаємо оформлення посилання, що відвідувалось*/
+	text-decoration: none;
+}
+
+a:hover {
+	/*скидаємо оформлення посилання НА ЯКЕ НАВОДИТЬСЯ КУРСОР*/
+	text-decoration: none;
+}
+
+ul,
+li {
+	list-style: none;
+	/*чистка стилів маркованих стилів*/
+}
+
+img {
+	vertical-align: top;
+	/*Піднімаємо картинку в гору*/
+}
+
+/*Обнуляємо заголовків*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 20px;
+	margin: 0px 0 20px 0px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+
+html,
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	line-height: 16px;
+}
+
+body {
+	padding: 10px;
+}
+
+.example {
+	border: 1px solid #333;
+	margin: 0 0 20px 0;
+}
+
+.descript,
+.code {
+	margin: 0 0 10px 0;
+}
+
+.head,
+.descript,
+.theory,
+.css,
+.code {
+	padding: 10px;
+}
+
+.descript {
+	background: #dfd;
+}
+
+.code {
+	background: #ffd;
+}
+
+.code__border {
+	padding: 10px;
+	margin: 10px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px#000;
+}
+
+.css span,
+.theory p {
+	font-weight: 700;
+}
+
+.theory {
+	background-color: gold;
+}
+
+.css {
+	background-color: #ddd;
+}
+
+.href {
+	display: block;
+	border: 1px solid gold;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.href :hover {
+	background-color: gold;
+}
+
+.block-decoration {
+	padding: 10px;
+	margin: 0 0 15px 0;
+	/*height: 220px;*/
+	border-radius: 15px;
+	box-shadow: 0 0 10px#000;
+}
+
+.block-decoration p {
+	display: inline-block;
+	padding: 3px 5px;
+	font-weight: bold;
+	background-color: #ffa;
+	border-radius: 3px;
+	border: 1px solid #777;
+}
+
+/* Стенд */
+.block,
+.block-none,
+.block-child {
+	margin: 0 0 30px 0;
+}
+
+.block-child {
+	color: red;
+}
+
+.block p,
+.block-none p,
+.block-child {
+	font-size: 18px;
+	line-height: 24px;
+	margin: 0 0 20px 0;
+}
+
+.link {
+	color: red;
+}
+
+.textinput {
+	border: 1px solid #666;
+	height: 50px;
+	padding: 0 15px;
+	font-size: 18px;
+	width: 300px;
+	margin: 0 0 10px 0;
+}
+
+.textbutton {
+	display: block;
+	width: 300px;
+	height: 50px;
+	background: #666;
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0 0 30px 0;
+}
+
+.list {}
+
+.list li,
+.list-ntt li {
+	font-size: 18px;
+	margin: 0 0 15px 0;
+}
+
+.shpargalka {
+	display: block;
+	font-size: 18px;
+	text-decoration: underline;
+	margin: 0 0 20px 0;
+}
+
+/*Вікно приклдів*/
+h3 {
+	font-size: 18px;
+	margin: 0 0 10px 0;
+}
+
+h4 {
+	font-size: 14px;
+	margin: 0 0 10px 0;
+}
+
+
+.section__example {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.example__blok {
+	margin: 0 0 20px 0;
+}
+
+/*Приклад 1 - Відступи Padding та Margin*/
+.item {
+	color: #fff;
+}
+
+.item__color_1 {
+	background-color: #794f45;
+}
+
+.item__color_2 {
+	background-color: #77608d;
+}
+
+.item__color_3 {
+	background-color: #7a956b;
+}
+
+div.item__info {
+	/*padding-top: 10px;padding-bottom: 10px;padding-left: 10px;padding-right: 10px;*/
+	padding: 10px;
+
+	/*margin-top: 15px;margin-bottom: 0px;margin-left: 0px;margin-right: 0px;*/
+	margin: 0 0 15px 0;
+}
+
+span.item__info {
+	/*display: inline-block;*/
+	/*display: block;*/
+	padding: 10px;
+	margin: 0 0 15px 0;
+}
+
+img.item__image {
+	box-sizing: content-box;
+	max-width: 300px;
+	padding: 15px;
+	/*margin: 15px;*/
+}
+
+
+/*Приклад 2 - Відступи та розміри блоку. Властивість box-sizing*/
+.item__block-sizing,
+.item__block-sizing-box {
+	width: 500px;
+	padding: 15px;
+	margin: 15px;
+	box-sizing: content-box;
+}
+
+.item__block-sizing-box {
+	box-sizing: border-box;
+}
+
+.image__block-sizing-box {
+	max-width: 300px;
+	box-sizing: border-box;
+	padding: 15px;
+}
+
+/*Приклад 3 - Відступи та фон*/
+.item__info_padding {
+	padding: 15px;
+}
+
+.item__info_margin {
+	margin: 15px;
+}
+
+.item__info_margin-padding {
+	padding: 15px;
+	margin: 15px;
+}
+
+.item__info_color_bacground-img {
+	color: #555;
+	padding: 0 0 0 30px;
+	background: url(../img/icon.svg) 0 0 no-repeat;
+}
+
+
+/*Приклад 4 - Відступи та позиціонування*/
+.item__info_position {
+	color: #555;
+	position: relative;
+	padding: 0 0 0 40px;
+}
+
+.item__info_position::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 25px;
+	height: 23px;
+	border-radius: 50%;
+	background-color: #333;
+}
+
+/*Приклад 5 - Відступи та overflow: hidden;*/
+.item__info_overflow {
+	overflow: hidden;
+	border: #7a956b 1px solid;
+
+	padding: 30px;
+}
+
+.item__overflow {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	box-shadow: 0 0 30px #000;
+}
+
+/*Приклад 6 - Центровка блоку*/
+.item__info_center {
+	overflow: hidden;
+	border: #7a956b 1px solid;
+}
+
+.item__center {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+/*Приклад 7 - Відємні значення margin*/
+.item__margin-neg {
+	padding: 15px;
+	position: relative;
+}
+
+.item__margin-neg-top {
+	margin: -50px 0 0 0;
+	z-index: 2;
+}
+
+.item__top-neg-top {
+	top: -50px;
+	z-index: 2;
+}
+
+.item__translate-neg-top {
+	transform: translate(0, -50px);
+}
+
+/*Приклад 8 - Відступи у FLEX-конструкціях*/
+
+.item__flex_row {
+	display: flex;
+	margin: 0 -15px;
+}
+
+.item__flex_col {
+	padding: 0 15px;
+	flex: 0 1 33.333%;
+	border: 1px solid #bbb;
+	color: #333;
+}
+
+.item__flex_element {
+	background-color: #77608d;
+	padding: 15px;
+	color: #ddd;
+}
+
+
+/*Приклад 9 - Відступи у слайдері*/
+.slider {
+	display: flex;
+	overflow: hidden;
+
+	border: 1px solid #ddd;
+	margin: -25px 0;
+	padding: 25px 0;
+}
+
+.slider__item {
+	text-align: center;
+	flex: 0 1 33.333%;
+}
+
+.slider__image {
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color: #7a956b;
+	box-shadow: 0 0 30px #000;
+}
+
+/*Приклад 10 - Схлопування Margin*/
+
+.margin_hlop {
+	padding: 15px;
+	margin: 0 0 20px 0;
+}
+
+/*обидва позитивні*/
+.margin__pos {
+	margin: 60px 0 20px 0;
+}
+
+/*один негативни*/
+.margin__neg {
+	margin: -15px 0 20px 0;
+}
+
+/*обидва негативні*/
+.margin__neg_1 {
+	margin: 0 0 -10px 0;
+}
+
+.margin__neg_2 {
+	margin: -5px 0 20px 0;
+}
+
+/*відступ нащадка більший за відступ батька*/
+.block__father {
+	border: red 2px solid;
+	margin: 10px 0 0 0;
+}
+
+.block__child {
+	margin: 20px 0 0 0;
+}
+
+
+/*Приклад 11 - Принципи застосування відступів*/
+
+/*- зверху до низ*/
+.princip__1 {
+	padding: 10px;
+	margin: 0 0 10px 0;
+}
+
+/*- зліва на право*/
+.block__princip {
+	display: flex;
+}
+
+.princip__2 {
+	padding: 10px;
+	margin: 0 0 0 10px;
+}
+
+/*!!!у останнього елемента групи, онулити відступ*/
+.princip__list {
+	background-color: #77608d;
+	padding: 20px 50px;
+	color: #fff;
+	margin: 0 0 10px 0;
+}
+
+.princip__li li {
+	margin: 0 0 20px 0;
+}
+
+.princip__li *:last-child {
+	margin: 0;
+}
+
+/*- відступи задаються самому верхньому батьку у конструкції*/
+.house {
+	background-color: #7a956b;
+	padding: 50px 50px;
+	color: #fff;
+}
+
+.list__body {
+	margin: 0 0 20px 0;
+}
+
+.list__body:last-child {
+	margin: 0;
+}
+
+.list li {
+	margin: 0;
+	padding: 5px;
+}
+
+/*!!!Зовнішні відступи не задають незалежним елементам*/
+.aticl {
+	background-color: #794f45;
+	padding: 30px 15px;
+	color: #fff;
+}
+
+/*незалежний блок вклячається як елемент іншого блоку, що включає зовнішній відступ*/
+.aticl__header {
+	margin: 0 0 20px 0;
+}
+
+.aticl__text,
+.contact__text {
+	font-size: 14px;
+}
+
+.contact {
+	background-color: #77608d;
+	padding: 30px 15px;
+	color: #fff;
+}
+
+/*незалежний блок вклячається як елемент іншого блоку, що включає зовнішній відступ*/
+.contact__header {
+	margin: 0 0 40px 0;
+}
+
+
+/*незалежний блок HEADER*/
+.header {
+	text-align: center;
+}
+
+.header__title {
+	font-size: 30px;
+	margin: 0 0 15px 0;
+}
+
+.header__discript {
+	font-size: 20px;
+}
+
+/*!!!Відступи повинні покращувати зручність користування та сприйняття*/
+.bad-good {}
+
+.bad-good__row {
+	display: flex;
+	margin: 0 -15px 30px;
+}
+
+.bad-good__column {
+	padding: 0 15px;
+	flex: 0 1 50%;
+}
+
+.bad-good__header {
+	font-weight: 700;
+	margin: 0 0 15px 0;
+}
+
+.bad-good__item {
+	padding: 20px 15px;
+	color: #fff;
+}
+
+.bad-good__item_bad {
+	background-color: #794f45;
+}
+
+.bad-good__item_good {
+	background-color: #7a956b;
+}
+
+.title-bad-good {
+	margin: 0 0 15px 0;
+}
+
+.bad-good__title {
+	font-size: 20px;
+}
+
+.bad-good__text {}
+
+/*- зайві відступи*/
+.item_bad {
+	padding: 80px 15px;
+}
+
+/*- розрив об'єктів*/
+.title-bad {
+	margin: 0 0 50px 0;
+}
+
+/*- площа натискання на кнопку*/
+.bad-good__link {
+	display: inline-block;
+	color: green;
+	cursor: pointer;
+	border: 1px solid green;
+}
+
+.bad-good__link:hover {}
+
+.link__good {
+	padding: 5px 100px 5px 10px;
+}

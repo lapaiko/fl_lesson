@@ -241,7 +241,7 @@ body {
 	margin: 0 0 30px 0;
 }
 
-.list {}
+/*.list {}*/
 
 .list li,
 .list-ntt li {
@@ -256,5 +256,500 @@ body {
 	margin: 0 0 20px 0;
 }
 
+h2 {
+	font-size: 24px;
+	line-height: 30px;
+}
 
-/*Приклад 1 - */
+h3 {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+h4 {
+	font-size: 18px;
+	line-height: 20px;
+}
+
+h2,
+h3,
+h4 {
+	margin: 0 0 10px 0;
+	z-index: 5;
+}
+
+
+
+/*Трансформація об'єктів - transform - 2*/
+
+.content__block {
+	position: relative;
+}
+
+.content__transform {
+	position: relative;
+	padding: 10px 20px;
+	border-bottom: 1px solid #333;
+}
+
+.transform__2d {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+	width: 150px;
+	height: 150px;
+
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-align: center;
+
+	transition: all 0.8s ease 0s;
+}
+
+/*Приклад 1 - Переміщення - translate */
+
+.translate__0,
+.translate__center_left {
+	color: #999;
+	border: 2px dashed #999;
+	z-index: 2;
+}
+
+.translate__50,
+.translate__center_align {
+
+	color: #fff;
+	background-color: #794f45;
+	z-index: 1;
+}
+
+/*Переміщення*/
+.translate__0 {
+	transform: translate(0px, 0px);
+}
+
+.translate__50 {
+	margin: -150px 0 0 0;
+	transform: translate(130px, -10px);
+}
+
+/*Центрування margin*/
+.translate__center_left {
+	left: 50%;
+	margin: 0 0 10px -75px;
+}
+
+/*Центрування transform*/
+.translate__center_align {
+	left: 50%;
+	width: 400px;
+	transform: translate(-50%, 0px);
+}
+
+/*Анімація*/
+.translate__animation {
+	color: #fff;
+	background-color: #794f45;
+}
+
+.translate__animation:hover {
+	transform: translate(20px, 20px);
+}
+
+/*Приклад 2 - Маштабування - scale*/
+
+.scale__0 {
+	color: #999;
+	border: 2px dashed #999;
+}
+
+.scale__width,
+.scale__height,
+.scale__all,
+.scale__gorizont,
+.scale__vertical {
+	color: #fff;
+	transform: scale(1);
+	background-color: #7a956b;
+}
+
+/*маштабування по ширині*/
+.scale__width:hover {
+	margin: 0px 0 0 75px;
+	transform: scale(2, 1);
+}
+
+/*маштабування по ширині*/
+.scale__height {
+	margin: 50px 0;
+}
+
+.scale__height:hover {
+	transform: scale(1, 1.5);
+}
+
+/*маштабування ним параметром*/
+.scale__all:hover {
+	transform: scale(0.5);
+}
+
+/*відображення по горизонталі*/
+.scale__gorizont:hover {
+	transform: scale(-1, 1);
+}
+
+/*відображення по вертикалі*/
+.scale__vertical:hover {
+	transform: scale(1, -1);
+}
+
+/*Приклад 3 - Обертання - rotate*/
+.rotate__0 {
+	color: #999;
+	border: 2px dashed #999;
+	margin: 0px 20px;
+}
+
+.rotate__45,
+.rotate__-90,
+.rotate__180,
+.rotate__-360 {
+	color: #fff;
+	background-color: #7a956b;
+	margin: 40px 20px;
+	transform: rotate(0);
+}
+
+
+/*обертання на 45 за годиниковою стрілкою*/
+.rotate__45:hover {
+	transform: rotate(45deg);
+}
+
+/*обертання на 45 проти годиникової стрілки*/
+.rotate__-90:hover {
+	transform: rotate(-45deg);
+}
+
+/*півоберта за годиниковою стрілкою */
+.rotate__180:hover {
+	transform: rotate(180deg);
+}
+
+/*повне обертання проти годиникової стрілки*/
+.rotate__-360:hover {
+	transform: rotate(-360deg);
+}
+
+
+/*Приклад 4 - Деформація - skew*/
+.skew__0 {
+	color: #999;
+	border: 2px dashed #999;
+	margin: 0px 20px;
+}
+
+.skew__horizont,
+.skew__vertical,
+.skew__all {
+	color: #fff;
+	background-color: #794f45;
+	margin: 40px 20px;
+	transform: skew(0deg, 0deg);
+}
+
+/*нахил обʼєкту по горизонталі на 20 градусію*/
+.skew__horizont:hover {
+	transform: skew(20deg, 0deg);
+}
+
+/*нахил обʼєкту по вертикалі на 20 градусію*/
+.skew__vertical:hover {
+	transform: skew(0deg, 20deg);
+}
+
+/*викривлення обʼєкту*/
+.skew__all:hover {
+	transform: skew(-20deg, -200deg);
+}
+
+
+/*Приклад 5 - Обєднання кількох трансформацій - matrix*/
+.matrix__0 {
+	color: #999;
+	border: 2px dashed #999;
+	margin: 0px 20px;
+}
+
+.matrix__mashtab,
+.matrix__skew,
+.matrix__translate {
+	color: #fff;
+	background-color: #77608d;
+	margin: 40px 20px;
+}
+
+/*маштабування обʼєкту по горизанталі у 1.5 та по вертикалі у 0.7*/
+.matrix__mashtab:hover {
+	margin: 0 0 0 95px;
+	transform: matrix(2, 0, 0, 0.7, 0, 0);
+}
+
+/*деформація обʼєкту по горизанталі на 0.3 та по вертикалі на 0.2*/
+.matrix__skew:hover {
+	transform: matrix(1, 0.3, 0.2, 1, 0, 0);
+}
+
+/*зміна положення обʼєкту по горизанталі на 70 та по вертикалі на 45*/
+.matrix__translate:hover {
+	transform: matrix(1, 0, 0, 1, 70, 45);
+}
+
+
+/*Приклад 6 - Обєднання кількох трансформацій - мультизапис*/
+.multi__0 {
+	color: #999;
+	border: 2px dashed #999;
+	margin: 0px 20px;
+}
+
+.multi__translate-scale-rotate {
+	color: #fff;
+	background-color: #7a956b;
+	margin: 40px 20px;
+}
+
+/*обʼєкт переміщається на x=50 y=20, маштабується по х=1.1 по у=0.5 та обертається на кут 45 градусів*/
+.multi__translate-scale-rotate:hover {
+	margin: 0 0 0 95px;
+	transform: translate(50px, 20px) scale(1.1, 0.5) rotate(45deg);
+}
+
+/*Приклад 7 - Зміщення центру трансформації - transform-origin*/
+.transform-origin__0 {
+	color: #999;
+	border: 2px dashed #999;
+	margin: 0px 20px;
+}
+
+.transform-origin__center,
+.transform-origin__top-right {
+	color: #fff;
+	background-color: #794f45;
+}
+
+/*трансформація у центрі обʼєкта - transform-origin: center; rotate(45deg)*/
+.transform-origin__center {
+	margin: 40px 20px;
+	transform-origin: center;
+}
+
+.transform-origin__center:hover {
+	transform: rotate(45deg);
+}
+
+/*трансформація у верху зліва обʼєкта - transform-origin: top left; rotate(45deg)*/
+.transform-origin__top-right {
+	margin: 20px 20px 60px 20px;
+	transform-origin: top right;
+}
+
+.transform-origin__top-right:hover {
+	transform: rotate(-45deg);
+}
+
+/*3D*/
+.content-3d__wrapper {
+	width: 150px;
+	height: 150px;
+	background-color: rgba(0, 0, 0, 0.2);
+
+	perspective-origin: center;
+	perspective: 400px;
+}
+
+.content-3d {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	text-transform: uppercase;
+	font-size: 16px;
+	width: 150px;
+	height: 150px;
+
+	transition: all 0.8s ease 0s;
+}
+
+
+/*Приклад 8 - Перспектива - глибина та точка відліку - perspective, perspective-origin*/
+
+/*обʼєкт повертається по осі X на 30deg з перспективою perspective=300px
+								perspective-origin=0 0*/
+.content-3d__wrapper_perspective-0-0 {
+	perspective-origin: 0 0;
+	perspective: 300px;
+}
+
+.content-3d__perspective {
+	background-color: #7a956b;
+}
+
+/*обʼєкт повертається по осі X на 30deg з перспективою perspective=300px
+								perspective-origin=center*/
+.content-3d__perspective:hover {
+	transform: rotateX(30deg);
+}
+
+/*Приклад 9 - Переміщення - translate3D */
+.content-3d__translate3D,
+.content-3d__translate3D-back {
+	background-color: #794f45;
+}
+
+/*наближeння обʼєкту по Z=50px х Х=30px Y=20px*/
+.content-3d__translate3D:hover {
+	transform: translate3d(30px, 20px, 50px);
+}
+
+/*віддалення обʼєкту по Z=-50px з Х=30px Y=20px*/
+.content-3d__translate3D-back:hover {
+	transform: translate3d(30px, 20px, -50px);
+}
+
+/*Приклад 10 - Маштабування - scale3D */
+.content-3d__scale3D,
+.content-3d__scale3D-min {
+	background-color: #77608d;
+	transform: scale3d(1, 1, 2);
+}
+
+/*збільшення обʼєкту по Z=5 з Х=-2 Y=2 - scale3d(-2, 2, 5)*/
+.content-3d__scale3D:hover {
+	transform: scale3d(-2, 2, 5);
+}
+
+/*зменшення обʼєкту по Z=0.5 з Х=2 Y=-2 - scale3d(2, -2, 0.5)*/
+.content-3d__scale3D-min:hover {
+	transform: scale3d(2, -2, 0.5);
+}
+
+/*Приклад 11 - Обертання - rotate3d */
+.content-3d__rotate3d,
+.content-3d__rotate3d-x-y {
+	background-color: #7a956b;
+	transform: rotate3d(1, 1, 1, 0deg);
+}
+
+/*обертання обʼєкту за вектором Х=1 Y=1 Z=1 та кутом 45*/
+.content-3d__rotate3d:hover {
+	transform: rotate3d(1, 1, 1, 45deg);
+}
+
+/*обертання обʼєкту за вектором Х=1 Y=1 Z=0 та кутом 45*/
+.content-3d__rotate3d-x-y:hover {
+	transform: rotate3d(1, 1, 0, 45deg);
+}
+
+
+/*Приклад 12 - Обєднання кількох 3D трансформацій - matrix3d*/
+.content-3d__matrix3d {
+	background-color: #999;
+}
+
+/*Приклад 13 - Обєднання кількох 3D трансформацій - мультизапис*/
+.content-3d__multi3d {
+	background-color: #794f45;
+}
+
+.content-3d__multi3d:hover {
+	transform: translate3d(20px, 20px, 20px) rotate3d(1, 1, 1, 45deg);
+}
+
+/*Приклад 14 - Стиль трансформації - мультизапис*/
+
+.wrapper__style3d {
+	width: 150px;
+	height: 150px;
+	background-color: rgba(0, 0, 0, 0.2);
+
+	perspective-origin: center;
+	perspective: 400px;
+	transform-style: flat;
+}
+
+.content__style3d {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	text-transform: uppercase;
+	font-size: 16px;
+	width: 150px;
+	height: 150px;
+	color: #fff;
+
+	transition: all 0.8s ease 0s;
+}
+
+.content__style3d {
+	background-color: #7a956b;
+}
+
+/*Звичайна трансформація*/
+.content__style3d:hover {
+	transform: rotateX(45deg);
+}
+
+/*Трансформація перетину двох площин*/
+.wrapper__style3d_preserv {
+	transform-style: preserve-3d;
+}
+
+
+/*Приклад 15 - Зворотня сторона об'єкта - backface-visibility*/
+.flip__body {
+	position: relative;
+	width: 150px;
+	height: 150px;
+
+	transform-style: preserve-3d;
+
+	transition: all 0.8s ease 0s;
+}
+
+.flip__front,
+.flip__back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+}
+
+.flip__front {
+	z-index: 2;
+	background-color: #77608d;
+	transform: rotateY(0deg);
+
+	backface-visibility: hidden;
+}
+
+.flip__back {
+	transform: rotateY(-180deg);
+	background-color: rgba(121, 79, 69, 1);
+}
+
+.flip:hover .flip__body {
+	transform: rotateY(-180deg);
+}

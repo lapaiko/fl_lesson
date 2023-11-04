@@ -30,129 +30,641 @@
 	<!--Приклад 1-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад 1 - </h2>
+			<h2>Трансформація об'єктів - transform - 2D<br><br>
+				Приклад 1 - Переміщення - translate
+			</h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			- transform - трансформація об'єктів:<br>
+			&nbsp;&nbsp; - блочні - трансформуються<br>
+			&nbsp;&nbsp; - інлайн - не трансформується<br>
+			&nbsp;&nbsp; - псевдоелементи - не трансформуються<br>
+			&nbsp;&nbsp; - display: inline-block; - трансформує інлайноб'єкти та псквдоелементи<br>
+			- об'єкти, що трансформуються не впливають на оточуючі обʼєкти<br>
 		</div>
 		<div class="theory">
+			- translate(x, y), translateX, translateY:<br>
+			&nbsp;&nbsp; - зсуває елемент на норве місце, <br>
+			&nbsp;&nbsp; - перміщуає відносно початкового положення об'єкта вправо і вниз<br>
+			&nbsp;&nbsp; - використовує координати X, Y<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;- у пікселях, процентах<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;- можуть бути відємними<br>
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
-			css:
+			css:<br>
+			.content__block { position: relative;} <br>
+			.content__transform { position: relative; padding: 10px 20px 60px 20px; margin: 0 0 20px 0; border-bottom: 1px
+			solid #333;} <br>
+			.transform__2d { display: flex; justify-content: center; align-items: center; position: relative; width: 150px;
+			height: 150px; font-size: 14px; line-height: 20px; text-transform: uppercase; text-align: center; transition:
+			all 0.8s ease 0s;} <br>
+			<br>.translate__0,
+			<br>.translate__center_left { color: #999; border: 2px dashed #999; z-index: 2;}<br>
+			<br>.translate__50,
+			<br>.translate__center_align { margin: -150px 0 0 0; color: #fff; background-color: #794f45; z-index: 1;}<br>
+			<br>.translate__animation { color: #fff; background-color: #794f45;}
+			<br>.translate__animation:hover { transform: translate(20px, 20px);}
+
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
 				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 2D</h2>
+
+					<div class="content__block">
+						<h3>translate (x, y) </h3>
+						<div class="content__transform">
+							<h4>переміщення обʼєкту - transform: translate(130px, -15px); </h4>
+							<div class="transform__2d translate__0">translate <br>(0px, 0px)</div>
+							<div class="transform__2d translate__50">translate <br>(130px, -15px)</div>
+						</div>
+						<div class="content__transform">
+							<h4>центруваня обʼєкту - left: 50%; через:<br>
+								&nbsp;&nbsp;- margin: 0 0 0 -75px; <br>
+								&nbsp;&nbsp;- transform: translate(-50%, 50px);
+							</h4>
+							<div class="transform__2d translate__center_left">left:50% <br>margin:0 0 0 -75pх</div>
+							<div class="transform__2d translate__center_align">left:50%<br>translate(-50%,0)</div>
+						</div>
+						<div class="content__transform">
+							<h4>анімація обʼєкту<br>
+								&nbsp;&nbsp;- :hover transform: translate(20px, 20px);</h4>
+							<div class="transform__2d translate__animation">left:50% <br>margin:0 0 0 -75pх</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
 
 	</div>
 
-	<!--Приклад * -->
+	<!--Приклад 2 - Маштабування - scale-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад * - </h2>
+			<h2>Приклад 2 - Маштабування - scale</h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			- scale(x, y), scaleX, scaleY:<br>
+			&nbsp;&nbsp; - X - маштабування по ширині (1 за замовчуванням)<br>
+			&nbsp;&nbsp; - Y - маштабування по висоті (1 за замовчуванням)<br>
+			&nbsp;&nbsp; - маштабує елементи (збільшує/зменшує)<br>
+			&nbsp;&nbsp; - відємне значення - відображає елемент зеркально<br>
 		</div>
 		<div class="theory">
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
-			css:
+			css:<br>
+			.scale__0 { color: #999; border: 2px dashed #999;}<br>
+			.scale__width,
+			.scale__height,
+			.scale__all,
+			.scale__gorizont,
+			.scale__vertical { color: #fff; transform: scale(1); background-color: #7a956b;}<br><br>
+			.scale__width:hover { margin: 0px 0 0 75px; transform: scale(2, 1);}<br>
+			.scale__height { margin: 50px 0;}<br>
+			.scale__height:hover { transform: scale(1, 1.5);}<br>
+			.scale__all:hover { transform: scale(0.5);}<br>
+			.scale__gorizont:hover { transform: scale(-1, 1);}<br>
+			.scale__vertical:hover { transform: scale(1, -1);}<br>
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
 				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 2D</h2>
+
+					<div class="content__block">
+						<h3>scale (x, y) </h3>
+						<div class="content__transform">
+							<h4>обʼєкт - scale (1, 1) </h4>
+							<div class="transform__2d scale__0">scale (1, 1)</div>
+						</div>
+						<div class="content__transform">
+							<h4>маштабування по ширині - scale (2, 1) </h4>
+							<div class="transform__2d scale__width">scale (2, 1)</div>
+						</div>
+						<div class="content__transform content__transform_height">
+							<h4>маштабування по висоті - scale (1, 1.5) </h4>
+							<div class="transform__2d scale__height">scale (1, 1.5)</div>
+						</div>
+						<div class="content__transform">
+							<h4>зменшення - scale (0.5) </h4>
+							<div class="transform__2d scale__all">scale (0.5)</div>
+						</div>
+						<div class="content__transform">
+							<h4>відображення по горизонталі - scale (-1, 1) </h4>
+							<div class="transform__2d scale__gorizont">scale (-1, 1)</div>
+						</div>
+						<div class="content__transform">
+							<h4>відображення по вертикалі - scale (1, -1) </h4>
+							<div class="transform__2d scale__vertical">scale (1, -1)</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
 
 	</div>
 
-	<!--Приклад * -->
+	<!--Приклад 3 - Обертання - rotate-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад * - </h2>
+			<h2>Приклад 3 - Обертання - rotate</h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			- rotate(Xdeg):<br>
+			&nbsp;&nbsp; - повертає елемент за годиниковою стрілкою на заданий градус<br>
+			&nbsp;&nbsp; - відємний градус повертає елемент проти годинникової стрілки<br>
+			&nbsp;&nbsp; - Xdeg - формат запису значення кута + deg
 		</div>
 		<div class="theory">
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
 			css:
+			<br>.rotate__0 { color: #999; border: 2px dashed #999; margin: 0px 20px;}
+			<br>.rotate__45,.rotate__-90,.rotate__180,.rotate__-360 { color: #fff; background-color: #7a956b; margin: 40px
+			20px; transform: rotate(0);}<br>
+			<br>.rotate__45:hover { transform: rotate(45deg);}
+			<br>.rotate__-90:hover { transform: rotate(-45deg);}
+			<br>.rotate__180:hover { transform: rotate(180deg);}
+			<br>.rotate__-360:hover { transform: rotate(-360deg);}
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
 				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 2D</h2>
+
+					<div class="content__block">
+						<h3>rotate(Xdeg) </h3>
+						<div class="content__transform">
+							<h4>обʼєкт - rotate(0deg) </h4>
+							<div class="transform__2d rotate__0">rotate(0deg)</div>
+						</div>
+						<div class="content__transform">
+							<h4>обертання на 45 за годиниковою стрілкою - rotate(45deg) </h4>
+							<div class="transform__2d rotate__45">rotate(45deg)</div>
+						</div>
+						<div class="content__transform">
+							<h4>обертання на 90 проти годиникової стрілки - rotate(-90deg) </h4>
+							<div class="transform__2d rotate__-90">rotate(-90deg)</div>
+						</div>
+						<div class="content__transform">
+							<h4>півоберта за годиниковою стрілкою - rotate(180deg) </h4>
+							<div class="transform__2d rotate__180">rotate(180deg)</div>
+						</div>
+						<div class="content__transform">
+							<h4>повне обертання проти годиникової стрілки - rotate(-360deg) </h4>
+							<div class="transform__2d rotate__-360">rotate(-360deg)</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- Exemple - HTML -->
+
+
 			</div>
 		</div>
 
 	</div>
 
-	<!--Приклад * -->
+	<!--Приклад 4 - Деформація - skew-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад * - </h2>
+			<h2>Приклад 4 - Деформація - skew</h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			- skew(Xdeg, Ydeg), skewX, skewY:
+			<br>&nbsp;&nbsp; - деформує (нахиляє) сторони об'єкта відносно координатних вісей
+			<br>&nbsp;&nbsp; - якщо вказано один кут тоді інший визначатиметься браузером автоматично
+			<br>&nbsp;&nbsp; - Xdeg, Ydeg - формат запису значення кута + deg
 		</div>
 		<div class="theory">
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
 			css:
+			<br>.skew__0 { color: #999; border: 2px dashed #999; margin: 0px 20px;}
+			<br>.skew__horizont,.skew__vertical,.skew__all { color: #fff; background-color: #794f45; margin: 40px 20px;
+			transform: skew(0deg, 0deg);}<br>
+			<br>.skew__horizont:hover { transform: skew(20deg, 0deg);}
+			<br>.skew__vertical:hover { transform: skew(0deg, 20deg);}
+			<br>.skew__all:hover { transform: skew(-20deg, -200deg);}
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 2D</h2>
+
+					<div class="content__block">
+						<h3>skew(0deg, 0deg) </h3>
+						<div class="content__transform">
+							<h4>обʼєкт - skew(0deg, 0deg) </h4>
+							<div class="transform__2d skew__0">skew<br>(0deg, 0deg)</div>
+						</div>
+						<div class="content__transform">
+							<h4>нахил обʼєкту по горизонталі на 20 градусів - skew(20deg, 0deg) </h4>
+							<div class="transform__2d skew__horizont">skew<br>(20deg, 0deg)</div>
+						</div>
+						<div class="content__transform">
+							<h4>нахил обʼєкту по вертикалі на 20 градусію - skew(0deg, 20deg) </h4>
+							<div class="transform__2d skew__vertical">skew<br>(0deg, 20deg)</div>
+						</div>
+						<div class="content__transform">
+							<h4>викривлення обʼєкту - skew(-20deg, -20deg) </h4>
+							<div class="transform__2d skew__all">skew<br>(-20deg, -20deg)</div>
+						</div>
+
+					</div>
+
+				</div>
 				<!-- Exemple - HTML -->
 			</div>
 		</div>
 
 	</div>
 
-	<!--Приклад * -->
+	<!--Приклад 5 - Обєднання кількох трансформацій - matrix-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад * - </h2>
+			<h2>Приклад 5 - Обєднання кількох трансформацій - matrix</h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			- matrix(a, c, b, d, x, y):
+			<br>&nbsp;&nbsp;- обєднання кількох трансформацій у одній функції
+			<br>&nbsp;&nbsp;- включає:
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- c, b - ( з маштабом a=1, d=1 ) нахил (деформація) по горизонталі та вертикалі
+			відповідно
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- x, y - ( з маштабом a=1, d=1 ) зміна положення по горизонталі та вертикалі
+			відповідно
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- c, b, x, y - з з маштабом a=0, d=0 поворот (сумнівна властивість!!!)
+			<br>&nbsp;&nbsp;- властивості вказуються без одиниць
 		</div>
 		<div class="theory">
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
 			css:
+			<br>.matrix__0 { color: #999; border: 2px dashed #999; margin: 0px 20px;}
+			<br>.matrix__mashtab,.matrix__skew,.matrix__translate { color: #fff; background-color: #77608d; margin: 40px
+			20px;}<br>
+			<br>.matrix__mashtab:hover { margin: 0 0 0 95px; transform: matrix(2, 0, 0, 0.7, 0, 0);}
+			<br>.matrix__skew:hover { transform: matrix(1, 0.3, 0.2, 1, 0, 0);}
+			<br>.matrix__translate:hover { transform: matrix(1, 0, 0, 1, 70, 45);}
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
 				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 2D</h2>
+
+					<div class="content__block">
+						<h3>matrix(0,0,0,0,0,0) </h3>
+						<div class="content__transform">
+							<h4>обʼєкт - matrix(0,0,0,0,0,0) </h4>
+							<div class="transform__2d matrix__0">matrix<br>(0,0,0,0,0,0)</div>
+						</div>
+						<div class="content__transform">
+							<h4>маштабування обʼєкту по горизанталі у 2 та по вертикалі у 0.7 - matrix(2,0,0,0.7,0,0) </h4>
+							<div class="transform__2d matrix__mashtab">matrix<br>(2,0,0,0.7,0,0)</div>
+						</div>
+						<div class="content__transform">
+							<h4>деформація обʼєкту по горизанталі на 0.3 та по вертикалі на 0.2 - matrix(1,0.3,0.2,1,0,0) </h4>
+							<div class="transform__2d matrix__skew">matrix<br>(1,0.3,0.2,1,0,0)</div>
+						</div>
+						<div class="content__transform">
+							<h4>зміна положення обʼєкту по горизанталі на 70 та по вертикалі на 45 - matrix(1,0,0,1,70,45)
+							</h4>
+							<div class="transform__2d matrix__translate">matrix<br>(1,0,0,1,70,45)</div>
+						</div>
+					</div>
+
+				</div>
+
+
 			</div>
 		</div>
 
 	</div>
 
-	<!--Приклад * -->
+	<!--Приклад 6 - Обєднання кількох трансформацій - мультизапис-->
 	<div class="example">
 		<div class="head">
-			<h2>Приклад * - </h2>
+			<h2>Приклад 6 - Обєднання кількох трансформацій - мультизапис </h2>
 		</div>
 		<div class="descript">Загальні відомості: <br>
+			<br>- transform - мультизапис - через пробіл вказується кілька трансформацій:
+			<br>&nbsp;&nbsp;- ranslate - перміщення
+			<br>&nbsp;&nbsp;- scale - маштабування
+			<br>&nbsp;&nbsp;- rotate - поворот
 		</div>
 		<div class="theory">
 		</div>
 		<div class="css">
 			<!-- Exemple - CSS -->
 			css:
+			<br>.multi__0 { color: #999; border: 2px dashed #999; margin: 0px 20px;}
+			<br>.multi__translate-scale-rotate { color: #fff; background-color: #7a956b; margin: 40px 20px;}<br>
+			<br>.multi__translate-scale-rotate:hover { margin: 0 0 0 95px; transform: translate(50px, 20px) scale(1.1, 0.5)
+			rotate(45deg);}
 		</div>
 
 		<div class="code code__border">
 			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 2D</h2>
+					<div class="content__block">
+						<h3>transform: translate(50px, 20px) scale(1.1, 0.5) rotate(45deg); </h3>
+						<div class="content__transform">
+							<h4>обʼєкт з x=0 y=0, маштабом 1 без обертання</h4>
+							<div class="transform__2d multi__0">translate<br>scale<br>rotate</div>
+						</div>
+						<div class="content__transform">
+							<h4>обʼєкт переміщається на x=50 y=20, маштабується по х=1.1 по у=0.5 та обертається на кут 45
+								градусів</h4>
+							<div class="transform__2d multi__translate-scale-rotate">translate<br>scale<br>rotate</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Приклад 7 - Зміщення центру трансформації - transform-origin-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 7 - Зміщення центру трансформації - transform-origin</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- transform-origin - зміщає центр трансформації відносно якого виконується трансформація та приймає
+			значення:
+			<br>&nbsp;&nbsp;- top - з верху
+			<br>&nbsp;&nbsp;- left - з ліва
+			<br>&nbsp;&nbsp;- right -з права
+			<br>&nbsp;&nbsp;- bootom - з верху
+			<br>&nbsp;&nbsp;- 0 - значення задано числом
+			<br>&nbsp;&nbsp;- у псевдокласах :hover не задавати зміщення транформації
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.transform-origin__0 { color: #999; border: 2px dashed #999; margin: 0px 20px;}
+			<br>.transform-origin__center,.transform-origin__top-right {color: #fff;background-color: #794f45;}
+			<br>.transform-origin__center {margin: 40px 20px;transform-origin: center;}
+			<br>.transform-origin__center:hover {transform: rotate(45deg);}
+			<br>.transform-origin__top-right{margin: 20px 20px 60px 20px;transform-origin: top right;}
+			<br>.transform-origin__top-right:hover {transform: rotate(-45deg);}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 2D</h2>
+
+					<div class="content__block">
+						<h3>transform-origin </h3>
+						<div class="content__transform">
+							<h4>обʼєкт з transform-origin: center</h4>
+							<div class="transform__2d transform-origin__0">transform-origin<br>center</div>
+						</div>
+						<div class="content__transform">
+							<h4>трансформація у центрі обʼєкта - transform-origin: center; rotate(45deg)</h4>
+							<div class="transform__2d transform-origin__center">transform-origin<br>center</div>
+						</div>
+						<div class="content__transform">
+							<h4>трансформація у верху зліва обʼєкта - transform-origin: top right; rotate(-45deg)</h4>
+							<div class="transform__2d transform-origin__top-right">transform-origin<br>top right</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 8 - Перспектива - глибина та точка відліку - perspective, perspective-origin-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 8 - Перспектива - глибина та точка відліку - perspective, perspective-origin</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- perspective: perspective-origin - встановлюють глибину перспективи
+			<br>&nbsp;&nbsp;- d - перспектива визначається - відстань між оком та об'єктом
+			<br>&nbsp;&nbsp;- d/(d-z)
+			<br>&nbsp;&nbsp;- perspective-origin - встановлюють точку відліку координат
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.content-3d__wrapper { width: 150px; height: 150px; background-color: rgba(0, 0, 0, 0.2);
+			perspective-origin: center; perspective: 400px;}
+			<br>.content-3d { display: flex; justify-content: center; align-items: center; text-align: center;
+			text-transform: uppercase; font-size: 16px; width: 150px; height: 150px; transition: all 0.8s ease 0s;}
+			<br>
+			<br>.content-3d__wrapper_perspective-0-0 { perspective-origin: 0 0; perspective: 300px;}
+			<br>.content-3d__perspective { background-color: #7a956b;}
+			<br>.content-3d__perspective:hover { transform: rotateX(30deg);}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 3D</h2>
+					<div class="content__block">
+						<h3>perspective, perspective-origin </h3>
+						<div class="content__transform">
+
+							<h4>обʼєкт повертається по осі X на 30deg з перспективою perspective=300px
+								perspective-origin=center</h4>
+							<div class=" content-3d__wrapper">
+								<div class="content-3d content-3d__perspective">perspective
+									perspective-origin</div>
+							</div>
+						</div>
+						<div class="content__transform">
+
+							<h4>обʼєкт повертається по осі X на 30deg з перспективою perspective=300px
+								perspective-origin=0 0</h4>
+							<div class=" content-3d__wrapper content-3d__wrapper_perspective-0-0">
+								<div class="content-3d content-3d__perspective">perspective
+									perspective-origin</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 9 - Переміщення - translate3D-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 9 - Переміщення - translate3d </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- translate3d(x, y, z), translateX, translateY, translateZ:
+			<br>&nbsp;&nbsp; - зсуває елемент на норве місце,
+			<br>&nbsp;&nbsp; - перміщуає відносно початкового положення об'єкта вправо і вниз
+			<br>&nbsp;&nbsp; - використовує координати X, Y, Z (пікселі, проценти, і т.д), що можуть бути відємними
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.content-3d__translate3D,.content-3d__translate3D-back { background-color: #794f45;}
+			<br>.content-3d__translate3D:hover { transform: translate3d(30px, 20px, 50px);}
+			<br>.content-3d__translate3D-back:hover { transform: translate3d(30px, 20px, -50px);}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 3D</h2>
+					<div class="content__block">
+						<h3>translate3Dn </h3>
+						<div class="content__transform">
+							<h4>наближeння обʼєкту по Z=50px х Х=30px Y=20px - translate3d(30px, 20px, 50px)</h4>
+							<div class=" content-3d__wrapper ">
+								<div class="content-3d content-3d__translate3D">translate3D</div>
+							</div>
+						</div>
+						<div class="content__transform">
+							<h4>віддалення обʼєкту по Z=-50px з Х=30px Y=20px - translate3d(30px, 20px, 50px)</h4>
+							<div class=" content-3d__wrapper ">
+								<div class="content-3d content-3d__translate3D-back">translate3D</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 10 - Маштабування - scale3D -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 10 - Маштабування - scale3d</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- scale3d(x, y, z), scaleX, scaleY, scaleZ:
+			<br>&nbsp;&nbsp;- X - маштабування по ширині
+			<br>&nbsp;&nbsp;- Y - маштабування по висоті
+			<br>&nbsp;&nbsp;- Z - маштабування по глибині
+			<br>&nbsp;&nbsp;- маштабує елементи (збільшує/зменшує)
+			<br>&nbsp;&nbsp;- відємне значення - відображає елемент зеркально
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.content-3d__scale3D,.content-3d__scale3D-min { background-color: #77608d; transform: scale3d(1, 1, 2);}
+			<br>.content-3d__scale3D:hover { transform: scale3d(-2, 2, 5);}
+			<br>.content-3d__scale3D-min:hover { transform: scale3d(2, -2, 0.5);}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 3D</h2>
+					<div class="content__block">
+						<h3>scale3d(X, Y, Z) </h3>
+						<div class="content__transform">
+							<h4>збільшення обʼєкту по Z=5 з Х=-2 Y=2 - scale3d(-2, 2, 5)</h4>
+							<div class=" content-3d__wrapper ">
+								<div class="content-3d content-3d__scale3D">scale3D</div>
+							</div>
+						</div>
+						<div class="content__transform">
+							<h4>зменшення обʼєкту по Z=0.5 з Х=2 Y=-2 - scale3d(2, -2, 0.5)</h4>
+							<div class="content-3d__wrapper">
+								<div class="content-3d content-3d__scale3D-min">scale3D</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 11 - Обертання - rotate3d-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 11 - Обертання - rotate3d</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- rotate3d(x,y,z,deg):
+			<br>&nbsp;&nbsp;- x, y, z - координати вектору напряму обертання
+			<br>&nbsp;&nbsp;- deg - кут обертання
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.content-3d__rotate3d,.content-3d__rotate3d-x-y { background-color: #7a956b; transform: rotate3d(1, 1, 1,
+			0deg);}
+			<br>.content-3d__rotate3d:hover { transform: rotate3d(1, 1, 1, 45deg);}
+			<br>.content-3d__rotate3d-x-y:hover { transform: rotate3d(1, 1, 0, 45deg);}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 3D</h2>
+					<div class="content__block">
+						<h3>rotate3d(x, y, x, deg) </h3>
+						<div class="content__transform">
+							<h4>обертання обʼєкту за вектором Х=1 Y=1 Z=1 та кутом 45 - rotate3d(1, 1, 1, 45deg)</h4>
+							<div class=" content-3d__wrapper ">
+								<div class="content-3d content-3d__rotate3d">rotate3d</div>
+							</div>
+						</div>
+						<div class="content__transform">
+							<h4>обертання обʼєкту за вектором Х=1 Y=1 Z=0 та кутом 45 - rotate3d(1, 1, 0, 45deg)</h4>
+							<div class="content-3d__wrapper">
+								<div class="content-3d content-3d__rotate3d-x-y">rotate3d</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- Exemple - HTML -->
 			</div>
 		</div>
@@ -160,6 +672,199 @@
 	</div>
 
 
+	<!--Приклад 12 - Обєднання кількох 3D трансформацій - matrix3d-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 12 - Обєднання кількох 3D трансформацій - matrix3d</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n):
+			<br>&nbsp;&nbsp;- задає тривимірну трансформацію як однорідну матрицю розміром 4х4 (16 значень)
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.content-3d__matrix3d { background-color: #999;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 3D</h2>
+					<div class="content__block">
+						<h3>matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n) </h3>
+						<div class="content__transform">
+							<h4>обертання обʼєкту за вектором Х=1 Y=1 Z=1 та кутом 45 - rotate3d(1, 1, 1, 45deg)</h4>
+							<div class=" content-3d__wrapper ">
+								<div class="content-3d content-3d__matrix3d">matrix3d</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 13 - Обєднання кількох 3D трансформацій - мультизапис-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 12 - Обєднання кількох 3D трансформацій - мультизапис</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- transform - мультизапис - через пробіл вказується кілька трансформацій:
+			<br>&nbsp;&nbsp;- ranslate3d - перміщення
+			<br>&nbsp;&nbsp;- scale3d - маштабування
+			<br>&nbsp;&nbsp;- rotate3d - поворот
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.content-3d__multi3d { background-color: #794f45;}
+			<br>.content-3d__multi3d:hover { transform: translate3d(20px, 20px, 20px) rotate3d(1, 1, 1, 45deg);}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 3D</h2>
+					<div class="content__block">
+						<h3>transform: translate3d(x, y, z) rotate3d(x, y, z, deg) </h3>
+						<div class="content__transform">
+							<h4>3d перміщення та обертання обʼєкту - translate3d(20px, 20px, 20px) rotate3d(1, 1, 1, 45deg)
+							</h4>
+							<div class=" content-3d__wrapper ">
+								<div class="content-3d content-3d__multi3d">translate3d rotate3d</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+
+	<!--Приклад 14 - Стиль трансформації - transform-style-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 14 - Стиль трансформації - transform-style</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- transform-style - задає стиль трансфлормації:
+			<br>&nbsp;&nbsp;- flat - пласка трансформація без візуального перетину площин
+			<br>&nbsp;&nbsp;- preserve-3d - обємна трансформація з візуалізацією перетину площин
+
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.wrapper__style3d { width: 150px; height: 150px; background-color: rgba(0, 0, 0, 0.2);
+			<br> perspective-origin: center;
+			<br> perspective: 400px;
+			<br> transform-style:flat; }<br>
+			<br>.content__style3d { display: flex; justify-content: center; align-items: center; text-align: center;
+			text-transform: uppercase; font-size: 16px; width: 150px; height: 150px; color: #fff; transition: all 0.8s ease
+			0s;}<br>
+			<br>.content__style3d { background-color: #7a956b;}
+			<br>.content__style3d:hover { transform: rotateX(45deg);}
+			<br>.wrapper__style3d_preserv { transform-style: preserve-3d;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 3D</h2>
+					<div class="content__block">
+						<h3>transform-style</h3>
+						<div class="content__transform">
+							<h4>Звичайна трансформація - transform-style: flat;</h4>
+							<div class="wrapper__style3d">
+								<div class="content__style3d content-3d__style3d">transform-style<br>flat</div>
+							</div>
+						</div>
+						<div class="content__transform">
+							<h4>Трансформація перетину двох площин - transform-style: preserve-3d;</h4>
+							<div class="wrapper__style3d wrapper__style3d_preserv">
+								<div class="content__style3d content-3d__style3d">transform-style<br>preserve-3d</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+
+	<!--Приклад 15 - Зворотня сторона об'єкта - backface-visibility-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 15 - Зворотня сторона об'єкта - backface-visibility</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			- backface-visibility - властивість визначає чи буде видно користувачу лицьова сторона обʼєкта
+
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.flip__body {position: relative;width: 150px;height: 150px;
+			<br> transform-style: preserve-3d;
+			<br> transition: all 0.8s ease 0s; }<br>
+			<br>.flip__front,.flip__back { position: absolute; top: 0; left: 0; height: 100%; width: 100%; display: flex;
+			justify-content: center; align-items: center; text-align: center; color: #fff;}
+			<br>.flip__front { z-index: 2; background-color: #77608d;
+			<br> transform: rotateY(0deg);<br>
+			<br> backface-visibility: hidden; }<br>
+			<br>.flip__back { transform: rotateY(-180deg); background-color: rgba(121, 79, 69, 1);}
+			<br>.flip:hover .flip__body { transform: rotateY(-180deg);}
+
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<div class="content">
+					<h2>CSS Transform 3D</h2>
+					<div class="content__block">
+						<h3>backface-visibilit</h3>
+						<div class="content__transform">
+							<h4>backface-visibilit</h4>
+
+							<div class="flip">
+								<div class="flip__body">
+									<div class="flip__front">
+										FONT
+									</div>
+									<div class="flip__back">
+										BACK
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
 
 </body>
 

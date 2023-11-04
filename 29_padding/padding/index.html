@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 29 Теорія CSS - відступи padding та margin</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<h1>Урок 29 Теорія CSS - відступи padding та margin</h1>
+	<!--a class="shpargalka" href="#">Шпаргалка</a-->
+	<div class="css">Стенд<br>
+		css:
+		.block { margin: 0 0 30px 0; } <br>
+		.block p { font-size: 18px; line-height: 24px; margin: 0 0 20px 0; } <br>
+		.link { color: red; } <br>
+		.textinput { border: 1px solid #666; height: 50px; padding: 0 15px; font-size: 18px; width: 300px; margin: 0 0
+		10px 0; } <br>
+		.textbutton { display: block; width: 300px; height: 50px; background: #666; font-size: 18px; color: #fff;
+		text-transform: uppercase; margin: 0 0 30px 0; } <br>
+		.list {} <br>
+		.list li font-size: 18px; margin: 0 0 15px 0;
+	</div> <br>
+
+	<!--Приклад 1 - Відступи Padding та Margin-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 1 - Відступи Padding та Margin</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- padding - внутрішній відступ від межі об'єкта до його вмісту
+			<br>&nbsp;&nbsp;- внутрішні відступи:
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- padding-top; - зверху
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- padding-bottom; - знизу
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- padding-left; - зліва
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- padding-right; - зправа
+			<br>- margin - зовнішній відступ від межі об'єкта до межі інших об'єктів
+			<br>&nbsp;&nbsp;- зовнішні відступи:
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- margin-top; - зверху
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- margin-bottom; - знизу
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- margin-left; - зліва
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- margin-right; - зправа
+			<br>- margin, padding - формат скороченого запису:
+			<br>&nbsp;&nbsp;- X - відступ по усьому периметру
+			<br>&nbsp;&nbsp;- X Y - відступ: зверху та знизу -X, зліва та зправа - Y
+			<br>&nbsp;&nbsp;- X1 Y X2 - відступ: зверху-X1, знизу -X2, зліва та зправа - Y
+			<br>&nbsp;&nbsp;- X1 Y1 X2 Y2 - відступи: зверху - X1 та знизу - X2, зправа - Y1 зліва - Y2
+			<br>- margin, padding - працюють лише з блочними елементами
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>h3 { font-size: 18px; margin: 0 0 10px 0;}
+			<br>.section__example { max-width: 800px; margin: 0 auto;}
+			<br>.example__blok { margin: 0 0 20px 0;}
+			<br>.item { color: #fff;}
+			<br>.item__color_1 { background-color: #794f45;}
+			<br>.item__color_2 { background-color: #77608d;}
+			<br>.item__color_3 { background-color: #7a956b;}<br>
+			<br>div.item__info {/*padding-top: 10px;padding-bottom: 10px;padding-left: 10px;padding-right: 10px;*/
+			<br>padding: 10px;
+			<br>/*margin-top: 15px;margin-bottom: 0px;margin-left: 0px;margin-right: 0px;*/
+			<br>margin: 0 0 15px 0;}
+			<br>span.item__info { /*display: inline-block;*/ /*display: block;*/
+			<br>padding: 10px; margin: 0 0 15px 0;}
+			<br>img.item__image { /* padding: 10px; margin: 15px;*/
+			<br>max-width: 300px;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="section__example">
+
+					<div class="example__blok">
+						<h3>Блочні об'єкти</h3>
+						<div class="item item__info item__color_1">Об'єкт №1(div) Lorem ipsum dolor sit, amet consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+						<div class="item item__info item__color_2">Об'єкт №2(div) Lorem ipsum dolor sit, amet consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+						<div class="item item__info item__color_3">Об'єкт №3(div) Lorem ipsum dolor sit, amet consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+					</div>
+
+					<div class="example__blok">
+						<h3>Стрічкові об'єкти</h3>
+						<span class="item item__info item__color_1">
+							Об'єкт №1(div) Lorem ipsum dolor sit, amet consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.
+						</span>
+						<span class="item item__info item__color_2">Об'єкт №2(span) Lorem ipsum dolor sit, amet consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</span>
+						<span class="item item__info item__color_3">Об'єкт №3(span) Lorem ipsum dolor sit, amet consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</span>
+					</div>
+
+					<div class="example__blok">
+						<h3>Зображення padding 15px=> width=330px</h3>
+						<img src="img/avatar.jpg" alt="" class="item__image">
+
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 2 - Відступи та розміри блоку. Властивість box-sizing -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 2 - Відступи та розміри блоку. Властивість box-sizing</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- box-sizing - алгоритм визначення розміру блоку
+			<br>&nbsp;&nbsp;- content-box - (за замовчуванням) розмір блоку = width/height + padding (width, height -
+			розмір контенту)
+			<br>&nbsp;&nbsp;- border-box - розмір блоку = width/height (padding входить у розмір блоку - контент
+			стискається)
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.item__block-sizing,.item__block-sizing-box { width: 500px; padding: 15px; margin: 15px; box-sizing:
+			content-box;}
+			<br>.item__block-sizing-box { box-sizing: border-box;}
+			<br>.image__block-sizing-box { max-width: 300px; box-sizing: border-box; padding: 15px;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="section__example">
+
+					<div class="example__blok">
+						<h3>block-sizing: content-box = width/height + padding</h3>
+						<div class="item item__color_3 item__block-sizing">Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Reprehenderit quas aliquid quod vitae praesentium quasi officiis repudiandae repellendus
+							dignissimos atque beatae veniam esse voluptate assumenda, doloremque temporibus quae harum porro?
+							Atque facere a sint voluptas voluptatum ex, eum accusantium numquam omnis. Totam porro nobis
+							praesentium qui molestias at quia placeat cum dolorem sint reiciendis, culpa ducimus in. Animi,
+							adipisci expedita.
+						</div>
+					</div>
+					<div class="example__blok">
+						<h3>block-sizing: border-box = width/height</h3>
+						<div class="item item__color_3 item__block-sizing-box">Lorem ipsum dolor sit amet consectetur
+							adipisicing
+							elit. Reprehenderit quas aliquid quod vitae praesentium quasi officiis repudiandae repellendus
+							dignissimos atque beatae veniam esse voluptate assumenda, doloremque temporibus quae harum porro?
+							Atque facere a sint voluptas voluptatum ex, eum accusantium numquam omnis. Totam porro nobis
+							praesentium qui molestias at quia placeat cum dolorem sint reiciendis, culpa ducimus in. Animi,
+							adipisci expedita.
+						</div>
+					</div>
+					<div class="example__blok">
+						<h3>Зображення block-sizing: content-box -> padding 15px=> width=330px</h3>
+						<img src="img/avatar.jpg" alt="" class="item__image">
+
+					</div>
+					<div class="example__blok">
+						<h3>Зображення box-sizing: border-box; -> padding 15px=> width=300px</h3>
+						<img src="img/avatar.jpg" alt="" class="image__block-sizing-box">
+
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 3 - Відступи та фон -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 3 - Відступи та фон</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- відступи у заливці об'єкта застосовується (margin: Хpx; padding: Хpx):
+			<br>&nbsp;&nbsp;- padding: Хpx - заливка фоновим зображенням
+			<br>&nbsp;&nbsp;- padding: Хpx, margin: Хpx; - заливка кольором або градієнтом (застосування margin: Хpx;
+			залежить від дизайну)
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.item__info_padding { padding: 15px;}
+			<br>.item__info_margin { margin: 15px;}
+			<br>.item__info_margin-padding { padding: 15px; margin: 15px;}
+			<br>.item__info_color_bacground-img { color: #000; padding: 0 0 0 30px; background: url(../img/icon.svg) 0 0
+			no-repeat;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="section__example">
+
+					<div class="example__blok">
+						<h3>Відступи та заливка:</h3>
+						<h3>- кольором</h3>
+						<h4>Між блоками НЕМА відступу, контент відступає від межі блоку - padding:15px;</h4>
+						<div class="item item__info_padding item__color_2">Lorem ipsum dolor sit amet consectetur,
+							adipisicing elit. Debitis excepturi aut qui tenetur facere voluptates maiores quod nihil cupiditate
+							cumque corrupti quasi doloribus consectetur distinctio dolores, unde veritatis velit quae.</div>
+						<div class="item item__info_padding item__color_3">Lorem ipsum dolor sit amet consectetur
+							adipisicing elit. Quae exercitationem facere facilis harum repudiandae inventore natus, commodi
+							dignissimos quaerat nam ex suscipit iure pariatur nulla officiis, molestias soluta repellat esse.
+						</div>
+					</div>
+					<div class="example__blok">
+						<h4>Між блоками Є відступ, контент НЕ відступає від межі блоку - margin:15px;</h4>
+						<div class="item item__info_margin item__color_2">Lorem ipsum dolor sit amet consectetur,
+							adipisicing elit. Debitis excepturi aut qui tenetur facere voluptates maiores quod nihil cupiditate
+							cumque corrupti quasi doloribus consectetur distinctio dolores, unde veritatis velit quae.</div>
+						<div class="item item__info_margin item__color_3">Lorem ipsum dolor sit amet consectetur
+							adipisicing elit. Quae exercitationem facere facilis harum repudiandae inventore natus, commodi
+							dignissimos quaerat nam ex suscipit iure pariatur nulla officiis, molestias soluta repellat esse.
+						</div>
+					</div>
+					<div class="example__blok">
+						<h4>Між блоками Є відступ, контент відступає від межі блоку - margin:15px; padding:15px;</h4>
+						<div class="item item__info_margin-padding item__color_2">Lorem ipsum dolor sit amet consectetur,
+							adipisicing elit. Debitis excepturi aut qui tenetur facere voluptates maiores quod nihil cupiditate
+							cumque corrupti quasi doloribus consectetur distinctio dolores, unde veritatis velit quae.</div>
+						<div class="item item__info_margin-padding item__color_3">Lorem ipsum dolor sit amet consectetur
+							adipisicing elit. Quae exercitationem facere facilis harum repudiandae inventore natus, commodi
+							dignissimos quaerat nam ex suscipit iure pariatur nulla officiis, molestias soluta repellat esse.
+						</div>
+					</div>
+					<div class="example__blok">
+						<h3>- фоновим зображенням</h3>
+						<h4>Тескт відступив від фонового зображення - background: url(../img/icon.svg)0 0 no-repeat; padding:
+							0
+							0 0 30px</h4>
+						<div class="item item__info_color_bacground-img">Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Odit sequi excepturi cumque officiis, totam alias ullam rerum vel dolorum labore reiciendis
+							voluptas numquam iste voluptate repudiandae quod, necessitatibus atque pariatur!</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 4 - Відступи та позиціонування -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 4 - Відступи та позиціонування</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- відступи у позиціонуванні об'єкта застосовується:
+			<br>&nbsp;&nbsp;- padding: Хpx - при абсолютному позиціонуванні
+			<br>&nbsp;&nbsp;- margin: Хpx; - залежить від дизайну
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.item__info_position { color: #555; position: relative; padding: 0 0 0 40px;}
+			<br>.item__info_position::before { content: ""; position: absolute; top: 0; left: 0; width: 25px; height: 23px;
+			border-radius: 50%; background-color: #333;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="section__example">
+
+					<div class="example__blok">
+						<h3>Відступи та позиціонування:</h3>
+						<div class="item item__info_position ">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Consequuntur laborum reprehenderit eos voluptates cupiditate perspiciatis sunt debitis, architecto
+							id quibusdam exercitationem labore recusandae minima qui esse dolore aspernatur at ducimus!
+							Voluptates, officia? Eius corrupti inventore dolor iste accusamus molestias possimus illum sit, aut
+							sequi minus illo est officiis sed iusto voluptatum adipisci, ex officia suscipit earum saepe? Hic,
+							quas unde.</div>
+					</div>
+
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 5 - Відступи та overflow: hidden;-->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 5 - Відступи та overflow: hidden;</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- відкрити приховану частину об'єкту:
+			<br>&nbsp;&nbsp;- padding: Хpx - виводить з-за рамки контейнеру
+			<br>&nbsp;&nbsp;- margin: Хpx; - залежить від дизайну
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.item__info_overflow { overflow: hidden; border: #7a956b 1px solid; padding: 30px;}
+			<br>.item__overflow { width: 150px; height: 150px; border-radius: 50%; box-shadow: 0 0 30px #000;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="section__example">
+
+					<div class="example__blok">
+						<h3>Відкриваємо прихованої тінь об'єкту - padding: 30px</h3>
+						<div class="item item__info_overflow">
+							<div class="item__color_3 item__overflow"></div>
+						</div>
+					</div>
+
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 6 - Центровка блоку -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 6 - Центровка блоку </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- центровка обєкта заданої ширини у блоці:
+			<br>&nbsp;&nbsp;- margin: 0 auto; - центрує об'єкт у блоці
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.item__info_center { overflow: hidden; border: #7a956b 1px solid;}
+			<br>.item__center { width: 150px; height: 150px; border-radius: 50%; margin: 0 auto;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="section__example">
+
+					<div class="example__blok">
+						<h3>Центровка об'єкту - margin: 0 auto</h3>
+						<div class="item item__info_center">
+							<div class="item__color_1 item__center"></div>
+						</div>
+					</div>
+
+				</section>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Приклад 7 - Відємні значення margin -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 7 - Відємні значення margin</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- margin - може бути відємним:
+			<br>&nbsp;&nbsp;- margin: -50px 0 0 0 - пінявся об'єкт і разом з ним ті, що були за/під ним
+			<br>&nbsp;&nbsp;- top: -50px - пінявся лише сам об'єкт
+			<br>&nbsp;&nbsp;- transform: translate(0, -50px); - пінявся лише сам об'єкт
+			<br>- padding - НЕ може бути відємним
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.item__margin-neg { padding: 15px; position: relative;}
+			<br>.item__margin-neg-top { margin: -50px 0 0 0; z-index: 2;}
+			<br>.item__top-neg-top { top: -50px; z-index: 2;}
+			<br>.item__translate-neg-top { transform: translate(0, -50px);}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="section__example">
+
+					<div class="example__blok">
+						<h3>Зсув у гору:</h3>
+						<h4>пінявся об'єкт і разом з ним ті, що були за/під ним - margin: -50px 0 0 0;</h4>
+						<div class="item item__margin-neg item__color_1">Об'єкт №1. Lorem ipsum dolor sit amet consectetur,
+							adipisicing elit. Debitis excepturi aut qui tenetur facere voluptates maiores quod nihil cupiditate
+							cumque corrupti quasi doloribus consectetur distinctio dolores, unde veritatis velit quae.</div>
+						<div class="item item__margin-neg item__margin-neg-top item__color_2">Об'єкт №2. Lorem ipsum dolor sit
+							amet consectetur,
+							adipisicing elit. Debitis excepturi aut qui tenetur facere voluptates maiores quod nihil cupiditate
+							cumque corrupti quasi doloribus consectetur distinctio dolores, unde veritatis velit quae.</div>
+						<div class="item item__margin-neg item__color_3">Об'єкт №3. Lorem ipsum dolor sit amet consectetur
+							adipisicing elit. Quae exercitationem facere facilis harum repudiandae inventore natus, commodi
+							dignissimos quaerat nam ex suscipit iure pariatur nulla officiis, molestias soluta repellat esse.
+						</div>
+					</div>
+					<div class="example__blok">
+						<h4>пінявся лише об'єкти - top: -50px;</h4>
+						<div class="item item__margin-neg item__color_1">Об'єкт №1. Lorem ipsum dolor sit amet consectetur,
+							adipisicing elit. Debitis excepturi aut qui tenetur facere voluptates maiores quod nihil cupiditate
+							cumque corrupti quasi doloribus consectetur distinctio dolores, unde veritatis velit quae.</div>
+						<div class="item item__margin-neg item__top-neg-top item__color_2">Об'єкт №2. Lorem ipsum dolor sit
+							amet consectetur,
+							adipisicing elit. Debitis excepturi aut qui tenetur facere voluptates maiores quod nihil cupiditate
+							cumque corrupti quasi doloribus consectetur distinctio dolores, unde veritatis velit quae.</div>
+						<div class="item item__margin-neg item__color_3">Об'єкт №3. Lorem ipsum dolor sit amet consectetur
+							adipisicing elit. Quae exercitationem facere facilis harum repudiandae inventore natus, commodi
+							dignissimos quaerat nam ex suscipit iure pariatur nulla officiis, molestias soluta repellat esse.
+						</div>
+					</div>
+					<div class="example__blok">
+						<h4>пінявся лише об'єкти - transform: translate(0,-50px)</h4>
+						<div class="item item__margin-neg item__color_1">Об'єкт №1. Lorem ipsum dolor sit amet consectetur,
+							adipisicing elit. Debitis excepturi aut qui tenetur facere voluptates maiores quod nihil
+							cupiditate
+							cumque corrupti quasi doloribus consectetur distinctio dolores, unde veritatis velit quae.</div>
+						<div class="item item__margin-neg item__translate-neg-top item__color_2">Об'єкт №2. Lorem ipsum
+							dolor sit
+							amet consectetur,
+							adipisicing elit. Debitis excepturi aut qui tenetur facere voluptates maiores quod nihil
+							cupiditate
+							cumque corrupti quasi doloribus consectetur distinctio dolores, unde veritatis velit quae.</div>
+						<div class="item item__margin-neg item__color_3">Об'єкт №3. Lorem ipsum dolor sit amet consectetur
+							adipisicing elit. Quae exercitationem facere facilis harum repudiandae inventore natus, commodi
+							dignissimos quaerat nam ex suscipit iure pariatur nulla officiis, molestias soluta repellat
+							esse.
+						</div>
+					</div>
+
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!--Приклад 8 - Відступи у FLEX-конструкціях -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 8 - Відступи у FLEX-конструкціях</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- FLEX-конструкція:
+			<br>&nbsp;&nbsp;- колонки у вигляді карток:
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- flex-контейнер:
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- margin: 0 -15px; - розсуває контейнер за межі контейнера контенту
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- flex-колонки
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ділять flex-контейнер на рівні частини
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- займають весь простір flex-контейнера (включає частину що вийшла за
+			межі контейнара контенту)
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- padding: 0 15px; - ввідсуває з лівого/ правого краю внутрішні межі
+			вмісту колонки
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- flex-елементи:
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- padding: 15px; - робить внутрішній відступ контенту елемента
+			<br><br>&nbsp;&nbsp;- звичайні колонки:
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- flex-контейнер:
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- margin: 0 -15px; - розсуває контейнер за межі контейнера контенту
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- flex-колонки
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ділять flex-контейнер на рівні частини
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- займають весь простір flex-контейнера (включає частину що вийшла за
+			межі контейнара контенту)
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- padding: 0 15px; - ввідсуває з лівого/ правого краю внутрішні межі
+			вмісту колонки
+
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.item__flex_row { display: flex; margin: 0 -15px;}
+			<br>.item__flex_col { padding: 0 15px; flex: 0 1 33.333%; border: 1px solid #999; color: #333;}
+			<br>.item__flex_element { background-color: #77608d; padding: 15px; color: #ddd;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<!-- Exemple - HTML -->
+				<section class="section__example">
+
+					<div class="example__blok">
+						<h3>Комбінація відємного margin з padding</h3>
+						<h4>- колонки у вигляді карток<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;.item__flex_row { display: flex;margin: 0 -15px; }<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;.item__flex_col { flex: 0 1 33.333%; padding: 0 15px; }<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;.item__flex_element { padding: 15px; background-color: #77608d; }</h4>
+						<div class="item item__flex_row">
+							<div class="item__flex_col">
+								<div class="item__flex_element">Контент внутрі flex-конструкції. Lorem ipsum dolor sit amet
+									consectetur
+									adipisicing elit. Nam suscipit numquam perferendis amet enim, accusantium consequatur commodi
+									debitis reprehenderit provident accusamus aspernatur tempore voluptatem quod cumque totam,
+									illum
+									autem explicabo.</div>
+							</div>
+							<div class="item__flex_col">
+								<div class="item__flex_element">Контент внутрі flex-конструкції. Lorem ipsum dolor sit amet
+									consectetur
+									adipisicing elit. Nam suscipit numquam perferendis amet enim, accusantium consequatur commodi
+									debitis reprehenderit provident accusamus aspernatur tempore voluptatem quod cumque totam,
+									illum
+									autem explicabo.</div>
+							</div>
+							<div class="item__flex_col">
+								<div class="item__flex_element">Контент внутрі flex-конструкції. Lorem ipsum dolor sit amet
+									consectetur
+									adipisicing elit. Nam suscipit numquam perferendis amet enim, accusantium consequatur commodi
+									debitis reprehenderit provident accusamus aspernatur tempore voluptatem quod cumque totam,
+									illum
+									autem explicabo.</div>
+							</div>
+						</div>
+					</div>
+					<div class="example__blok">
+						<h4>- звичайні колонки<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;.item__flex_row { display: flex;margin: 0 -15px; }<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;.item__flex_col {flex: 0 1 33.333%; padding: 0 15px; }</h4>
+						<div class="item item__flex_row">
+							<div class="item__flex_col">
+								Контент внутрі flex-конструкції. Lorem ipsum dolor sit amet
+								consectetur
+								adipisicing elit. Nam suscipit numquam perferendis amet enim, accusantium consequatur commodi
+								debitis reprehenderit provident accusamus aspernatur tempore voluptatem quod cumque totam,
+								illum
+								autem explicabo.</div>
+
+							<div class="item__flex_col">
+								Контент внутрі flex-конструкції. Lorem ipsum dolor sit amet
+								consectetur
+								adipisicing elit. Nam suscipit numquam perferendis amet enim, accusantium consequatur commodi
+								debitis reprehenderit provident accusamus aspernatur tempore voluptatem quod cumque totam,
+								illum
+								autem explicabo.</div>
+
+							<div class="item__flex_col">
+								Контент внутрі flex-конструкції. Lorem ipsum dolor sit amet
+								consectetur
+								adipisicing elit. Nam suscipit numquam perferendis amet enim, accusantium consequatur commodi
+								debitis reprehenderit provident accusamus aspernatur tempore voluptatem quod cumque totam,
+								illum
+								autem explicabo.</div>
+
+						</div>
+					</div>
+
+
+				</section>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!--Приклад 9 - Відступи у слайдері -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 9 - Відступи у слайдері</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- FLEX-контейнер: - відкрити приховану частину контенту без зміни його положення:
+			<br>&nbsp;&nbsp;- padding: 25px 0; - відкриває приховану частину контенту (при цьому контейнер збільшується і
+			контент змінює своє положення)
+			<br>&nbsp;&nbsp;- margin: -25px 0; - піднімає контейнер угору при цьому контент повертається на початкове місце
+
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.slider { display: flex; overflow: hidden; border: 1px solid #ddd; margin: -25px 0; padding: 25px 0;}
+			<br>.slider__item { text-align: center; flex: 0 1 33.333%;}
+			<br>.slider__image { width: 150px; height: 150px; margin: 0 auto; border-radius: 50%; background-color:
+			#7a956b; box-shadow: 0 0 30px #000;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="section__example">
+
+					<div class="example__blok">
+						<h3>Відкриваємо прихованої тінь об'єкту - padding: 30px</h3>
+						<h4>
+							&nbsp;&nbsp;- padding: 25px 0; - відкриває приховану частину контенту
+							<br>&nbsp;&nbsp;- margin: -25px 0; - піднімає контейнер з контентом угору
+
+						</h4>
+						<div class="item slider ">
+							<div class="slider__item">
+								<div class="slider__image"></div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__image"></div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__image"></div>
+							</div>
+						</div>
+					</div>
+
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!--Приклад 10 - Схлопування Margin -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 10 - Схлопування Margin</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- margin - відступ між двома елементами схлопується:
+			<br>&nbsp;&nbsp;- (margin-bottom:20px) max (margin-top:60px) = 60px - обидва позитивні, тоді берем максимальний
+			відступ
+			<br>&nbsp;&nbsp;- (margin-bottom:-20px) + (margin-top:60px) = 40px - один негативний, тоді складаємо два
+			відступи
+			<br>&nbsp;&nbsp;- (margin-bottom:-20px) + (margin-top:-60px) = -60px - обидва негативні, тоді берем відступ
+			максимальний по модулю
+			<br>&nbsp;&nbsp;- батька(margin-top:20px) + нащадка(margin-top:60px) = 60px - відступ нащадка більший за
+			відступ батька:
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- відступ батька = відступу нащадка
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- відступ між батьком та нащадком буде відсутній
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>.margin_hlop { padding: 15px; margin: 0 0 20px 0;}
+			<br>.margin__pos { margin: 60px 0 20px 0;}
+			<br>.margin__neg { margin: -15px 0 20px 0;}
+			<br>.margin__neg_1 { margin: 0 0 -10px 0;}
+			<br>.margin__neg_2 { margin: -5px 0 20px 0;}
+			<br>.block__father { border: red 2px solid; margin: 10px 0 0 0;}
+			<br>.block__child { margin: 20px 0 0 0;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="section__example">
+
+					<div class="example__blok">
+						<h3>Схлопування margin</h3>
+						<h4>- обидва позитивні, тоді берем максимальний відступ - (margin-bottom:20px) max (margin-top:60px) =
+							60px</h4>
+						<div class="item margin_hlop item__color_1">Об'єкт №1 Lorem ipsum dolor sit, amet consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+						<div class="item margin_hlop margin__pos item__color_2">Об'єкт №2 Lorem ipsum dolor sit, amet
+							consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+						<div class="item margin_hlop item__color_3">Об'єкт №3 Lorem ipsum dolor sit, amet consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+					</div>
+					<div class="example__blok">
+						<h4>- один негативний, тоді складаємо два відступи - (margin-bottom:20px) max (margin-top:-15px) = 5px
+						</h4>
+						<div class="item margin_hlop item__color_1">Об'єкт №1 Lorem ipsum dolor sit, amet consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+						<div class="item margin_hlop margin__neg item__color_2">Об'єкт №2 Lorem ipsum dolor sit, amet
+							consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+						<div class="item margin_hlop item__color_3">Об'єкт №3 Lorem ipsum dolor sit, amet consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+					</div>
+
+					<div class="example__blok">
+						<h4>- обидва негативні, тоді берем відступ максимальний по модулю (margin-bottom:-10px) +
+							(margin-top:-5px) = -10px
+						</h4>
+						<div class="item margin_hlop margin__neg_1 item__color_1">Об'єкт №1 Lorem ipsum dolor sit, amet
+							consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+						<div class="item margin_hlop margin__neg_2 item__color_2">Об'єкт №2 Lorem ipsum dolor sit, amet
+							consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+						<div class="item margin_hlop item__color_3">Об'єкт №3 Lorem ipsum dolor sit, amet consectetur
+							adipisicing elit. Deleniti architecto minus nobis, dolorem quibusdam voluptatem id rem. Veritatis
+							corporis ad sapiente temporibus facilis eligendi eos est, numquam error consectetur maiores.</div>
+					</div>
+
+					<div class="example__blok">
+						<h4>- відступ нащадка більший за відступ батька: батька(margin-top:10px) + нащадка(margin-top:20px) =
+							20px
+						</h4>
+						<div class="item block__father">
+							<div class="item__color_1 block__child">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+								Aliquam earum
+								beatae distinctio commodi libero, explicabo placeat eos doloremque reiciendis sunt minus
+								adipisci debitis dicta iusto minima dolorem, ad, ex accusamus!</div>
+						</div>
+				</section>
+			</div>
+		</div>
+
+	</div>
+	<!--Приклад 11 - Принципи застосування відступів -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад 11 - Принципи застосування відступів</h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+			<br>- принципи застосування відступів:
+			<br>&nbsp;&nbsp;- відступи потрібно задавати від попереднього елементу до іншого:
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- зверху до низу
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- зліва на право
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- у останнього елемента групи, онулити відступ
+			<br>&nbsp;&nbsp;- відступи задаються самому верхньому батьку у конструкції
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- "будинок" задає внутрішній відступ - house > padding: 50px 50px;
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- "тіло списку" задає зовнішній відступ - list__body > margin: 0 0 20px 0;
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- "пункти списку" - задають відступи внутрі пункту - list li > padding: 5px;
+			<br>&nbsp;&nbsp;- зовнішні відступи не задають незалежним елементам
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- .header - незалежний блок має лише відступи, що відповідає його внутріньому
+			контенту
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- .contact__header - незалежний блок вклячається як елемент іншого блоку, що
+			включає зовнішній відступ
+			<br>&nbsp;&nbsp;- відступи повинні покращувати зручність користування та сприйняття
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- зайві відступи
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;- площа натискання на кнопку
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+			<br>/*- зверху до низ*/
+			<br>.princip__1 { padding: 10px; margin: 0 0 10px 0;}
+			<br>
+			<br>/*- зліва на право*/
+			<br>.block__princip { display: flex;}
+			<br>.princip__2 { padding: 10px; margin: 0 0 0 10px;}
+			<br>
+			<br>/*!!!у останнього елемента групи, онулити відступ*/
+			<br>.princip__list { background-color: #77608d; padding: 20px 50px; color: #fff; margin: 0 0 10px 0;}
+			<br>.princip__li li { margin: 0 0 20px 0;}
+			<br>.princip__li *:last-child { margin: 0;}
+			<br>
+			<br>/*- відступи задаються самому верхньому батьку у конструкції*/
+			<br>.house { background-color: #7a956b; padding: 50px 50px; color: #fff;}
+			<br>.list__body { margin: 0 0 20px 0;}
+			<br>.list__body:last-child { margin: 0;}
+			<br>.list li { margin: 0; padding: 5px;}
+			<br>
+			<br>/*!!!Зовнішні відступи не задають незалежним елементам*/
+			<br>.aticl { background-color: #794f45; padding: 30px 15px; color: #fff;}
+			<br>
+			<br>/*незалежний блок вклячається як елемент іншого блоку, що включає зовнішній відступ*/
+			<br>.aticl__header { margin: 0 0 20px 0;}
+			<br>.aticl__text,.contact__text { font-size: 14px;}
+			<br>.contact { background-color: #77608d; padding: 30px 15px; color: #fff;}
+			<br>
+			<br>/*незалежний блок вклячається як елемент іншого блоку, що включає зовнішній відступ*/
+			<br>.contact__header { margin: 0 0 40px 0;}
+			<br>
+			<br>/*незалежний блок HEADER*/
+			<br>.header { text-align: center;}
+			<br>.header__title { font-size: 30px; margin: 0 0 15px 0;}
+			<br>.header__discript { font-size: 20px;}
+			<br>
+			<br>/*!!!Відступи повинні покращувати зручність користування та сприйняття*/
+			<br>.bad-good__row { display: flex; margin: 0 -15px 30px;}
+			<br>.bad-good__column { padding: 0 15px; flex: 0 1 50%;}
+			<br>.bad-good__header { font-weight: 700; margin: 0 0 15px 0;}
+			<br>.bad-good__item { padding: 20px 15px; color: #fff;}
+			<br>.bad-good__item_bad { background-color: #794f45;}
+			<br>.bad-good__item_good { background-color: #7a956b;}
+			<br>.title-bad-good { margin: 0 0 15px 0;}
+			<br>.bad-good__title { font-size: 20px;}
+			<br>
+			<br>/*- зайві відступи*/
+			<br>.item_bad { padding: 80px 15px;}
+			<br>/*- розрив об'єктів*/
+			<br>.title-bad { margin: 0 0 50px 0;}
+			<br>/*- площа натискання на кнопку*/
+			<br>.bad-good__link { display: inline-block; color: green; cursor: pointer; border: 1px solid green;}
+			<br>.link__good { padding: 5px 100px 5px 10px;}
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+				<section class="section__example">
+
+					<div class="example__blok">
+						<h3>Відступи потрібно задавати від попереднього елементу до іншого</h3>
+						<h4>- зверху до низу - margin: 0 0 10px 0;</h4>
+						<div class="item princip__1 item__color_1">Об'єкт №1 </div>
+						<div class="item princip__1 item__color_2">Об'єкт №2</div>
+						<div class="item princip__1 item__color_3">Об'єкт №3</div>
+					</div>
+					<div class="example__blok">
+						<h4>- зліва на право - margin: 0 0 0 10px;</h4>
+						<div class="block__princip">
+							<div class="item princip__2 item__color_1">Об'єкт №1 </div>
+							<div class="item princip__2 item__color_2">Об'єкт №2</div>
+							<div class="item princip__2 item__color_3">Об'єкт №3</div>
+						</div>
+					</div>
+					<div class="example__blok">
+						<h4>- у останнього елемента групи, онулити відступ - .princip__li *:last-child</h4>
+						<div class="princip__list">
+							<ul class="princip__li">
+								<li>Пункт №1</li>
+								<li>Пункт №2</li>
+								<li>Пункт №3</li>
+								<li>Пункт №4</li>
+							</ul>
+						</div>
+						<div class="princip__list">
+							<ul class="princip__li">
+								<li>Пункт №1</li>
+								<li>Пункт №2</li>
+								<li>Пункт №3</li>
+								<li>Пункт №4</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="example__blok">
+						<h3>Відступи задаються самому верхньому батьку у конструкції</h3>
+						<h4> &nbsp;&nbsp;- "будинок" задає внутрішній відступ - house > padding: 50px 50px;<br>
+							&nbsp;&nbsp;- "тіло списку" задає зовнішній відступ - list__body > margin: 0 0 20px 0;<br>
+							&nbsp;&nbsp;- "пункти списку" - задають відступи внутрі пункту - list li > padding: 5px;
+						</h4>
+						<div class="house">
+							<div class="list__body">
+								<ul class="list">
+									<li>Пункт №1</li>
+									<li>Пункт №2</li>
+									<li>Пункт №3</li>
+									<li>Пункт №4</li>
+								</ul>
+							</div>
+							<div class="list__body">
+								<ul class="list">
+									<li>Пункт №1</li>
+									<li>Пункт №2</li>
+									<li>Пункт №3</li>
+									<li>Пункт №4</li>
+								</ul>
+							</div>
+							<div class="list__body">
+								<ul class="list">
+									<li>Пункт №1</li>
+									<li>Пункт №2</li>
+									<li>Пункт №3</li>
+									<li>Пункт №4</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="example__blok">
+						<h3>Зовнішні відступи не задають незалежним елементам</h3>
+						<h4>
+							<br>&nbsp;&nbsp;- незалежний блок має лише відступи, що відповідає його внутріньому контенту
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;.header: margin: 0 ;
+							<br>&nbsp;&nbsp;- незалежний блок вклячається як елемент іншого блоку, що включає зовнішній відступ
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;.atic__header: margin: 0 0 20px 0;
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;.contact__header: margin: 0 0 40px 0;
+
+						</h4>
+						<div class="aticl">
+							<div class="aticl__header header">
+								<div class="header__title">Заголовок</div>
+								<div class="header__discript">Lorem ipsum dolor sit amet consectetur adipisicing eli</div>
+							</div>
+							<div class="aticl__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+								consequatur molestias veritatis laborum fugit adipisci architecto minima voluptas sequi,
+								doloremque illum recusandae nobis placeat delectus assumenda praesentium maxime earum vel.</div>
+						</div>
+						<div class="contact">
+							<div class="contact__header header">
+								<div class="header__title">Заголовок</div>
+								<div class="header__discript">Lorem ipsum dolor sit amet consectetur adipisicing eli</div>
+							</div>
+							<div class="contact__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+								perspiciatis qui incidunt iure vel, ducimus totam, unde mollitia dicta rem veritatis tempore
+								vero repellendus pariatur quod ad facilis architecto est?</div>
+						</div>
+					</div>
+
+
+					<div class="example__blok">
+						<h3>Відступи повинні покращувати зручність користування та сприйняття</h3>
+						<h4>- зайві відступи </h4>
+						<div class="bad-good">
+							<div class="bad-good__row">
+								<div class="bad-good__column">
+									<div class="bad-good__header">Погано</div>
+									<div class="bad-good__item bad-good__item_bad item_bad">
+										<div class="bad-good__title title-bad-good">Заголовок</div>
+										<div class="bad-good__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+											facilis porro veritatis dicta autem saepe omnis explicabo quasi ab maxime! Hic fugiat
+											corporis aliquid modi, vel sunt nulla similique enim.</div>
+									</div>
+								</div>
+								<div class="bad-good__column">
+									<div class="bad-good__header">Хорошо</div>
+									<div class="bad-good__item bad-good__item_good">
+										<div class="bad-good__title title-bad-good ">Заголовок</div>
+										<div class="bad-good__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+											facilis porro veritatis dicta autem saepe omnis explicabo quasi ab maxime! Hic fugiat
+											corporis aliquid modi, vel sunt nulla similique enim.</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="example__blok">
+						<h4>- розрив об'єктів </h4>
+						<div class="bad-good">
+							<div class="bad-good__row">
+								<div class="bad-good__column">
+									<div class="bad-good__header">Погано</div>
+									<div class="bad-good__item bad-good__item_bad">
+										<div class="bad-good__title title-bad-good title-bad">Заголовок</div>
+										<div class="bad-good__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+											facilis porro veritatis dicta autem saepe omnis explicabo quasi ab maxime! Hic fugiat
+											corporis aliquid modi, vel sunt nulla similique enim.</div>
+									</div>
+								</div>
+								<div class="bad-good__column">
+									<div class="bad-good__header">Хорошо</div>
+									<div class="bad-good__item bad-good__item_good">
+										<div class="bad-good__title title-bad-good">Заголовок</div>
+										<div class="bad-good__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+											facilis porro veritatis dicta autem saepe omnis explicabo quasi ab maxime! Hic fugiat
+											corporis aliquid modi, vel sunt nulla similique enim.</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+
+					<div class="example__blok">
+						<h4>- площа натискання на кнопку </h4>
+						<div class="bad-good">
+							<div class="bad-good__row">
+								<div class="bad-good__column">
+									<div class="bad-good__header">Погано</div>
+									<a href="#" class="bad-good__link">+</a>
+								</div>
+								<div class="bad-good__column">
+									<div class="bad-good__header">Хорошо</div>
+									<a href="#" class="bad-good__link link__good">+</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!--Приклад * -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад * - </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+	<!--Приклад * -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад * - </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+	<!--Приклад * -->
+	<div class="example">
+		<div class="head">
+			<h2>Приклад * - </h2>
+		</div>
+		<div class="descript">Загальні відомості: <br>
+		</div>
+		<div class="theory">
+		</div>
+		<div class="css">
+			<!-- Exemple - CSS -->
+			css:
+		</div>
+
+		<div class="code code__border">
+			<div class="block">
+				<!-- Exemple - HTML -->
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+
+</html>
